@@ -13,9 +13,11 @@
 		790621D72B4439B700D50F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790621D52B4439B700D50F45 /* Main.storyboard */; };
 		790621D92B4439B800D50F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790621D82B4439B800D50F45 /* Assets.xcassets */; };
 		790621DC2B4439B800D50F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790621DA2B4439B800D50F45 /* LaunchScreen.storyboard */; };
+		7C8D8584C006957BDD3EB4C4 /* Pods_whatseason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F98590EB53F4954B9836A /* Pods_whatseason.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		499F98590EB53F4954B9836A /* Pods_whatseason.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatseason.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790621CC2B4439B700D50F45 /* whatseason.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatseason.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		790621CF2B4439B700D50F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790621D12B4439B700D50F45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,9 @@
 		790621D82B4439B800D50F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		790621DB2B4439B800D50F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		790621DD2B4439B800D50F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79267CAD2B444170001BFF15 /* whatseason.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = whatseason.entitlements; sourceTree = "<group>"; };
+		85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.release.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.release.xcconfig"; sourceTree = "<group>"; };
+		A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.debug.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8D8584C006957BDD3EB4C4 /* Pods_whatseason.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193F17C82EF89770B78F068B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */,
+				85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		790621C32B4439B700D50F45 = {
 			isa = PBXGroup;
 			children = (
 				790621CE2B4439B700D50F45 /* whatseason */,
 				790621CD2B4439B700D50F45 /* Products */,
+				193F17C82EF89770B78F068B /* Pods */,
+				85D0BBBFD7D8312D1E23B339 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 		790621CE2B4439B700D50F45 /* whatseason */ = {
 			isa = PBXGroup;
 			children = (
+				79267CAD2B444170001BFF15 /* whatseason.entitlements */,
 				790621CF2B4439B700D50F45 /* AppDelegate.swift */,
 				790621D12B4439B700D50F45 /* SceneDelegate.swift */,
 				790621D32B4439B700D50F45 /* ViewController.swift */,
@@ -67,6 +85,14 @@
 			path = whatseason;
 			sourceTree = "<group>";
 		};
+		85D0BBBFD7D8312D1E23B339 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				499F98590EB53F4954B9836A /* Pods_whatseason.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 790621E02B4439B800D50F45 /* Build configuration list for PBXNativeTarget "whatseason" */;
 			buildPhases = (
+				D1C2B6F4A00988607507673A /* [CP] Check Pods Manifest.lock */,
 				790621C82B4439B700D50F45 /* Sources */,
 				790621C92B4439B700D50F45 /* Frameworks */,
 				790621CA2B4439B700D50F45 /* Resources */,
+				A2AF4D8C11247D003B0761D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2AF4D8C11247D003B0761D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-whatseason/Pods-whatseason-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-whatseason/Pods-whatseason-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-whatseason/Pods-whatseason-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1C2B6F4A00988607507673A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-whatseason-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		790621C82B4439B700D50F45 /* Sources */ = {
@@ -203,7 +273,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,7 +336,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,9 +357,11 @@
 		};
 		790621E12B4439B800D50F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = whatseason/whatseason.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47PZ53ZAF2;
@@ -300,6 +372,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,9 +388,11 @@
 		};
 		790621E22B4439B800D50F45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = whatseason/whatseason.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47PZ53ZAF2;
@@ -328,6 +403,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
