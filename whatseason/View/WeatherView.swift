@@ -11,7 +11,7 @@ import Then
 
 class WeatherView: UIView {
     
-    // MARK: - 객체
+    // MARK: - 객체 정의
     let mainLabel: UILabel = UILabel().then {
         $0.text = "날씨"
         $0.font = UIFont.systemFont(ofSize: 30)
@@ -41,14 +41,6 @@ class WeatherView: UIView {
         $0.textColor = .white
     }
     
-    let hourlyForecastView: ForecastView = ForecastView().then {
-            $0.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-            $0.layer.cornerRadius = 10
-            $0.clipsToBounds = true
-        }
-    
-    
-    
     // MARK: - 생성자
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,7 +52,6 @@ class WeatherView: UIView {
         setUpTemperatureLabel()
         setUpHumidityLabel()
         setUpLocationLabel()
-        setUpHourlyForecastView()
     }
     
     required init?(coder: NSCoder) {
@@ -113,14 +104,5 @@ class WeatherView: UIView {
         }
     }
     
-    func setUpHourlyForecastView() {
-            addSubview(hourlyForecastView)
-
-            hourlyForecastView.snp.makeConstraints {
-                $0.top.equalTo(locationLabel.snp.bottom).offset(20)
-                $0.left.right.equalToSuperview().inset(20)
-                $0.height.equalTo(100) // 높이는 조정 가능
-            }
-        }
     
 }
