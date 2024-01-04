@@ -10,14 +10,17 @@ import WeatherKit
 import UIKit
 
 class WeatherVC: UIViewController {
+    
+    // MARK: - 프로퍼티
     var weatherView = WeatherView()
     let locationManager = CLLocationManager()
-    
     let service = WeatherService()
+    
+    // 예보 데이터를 담을 배열
     var hourly: [HourWeather] = []
     var daily: [DayWeather] = []
     
-    
+    // MARK: - 라이프사이클
     override func loadView() {
         view = weatherView
     }
@@ -28,13 +31,16 @@ class WeatherVC: UIViewController {
         setUpTableView()
     }
     
-    // MARK: - 위치 및 날씨 설정
+    // MARK: - 메서드
+    /// 유저에게 위치 정보 권한을 요청하고 위치 정보를 불러옵니다.
     func getUserLocation() {
+        // 날씨 데이터에 대한 권한 설정
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
     }
     
+    /// 위치 정보와 도시명을 파라미터로 받아 날씨 데이터를 불러옵니다.
     func getWeather(
         location: CLLocation,
         city: String
@@ -44,11 +50,6 @@ class WeatherVC: UIViewController {
                 let result = try await service.weather(
                     for: location
                 )
-                //                let current = result.currentWeather
-                //                print("Current: \n"+String(describing: result.currentWeather))
-                //                print("Daily: \n"+String(describing: result.dailyForecast))
-                //                print("Hourly: \n"+String(describing: result.hourlyForecast))
-                //                print("Minutely: \n"+String(describing: result.minuteForecast))
                 
                 result.hourlyForecast.forecast.forEach { hourWeather in
                     self.hourly.append(
@@ -60,12 +61,14 @@ class WeatherVC: UIViewController {
                         dayWeather
                     )
                 }
+                
+                // 뷰 업데이트
                 weatherView.configure(
                     with: result,
                     city: city
                 )
-                
                 weatherView.tableView.reloadData()
+                
             } catch {
                 print(
                     String(
@@ -76,6 +79,7 @@ class WeatherVC: UIViewController {
         }
     }
     
+    /// 테이블뷰의 identifier와 datasource를 설정합니다.
     func setUpTableView() {
         weatherView.tableView.register(
             DailyCell.self,
@@ -85,8 +89,10 @@ class WeatherVC: UIViewController {
     }
 }
 
+// MARK: - 코어로케이션델리게이트
 extension WeatherVC: CLLocationManagerDelegate {
-    // MARK: - 코어로케이션델리게이트
+    
+    // 위치 정보가 업데이트되면 호출
     func locationManager(
         _ manager: CLLocationManager,
         didUpdateLocations locations: [CLLocation]
@@ -96,6 +102,7 @@ extension WeatherVC: CLLocationManagerDelegate {
         }
         locationManager.stopUpdatingLocation()
         
+        // 위치 정보로 도시명을 받아 날씨 데이터 파싱
         location.fetchCity {
             city,
             error in
@@ -111,8 +118,10 @@ extension WeatherVC: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - 테이블뷰데이터소스
 extension WeatherVC: UITableViewDataSource {
-    // MARK: - 테이블뷰데이터소스
+    
+    // 셀 행 개수 업데이트
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -120,6 +129,7 @@ extension WeatherVC: UITableViewDataSource {
         daily.count
     }
     
+    // 셀 내용 업데이트
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath

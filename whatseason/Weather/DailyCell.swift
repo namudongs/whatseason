@@ -11,6 +11,8 @@ import Then
 import SnapKit
 
 class DailyCell: UITableViewCell {
+    
+    // MARK: - 프로퍼티
     let dateLabel = UILabel().then {
         $0.text = "날짜"
     }
@@ -25,6 +27,7 @@ class DailyCell: UITableViewCell {
         $0.distribution = .fillEqually
     }
     
+    // MARK: - 생성자
     override init(
         style: UITableViewCell.CellStyle,
         reuseIdentifier: String?
@@ -45,6 +48,7 @@ class DailyCell: UITableViewCell {
         )
     }
     
+    // MARK: - 오토레이아웃
     func setUpView() {
         addSubview(
             stack

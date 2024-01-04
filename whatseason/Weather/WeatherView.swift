@@ -12,7 +12,7 @@ import Then
 
 class WeatherView: UIView {
     
-    // MARK: - 객체 정의
+    // MARK: - 프로퍼티
     var tableView = UITableView()
     
     let mainLabel = UILabel().then {
@@ -72,6 +72,8 @@ class WeatherView: UIView {
         )
     }
     
+    // MARK: - 메서드
+    /// 날씨와 도시명을 받아 WeatherView를 업데이트하는 메서드입니다.
     func configure(
         with: Weather,
         city: String
@@ -80,7 +82,6 @@ class WeatherView: UIView {
         conditionLabel.text = "\(with.currentWeather.condition)"
         locationLabel.text = "\(city)"
     }
-    
     
     // MARK: - 오토레이아웃
     func setUpView() {
