@@ -79,6 +79,15 @@ class WeatherVC: UIViewController {
         }
     }
     
+    /// Date 데이터를 설정합니다.
+    func converDate(_ to: Date) -> String {
+        let df = DateFormatter()
+        df.timeZone = .current
+        df.locale = Locale(identifier: "ko")
+        df.dateFormat = "M월 d일 E요일"
+        return df.string(from: to)
+    }
+    
     /// 테이블뷰의 identifier와 datasource를 설정합니다.
     func setUpTableView() {
         weatherView.tableView.register(
@@ -139,11 +148,11 @@ extension WeatherVC: UITableViewDataSource {
             for: indexPath
         ) as! DailyCell
         
-        print(daily.count)
         let dayWeather = daily[indexPath.row]
-        cell.dateLabel.text = "\(dayWeather.date)"
-        cell.lowTempLable.text = "\(dayWeather.lowTemperature)"
-        cell.highTempLable.text = "\(dayWeather.highTemperature)"
+        let date = converDate(dayWeather.date)
+        cell.dateLabel.text = "\(date)"
+        cell.lowTempLable.text = "\(Int(dayWeather.lowTemperature.value.rounded()))"
+        cell.highTempLable.text = "\(Int(dayWeather.highTemperature.value.rounded()))"
         return cell
     }
 }

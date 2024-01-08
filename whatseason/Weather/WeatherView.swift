@@ -81,6 +81,7 @@ class WeatherView: UIView {
         temperatureLabel.text = "\(with.currentWeather.temperature.value.rounded())°C"
         conditionLabel.text = "\(with.currentWeather.condition)"
         locationLabel.text = "\(city)"
+        print(with.currentWeather.date.description)
     }
     
     // MARK: - 오토레이아웃
@@ -107,9 +108,7 @@ class WeatherView: UIView {
         
         stack.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(
-                50
-            )
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(0)
         }
         
         tableView.snp.makeConstraints { make in
