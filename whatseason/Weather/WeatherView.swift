@@ -18,8 +18,14 @@ class WeatherView: UIView {
     }
     
     let todayView = UIView().then {
-        $0.backgroundColor = .systemBlue
-        $0.layer.cornerRadius = 30
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 40
+        $0.clipsToBounds = true
+    }
+    
+    let forecastView = UIView().then {
+        $0.backgroundColor = UIColor(red: 21/255.0, green: 27/255.0, blue: 37/255.0, alpha: 1.0)
+        $0.layer.cornerRadius = 40
         $0.clipsToBounds = true
     }
     
@@ -73,12 +79,13 @@ class WeatherView: UIView {
         print(with.currentWeather.date.description)
         
         todayView.setGradient(
-            color1: UIColor(red: 0.63, green: 0.77, blue: 0.99, alpha: 1.0),
-            color2: UIColor(red: 0.76, green: 0.91, blue: 0.98, alpha: 1.0),
+            color1: UIColor(red: 80/255.0, green: 174/255.0, blue: 251/255.0, alpha: 1.0),
+            color2: UIColor(red: 40/255.0, green: 147/255.0, blue: 244/255.0, alpha: 1.0),
             loc: [0.0, 1.0],
-            start: CGPoint(x: 0.86, y: 0.0),
-            end: CGPoint(x: 0.14, y: 1.0)
+            start: CGPoint(x: 0.5, y: 0.0),
+            end: CGPoint(x: 0.5, y: 1.0)
         )
+        self.backgroundColor = UIColor(red: 53/255.0, green: 57/255.0, blue: 67/255.0, alpha: 1.0)
     }
     
     func translateWeatherCondition(_ condition: WeatherCondition) -> String {
@@ -159,6 +166,7 @@ class WeatherView: UIView {
     // MARK: - 오토레이아웃
     func setUpView() {
         addSubview(todayView)
+        addSubview(forecastView)
         todayView.addSubview(stack)
         
         stack.addArrangedSubview(mainLabel)
@@ -168,10 +176,18 @@ class WeatherView: UIView {
         
         
         todayView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide)
-            make.leading.equalToSuperview().offset(30)
-            make.trailing.equalToSuperview().offset(-30)
+            make.top.equalTo(safeAreaLayoutGuide).offset(10)
+            make.leading.equalToSuperview().offset(25)
+            make.trailing.equalToSuperview().offset(-25)
+            make.bottom.equalTo(forecastView.snp.top).offset(-30)
+        }
+        
+        forecastView.snp.makeConstraints { make in
+            make.top.equalTo(todayView.snp.bottom).offset(30)
+            make.leading.equalToSuperview().offset(25)
+            make.trailing.equalToSuperview().offset(-25)
             make.bottom.equalToSuperview().offset(-30)
+            make.height.equalTo(250)
         }
         
         stack.snp.makeConstraints { make in
