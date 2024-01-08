@@ -16,6 +16,7 @@ Refactor: 코드 리팩토링<br/>
 Perf: 성능 개선<br/>
 Chore: 기타 변경사항(빌드 프로세스 수정, 패키지 매니저 수정, assets 등)<br/>
 Style: 스타일 수정, 줄 바꿈, 공백, 세미콜론 누락 등<br/>
+UI: UI 및 AutoLayout 수정 등<br/>
 Docs: 문서 수정(추가, 수정, 삭제, README)<br/>
 Test: 테스트 관련 코드<br/>
 
