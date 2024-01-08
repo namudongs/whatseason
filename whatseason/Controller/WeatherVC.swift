@@ -41,10 +41,7 @@ class WeatherVC: UIViewController {
     }
     
     /// 위치 정보와 도시명을 파라미터로 받아 날씨 데이터를 불러옵니다.
-    func getWeather(
-        location: CLLocation,
-        city: String
-    ) {
+    func getWeather(location: CLLocation, city: String) {
         Task {
             do {
                 let result = try await service.weather(
@@ -52,9 +49,7 @@ class WeatherVC: UIViewController {
                 )
                 
                 result.hourlyForecast.forecast.forEach { hourWeather in
-                    self.hourly.append(
-                        hourWeather
-                    )
+                    self.hourly.append(hourWeather)
                 }
                 result.dailyForecast.forecast.forEach { dayWeather in
                     self.daily.append(
@@ -84,7 +79,7 @@ class WeatherVC: UIViewController {
         let df = DateFormatter()
         df.timeZone = .current
         df.locale = Locale(identifier: "ko")
-        df.dateFormat = "M월 d일 E요일"
+        df.dateFormat = "E요일"
         return df.string(from: to)
     }
     
