@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         
-        
         // MARK: - RootViewController 설정
         guard let scene = (
             scene as? UIWindowScene

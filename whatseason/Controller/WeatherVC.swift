@@ -62,7 +62,8 @@ class WeatherVC: UIViewController {
     
     /// 날씨 데이터를 받아 화면을 업데이트합니다.
     func updateWeatherView(_ result: Weather, _ city: String) {
-        weatherView.configure(with: result, city: city)
+        let date = convertDate(result.currentWeather.date)
+        weatherView.configure(result, city, date)
         weatherView.tableView.reloadData()
     }
     
@@ -71,7 +72,7 @@ class WeatherVC: UIViewController {
         let df = DateFormatter()
         df.timeZone = .current
         df.locale = Locale(identifier: "ko")
-        df.dateFormat = "E요일"
+        df.dateFormat = "M월 d일 E요일 H시 m분"
         return df.string(from: to)
     }
     

@@ -9,6 +9,7 @@ import UIKit
 import WeatherKit
 import SnapKit
 import Then
+import Lottie
 
 class WeatherView: UIView {
     
@@ -17,53 +18,100 @@ class WeatherView: UIView {
         $0.rowHeight = 50
     }
     
-    let todayView = UIView().then {
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 40
-        $0.clipsToBounds = true
-    }
-    
-    let forecastView = UIView().then {
-        $0.backgroundColor = UIColor(red: 21/255.0, green: 27/255.0, blue: 37/255.0, alpha: 1.0)
-        $0.layer.cornerRadius = 40
-        $0.clipsToBounds = true
-    }
-    
-    let mainLabel = UILabel().then {
-        $0.text = "날씨"
-        $0.font = UIFont.systemFont(ofSize: 30)
-        $0.textColor = .white
-    }
-    
-    let temperatureLabel = UILabel().then {
-        $0.text = "0.0"
-        $0.font = UIFont.systemFont(ofSize: 30)
-        $0.textColor = .white
-    }
-    
-    let conditionLabel = UILabel().then {
-        $0.text = "0.0"
-        $0.font = UIFont.systemFont(ofSize: 30)
-        $0.textColor = .white
+    let locationIcon = UIImageView().then {
+        $0.image = UIImage(systemName: "chevron.down")
+        $0.tintColor = .black
+        $0.contentMode = .scaleAspectFit
     }
     
     let locationLabel = UILabel().then {
-        $0.text = "위치"
-        $0.font = UIFont.systemFont(ofSize: 30)
-        $0.textColor = .white
+        $0.text = "--"
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
     }
     
-    let stack = UIStackView().then {
+    let locationStack = UIStackView().then {
+        $0.axis = .horizontal
+        $0.spacing = 5
+    }
+    
+    let settingIcon = UIImageView().then {
+        $0.image = UIImage(systemName: "slider.horizontal.3")
+        $0.tintColor = .black
+        $0.contentMode = .scaleAspectFit
+    }
+    
+    let headerStack = UIStackView().then {
+        $0.axis = .horizontal
+        $0.alignment = .center
+        $0.distribution = .equalCentering
+        $0.spacing = 5
+    }
+    
+    let temperatureLabel = UILabel().then {
+        $0.text = "--"
+        $0.font = UIFont.systemFont(ofSize: 100, weight: .ultraLight, width: .standard)
+    }
+    
+    let highlowTempView = UIView().then {
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 5
+        $0.clipsToBounds = true
+    }
+    
+    let highTemp = UILabel().then {
+        $0.text = "4"
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .light)
+        $0.textColor = .systemRed
+    }
+    
+    let lowTemp = UILabel().then {
+        $0.text = "-6"
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .light)
+        $0.textColor = .systemBlue
+    }
+    
+    let highlowTempStack = UIStackView().then {
         $0.axis = .vertical
         $0.alignment = .center
+        $0.spacing = 3
+    }
+    
+    let tempLabelStack = UIStackView().then {
+        $0.axis = .horizontal
+        $0.alignment = .center
+        $0.spacing = 10
+    }
+    
+    let conditionIcon = LottieAnimationView(name: "partly-cloudy-day").then {
+        $0.contentMode = .scaleAspectFill
+        $0.loopMode = .loop
+        $0.animationSpeed = 1.0
+        $0.play()
+    }
+    
+    let tempBodyStack = UIStackView().then {
+        $0.axis = .horizontal
+        $0.alignment = .center
+        $0.distribution = .equalCentering
+    }
+    
+    let conditionLabel = UILabel().then {
+        $0.text = "--"
+        $0.font = UIFont.systemFont(ofSize: 15, weight: .thin)
+    }
+    
+    let dateLabel = UILabel().then {
+        $0.text = "--"
+        $0.font = UIFont.systemFont(ofSize: 20)
     }
     
     // MARK: - 생성자
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .white
+        self.backgroundColor = .white
         setUpView()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -72,20 +120,21 @@ class WeatherView: UIView {
     
     // MARK: - 메서드
     /// 날씨와 도시명을 받아 WeatherView를 업데이트하는 메서드입니다.
-    func configure(with: Weather, city: String) {
-        temperatureLabel.text = "\(Int(with.currentWeather.temperature.value.rounded())) °C"
+    func configure(_ with: Weather, _ city: String, _ date: String) {
+        dateLabel.text = "\(date)"
+        temperatureLabel.text = "\(Int(with.currentWeather.temperature.value.rounded()))"
         conditionLabel.text = "\(translateWeatherCondition(with.currentWeather.condition))"
         locationLabel.text = "\(city)"
-        print(with.currentWeather.date.description)
+        print(date)
         
-        todayView.setGradient(
-            color1: UIColor(red: 80/255.0, green: 174/255.0, blue: 251/255.0, alpha: 1.0),
-            color2: UIColor(red: 40/255.0, green: 147/255.0, blue: 244/255.0, alpha: 1.0),
+        // 온도 그라데이션 설정
+        highlowTempView.setGradient(
+            color1: UIColor.systemBlue,
+            color2: UIColor.systemRed,
             loc: [0.0, 1.0],
-            start: CGPoint(x: 0.5, y: 0.0),
-            end: CGPoint(x: 0.5, y: 1.0)
+            start: CGPoint(x: 0.0, y: 1.0),
+            end: CGPoint(x: 0.0, y: 0.0)
         )
-        self.backgroundColor = UIColor(red: 53/255.0, green: 57/255.0, blue: 67/255.0, alpha: 1.0)
     }
     
     func translateWeatherCondition(_ condition: WeatherCondition) -> String {
@@ -165,34 +214,63 @@ class WeatherView: UIView {
             
     // MARK: - 오토레이아웃
     func setUpView() {
-        addSubview(todayView)
-        addSubview(forecastView)
-        todayView.addSubview(stack)
+        addSubview(headerStack)
+        addSubview(tempBodyStack)
         
-        stack.addArrangedSubview(mainLabel)
-        stack.addArrangedSubview(locationLabel)
-        stack.addArrangedSubview(temperatureLabel)
-        stack.addArrangedSubview(conditionLabel)
+        locationStack.addArrangedSubview(locationIcon)
+        locationStack.addArrangedSubview(locationLabel)
         
+        headerStack.addArrangedSubview(locationStack)
+        headerStack.addArrangedSubview(settingIcon)
         
-        todayView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(10)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.bottom.equalTo(forecastView.snp.top).offset(-30)
+        highlowTempStack.addArrangedSubview(highTemp)
+        highlowTempStack.addArrangedSubview(highlowTempView)
+        highlowTempStack.addArrangedSubview(lowTemp)
+        
+        tempLabelStack.addArrangedSubview(temperatureLabel)
+        tempLabelStack.addArrangedSubview(highlowTempStack)
+        
+        tempBodyStack.addArrangedSubview(tempLabelStack)
+        tempBodyStack.addArrangedSubview(conditionIcon)
+        
+        // ------------ 헤더 ------------
+        headerStack.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide).offset(20)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
         }
         
-        forecastView.snp.makeConstraints { make in
-            make.top.equalTo(todayView.snp.bottom).offset(30)
-            make.leading.equalToSuperview().offset(25)
-            make.trailing.equalToSuperview().offset(-25)
-            make.bottom.equalToSuperview().offset(-30)
-            make.height.equalTo(250)
+        locationIcon.snp.makeConstraints { make in
+            make.width.height.equalTo(20)
         }
         
-        stack.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+        settingIcon.snp.makeConstraints { make in
+            make.width.height.equalTo(25)
         }
+        // ------------ 헤더 끝 ------------
+        
+        // ------------ 온도/날씨 바디 ------------
+        tempBodyStack.snp.makeConstraints { make in
+            make.top.equalTo(headerStack.snp.bottom)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide)
+            make.bottom.equalTo(tempLabelStack.snp.bottom)
+        }
+        
+        highlowTempView.snp.makeConstraints { make in
+            make.width.equalTo(1)
+        }
+        
+        highlowTempStack.snp.makeConstraints { make in
+            make.top.equalTo(temperatureLabel.snp.top).offset(25)
+            make.bottom.equalTo(temperatureLabel.snp.bottom).offset(-25)
+            make.leading.equalTo(temperatureLabel.snp.trailing).offset(10)
+        }
+        
+        conditionIcon.snp.makeConstraints { make in
+            make.width.height.equalTo(125)
+        }
+        // ------------ 온도/날씨 바디 끝 ------------
+        
     }
 }

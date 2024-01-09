@@ -18,6 +18,242 @@
 		799EAAB02B445DBB006F7C14 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAAF2B445DBB006F7C14 /* WeatherView.swift */; };
 		799EAABA2B4472D1006F7C14 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAB92B4472D1006F7C14 /* WeatherVC.swift */; };
 		799EAAC92B449087006F7C14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799EAAC82B449087006F7C14 /* Main.storyboard */; };
+		79B0D8C62B4DA6E6004A2178 /* extreme-day-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7DA2B4DA6DA004A2178 /* extreme-day-haze.json */; };
+		79B0D8C72B4DA6E6004A2178 /* thunderstorms-day-overcast-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7DB2B4DA6DA004A2178 /* thunderstorms-day-overcast-rain.json */; };
+		79B0D8C82B4DA6E6004A2178 /* thunderstorms-night-extreme.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7DC2B4DA6DA004A2178 /* thunderstorms-night-extreme.json */; };
+		79B0D8C92B4DA6E6004A2178 /* thermometer-glass-fahrenheit.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7DD2B4DA6DA004A2178 /* thermometer-glass-fahrenheit.json */; };
+		79B0D8CA2B4DA6E6004A2178 /* time-evening.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7DE2B4DA6DA004A2178 /* time-evening.json */; };
+		79B0D8CB2B4DA6E6004A2178 /* flag-hurricane-warning.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7DF2B4DA6DA004A2178 /* flag-hurricane-warning.json */; };
+		79B0D8CC2B4DA6E6004A2178 /* uv-index.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E02B4DA6DA004A2178 /* uv-index.json */; };
+		79B0D8CD2B4DA6E6004A2178 /* time-late-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E12B4DA6DA004A2178 /* time-late-night.json */; };
+		79B0D8CE2B4DA6E6004A2178 /* thermometer-sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E22B4DA6DA004A2178 /* thermometer-sun.json */; };
+		79B0D8CF2B4DA6E6004A2178 /* partly-cloudy-day-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E32B4DA6DA004A2178 /* partly-cloudy-day-fog.json */; };
+		79B0D8D02B4DA6E6004A2178 /* thermometer-glass-celsius.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E42B4DA6DA004A2178 /* thermometer-glass-celsius.json */; };
+		79B0D8D12B4DA6E6004A2178 /* moon-waning-crescent.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E52B4DA6DA004A2178 /* moon-waning-crescent.json */; };
+		79B0D8D22B4DA6E6004A2178 /* thunderstorms-day-extreme-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E62B4DA6DA004A2178 /* thunderstorms-day-extreme-snow.json */; };
+		79B0D8D32B4DA6E6004A2178 /* uv-index-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E72B4DA6DB004A2178 /* uv-index-2.json */; };
+		79B0D8D42B4DA6E6004A2178 /* wind.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E82B4DA6DB004A2178 /* wind.json */; };
+		79B0D8D52B4DA6E6004A2178 /* thunderstorms-day-overcast.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7E92B4DA6DB004A2178 /* thunderstorms-day-overcast.json */; };
+		79B0D8D62B4DA6E6004A2178 /* not-available.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7EA2B4DA6DB004A2178 /* not-available.json */; };
+		79B0D8D72B4DA6E6004A2178 /* sunset.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7EB2B4DA6DB004A2178 /* sunset.json */; };
+		79B0D8D82B4DA6E6004A2178 /* mist.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7EC2B4DA6DB004A2178 /* mist.json */; };
+		79B0D8D92B4DA6E6004A2178 /* haze-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7ED2B4DA6DB004A2178 /* haze-day.json */; };
+		79B0D8DA2B4DA6E6004A2178 /* overcast.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7EE2B4DA6DB004A2178 /* overcast.json */; };
+		79B0D8DB2B4DA6E6004A2178 /* thunderstorms-overcast-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7EF2B4DA6DB004A2178 /* thunderstorms-overcast-snow.json */; };
+		79B0D8DC2B4DA6E6004A2178 /* raindrops.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F02B4DA6DB004A2178 /* raindrops.json */; };
+		79B0D8DD2B4DA6E6004A2178 /* thunderstorms-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F12B4DA6DB004A2178 /* thunderstorms-day.json */; };
+		79B0D8DE2B4DA6E6004A2178 /* wind-beaufort-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F22B4DA6DB004A2178 /* wind-beaufort-1.json */; };
+		79B0D8DF2B4DA6E6004A2178 /* thunderstorms-night-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F32B4DA6DB004A2178 /* thunderstorms-night-rain.json */; };
+		79B0D8E02B4DA6E6004A2178 /* dust-wind.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F42B4DA6DB004A2178 /* dust-wind.json */; };
+		79B0D8E12B4DA6E6004A2178 /* thermometer-raindrop.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F52B4DA6DB004A2178 /* thermometer-raindrop.json */; };
+		79B0D8E22B4DA6E6004A2178 /* code-yellow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F62B4DA6DB004A2178 /* code-yellow.json */; };
+		79B0D8E32B4DA6E6004A2178 /* overcast-day-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F72B4DA6DB004A2178 /* overcast-day-drizzle.json */; };
+		79B0D8E42B4DA6E6004A2178 /* pollen.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F82B4DA6DB004A2178 /* pollen.json */; };
+		79B0D8E52B4DA6E6004A2178 /* overcast-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7F92B4DA6DB004A2178 /* overcast-rain.json */; };
+		79B0D8E62B4DA6E6004A2178 /* overcast-night-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7FA2B4DA6DB004A2178 /* overcast-night-drizzle.json */; };
+		79B0D8E72B4DA6E6004A2178 /* extreme-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7FB2B4DA6DB004A2178 /* extreme-hail.json */; };
+		79B0D8E82B4DA6E6004A2178 /* partly-cloudy-day-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7FC2B4DA6DC004A2178 /* partly-cloudy-day-rain.json */; };
+		79B0D8E92B4DA6E6004A2178 /* partly-cloudy-night-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7FD2B4DA6DC004A2178 /* partly-cloudy-night-hail.json */; };
+		79B0D8EA2B4DA6E6004A2178 /* wind-beaufort-6.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7FE2B4DA6DC004A2178 /* wind-beaufort-6.json */; };
+		79B0D8EB2B4DA6E6004A2178 /* thunderstorms-overcast.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D7FF2B4DA6DC004A2178 /* thunderstorms-overcast.json */; };
+		79B0D8EC2B4DA6E6004A2178 /* partly-cloudy-day-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8002B4DA6DC004A2178 /* partly-cloudy-day-drizzle.json */; };
+		79B0D8ED2B4DA6E6004A2178 /* wind-beaufort-9.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8012B4DA6DC004A2178 /* wind-beaufort-9.json */; };
+		79B0D8EE2B4DA6E6004A2178 /* humidity.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8022B4DA6DC004A2178 /* humidity.json */; };
+		79B0D8EF2B4DA6E6004A2178 /* fahrenheit.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8032B4DA6DC004A2178 /* fahrenheit.json */; };
+		79B0D8F02B4DA6E6004A2178 /* wind-beaufort-0.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8042B4DA6DC004A2178 /* wind-beaufort-0.json */; };
+		79B0D8F12B4DA6E6004A2178 /* extreme-night-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8052B4DA6DC004A2178 /* extreme-night-rain.json */; };
+		79B0D8F22B4DA6E6004A2178 /* haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8062B4DA6DC004A2178 /* haze.json */; };
+		79B0D8F32B4DA6E6004A2178 /* wind-beaufort-5.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8072B4DA6DC004A2178 /* wind-beaufort-5.json */; };
+		79B0D8F42B4DA6E6004A2178 /* thunderstorms-extreme-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8082B4DA6DC004A2178 /* thunderstorms-extreme-snow.json */; };
+		79B0D8F52B4DA6E6004A2178 /* thermometer-warmer.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8092B4DA6DC004A2178 /* thermometer-warmer.json */; };
+		79B0D8F62B4DA6E6004A2178 /* rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D80A2B4DA6DC004A2178 /* rain.json */; };
+		79B0D8F72B4DA6E6004A2178 /* windsock-weak.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D80B2B4DA6DC004A2178 /* windsock-weak.json */; };
+		79B0D8F82B4DA6E6004A2178 /* uv-index-11.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D80C2B4DA6DC004A2178 /* uv-index-11.json */; };
+		79B0D8F92B4DA6E6004A2178 /* pollen-grass.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D80D2B4DA6DC004A2178 /* pollen-grass.json */; };
+		79B0D8FA2B4DA6E6004A2178 /* snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D80E2B4DA6DC004A2178 /* snow.json */; };
+		79B0D8FB2B4DA6E6004A2178 /* moon-first-quarter.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D80F2B4DA6DC004A2178 /* moon-first-quarter.json */; };
+		79B0D8FC2B4DA6E6004A2178 /* wind-beaufort-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8102B4DA6DC004A2178 /* wind-beaufort-3.json */; };
+		79B0D8FD2B4DA6E6004A2178 /* moon-new.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8112B4DA6DD004A2178 /* moon-new.json */; };
+		79B0D8FE2B4DA6E6004A2178 /* fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8122B4DA6DD004A2178 /* fog.json */; };
+		79B0D8FF2B4DA6E6004A2178 /* overcast-night-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8132B4DA6DD004A2178 /* overcast-night-hail.json */; };
+		79B0D9002B4DA6E6004A2178 /* extreme.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8142B4DA6DD004A2178 /* extreme.json */; };
+		79B0D9012B4DA6E6004A2178 /* dust.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8152B4DA6DD004A2178 /* dust.json */; };
+		79B0D9022B4DA6E6004A2178 /* extreme-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8162B4DA6DD004A2178 /* extreme-snow.json */; };
+		79B0D9032B4DA6E6004A2178 /* raindrop.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8172B4DA6DD004A2178 /* raindrop.json */; };
+		79B0D9042B4DA6E6004A2178 /* code-green.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8182B4DA6DD004A2178 /* code-green.json */; };
+		79B0D9052B4DA6E6004A2178 /* thunderstorms-day-extreme-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8192B4DA6DD004A2178 /* thunderstorms-day-extreme-rain.json */; };
+		79B0D9062B4DA6E6004A2178 /* code-red.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D81A2B4DA6DD004A2178 /* code-red.json */; };
+		79B0D9072B4DA6E6004A2178 /* fog-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D81B2B4DA6DD004A2178 /* fog-day.json */; };
+		79B0D9082B4DA6E6004A2178 /* thunderstorms.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D81C2B4DA6DD004A2178 /* thunderstorms.json */; };
+		79B0D9092B4DA6E6004A2178 /* tide-low.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D81D2B4DA6DD004A2178 /* tide-low.json */; };
+		79B0D90A2B4DA6E6004A2178 /* thermometer-water.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D81E2B4DA6DD004A2178 /* thermometer-water.json */; };
+		79B0D90B2B4DA6E6004A2178 /* pressure-low-alt.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D81F2B4DA6DD004A2178 /* pressure-low-alt.json */; };
+		79B0D90C2B4DA6E6004A2178 /* moon-waning-gibbous.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8202B4DA6DD004A2178 /* moon-waning-gibbous.json */; };
+		79B0D90D2B4DA6E6004A2178 /* thermometer-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8212B4DA6DD004A2178 /* thermometer-snow.json */; };
+		79B0D90E2B4DA6E6004A2178 /* wind-beaufort-11.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8222B4DA6DD004A2178 /* wind-beaufort-11.json */; };
+		79B0D90F2B4DA6E6004A2178 /* extreme-day-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8232B4DA6DD004A2178 /* extreme-day-rain.json */; };
+		79B0D9102B4DA6E6004A2178 /* tide-high.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8242B4DA6DE004A2178 /* tide-high.json */; };
+		79B0D9112B4DA6E6004A2178 /* sun-hot.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8252B4DA6DE004A2178 /* sun-hot.json */; };
+		79B0D9122B4DA6E6004A2178 /* extreme-night-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8262B4DA6DE004A2178 /* extreme-night-haze.json */; };
+		79B0D9132B4DA6E6004A2178 /* wind-alert.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8272B4DA6DE004A2178 /* wind-alert.json */; };
+		79B0D9142B4DA6E6004A2178 /* moon-last-quarter.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8282B4DA6DE004A2178 /* moon-last-quarter.json */; };
+		79B0D9152B4DA6E6004A2178 /* thermometer-colder.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8292B4DA6DE004A2178 /* thermometer-colder.json */; };
+		79B0D9162B4DA6E6004A2178 /* overcast-night-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D82A2B4DA6DE004A2178 /* overcast-night-fog.json */; };
+		79B0D9172B4DA6E6004A2178 /* beanie.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D82B2B4DA6DE004A2178 /* beanie.json */; };
+		79B0D9182B4DA6E6004A2178 /* extreme-day-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D82C2B4DA6DE004A2178 /* extreme-day-hail.json */; };
+		79B0D9192B4DA6E6004A2178 /* rainbow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D82D2B4DA6DE004A2178 /* rainbow.json */; };
+		79B0D91A2B4DA6E6004A2178 /* moonrise.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D82E2B4DA6DE004A2178 /* moonrise.json */; };
+		79B0D91B2B4DA6E6004A2178 /* overcast-day-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D82F2B4DA6DE004A2178 /* overcast-day-fog.json */; };
+		79B0D91C2B4DA6E6004A2178 /* overcast-night-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8302B4DA6DE004A2178 /* overcast-night-rain.json */; };
+		79B0D91D2B4DA6E6004A2178 /* cloudy.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8312B4DA6DE004A2178 /* cloudy.json */; };
+		79B0D91E2B4DA6E6004A2178 /* extreme-night-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8322B4DA6DE004A2178 /* extreme-night-drizzle.json */; };
+		79B0D91F2B4DA6E6004A2178 /* overcast-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8332B4DA6DE004A2178 /* overcast-fog.json */; };
+		79B0D9202B4DA6E6004A2178 /* cloud-down.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8342B4DA6DE004A2178 /* cloud-down.json */; };
+		79B0D9212B4DA6E6004A2178 /* moon-waxing-crescent.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8352B4DA6DE004A2178 /* moon-waxing-crescent.json */; };
+		79B0D9222B4DA6E6004A2178 /* thunderstorms-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8362B4DA6DE004A2178 /* thunderstorms-rain.json */; };
+		79B0D9232B4DA6E6004A2178 /* extreme-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8372B4DA6DE004A2178 /* extreme-sleet.json */; };
+		79B0D9242B4DA6E6004A2178 /* thunderstorms-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8382B4DA6DE004A2178 /* thunderstorms-night.json */; };
+		79B0D9252B4DA6E6004A2178 /* extreme-night-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8392B4DA6DF004A2178 /* extreme-night-snow.json */; };
+		79B0D9262B4DA6E6004A2178 /* overcast-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D83A2B4DA6DF004A2178 /* overcast-hail.json */; };
+		79B0D9272B4DA6E6004A2178 /* thunderstorms-day-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D83B2B4DA6DF004A2178 /* thunderstorms-day-snow.json */; };
+		79B0D9282B4DA6E6004A2178 /* overcast-day-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D83C2B4DA6DF004A2178 /* overcast-day-sleet.json */; };
+		79B0D9292B4DA6E6004A2178 /* umbrella.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D83D2B4DA6DF004A2178 /* umbrella.json */; };
+		79B0D92A2B4DA6E6004A2178 /* extreme-day-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D83E2B4DA6DF004A2178 /* extreme-day-sleet.json */; };
+		79B0D92B2B4DA6E6004A2178 /* extreme-day-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D83F2B4DA6DF004A2178 /* extreme-day-fog.json */; };
+		79B0D92C2B4DA6E6004A2178 /* overcast-day-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8402B4DA6DF004A2178 /* overcast-day-snow.json */; };
+		79B0D92D2B4DA6E6004A2178 /* hurricane.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8412B4DA6DF004A2178 /* hurricane.json */; };
+		79B0D92E2B4DA6E6004A2178 /* extreme-day-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8422B4DA6DF004A2178 /* extreme-day-drizzle.json */; };
+		79B0D92F2B4DA6E6004A2178 /* pollen-flower.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8432B4DA6DF004A2178 /* pollen-flower.json */; };
+		79B0D9302B4DA6E6004A2178 /* extreme-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8442B4DA6DF004A2178 /* extreme-drizzle.json */; };
+		79B0D9312B4DA6E6004A2178 /* overcast-day-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8452B4DA6DF004A2178 /* overcast-day-rain.json */; };
+		79B0D9322B4DA6E6004A2178 /* snowman.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8462B4DA6DF004A2178 /* snowman.json */; };
+		79B0D9332B4DA6E6004A2178 /* star.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8472B4DA6DF004A2178 /* star.json */; };
+		79B0D9342B4DA6E6004A2178 /* partly-cloudy-night-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8482B4DA6DF004A2178 /* partly-cloudy-night-haze.json */; };
+		79B0D9352B4DA6E6004A2178 /* overcast-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8492B4DA6DF004A2178 /* overcast-smoke.json */; };
+		79B0D9362B4DA6E6004A2178 /* horizon.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D84A2B4DA6DF004A2178 /* horizon.json */; };
+		79B0D9372B4DA6E6004A2178 /* overcast-night-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D84B2B4DA6DF004A2178 /* overcast-night-snow.json */; };
+		79B0D9382B4DA6E6004A2178 /* thunderstorms-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D84C2B4DA6DF004A2178 /* thunderstorms-snow.json */; };
+		79B0D9392B4DA6E6004A2178 /* drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D84D2B4DA6E0004A2178 /* drizzle.json */; };
+		79B0D93A2B4DA6E6004A2178 /* lightning-bolt.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D84E2B4DA6E0004A2178 /* lightning-bolt.json */; };
+		79B0D93B2B4DA6E6004A2178 /* partly-cloudy-night-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D84F2B4DA6E0004A2178 /* partly-cloudy-night-drizzle.json */; };
+		79B0D93C2B4DA6E6004A2178 /* sunrise.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8502B4DA6E0004A2178 /* sunrise.json */; };
+		79B0D93D2B4DA6E6004A2178 /* extreme-night-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8512B4DA6E0004A2178 /* extreme-night-fog.json */; };
+		79B0D93E2B4DA6E6004A2178 /* partly-cloudy-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8522B4DA6E0004A2178 /* partly-cloudy-day.json */; };
+		79B0D93F2B4DA6E6004A2178 /* uv-index-8.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8532B4DA6E0004A2178 /* uv-index-8.json */; };
+		79B0D9402B4DA6E6004A2178 /* partly-cloudy-night-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8542B4DA6E0004A2178 /* partly-cloudy-night-smoke.json */; };
+		79B0D9412B4DA6E6004A2178 /* overcast-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8552B4DA6E0004A2178 /* overcast-night.json */; };
+		79B0D9422B4DA6E6004A2178 /* wind-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8562B4DA6E0004A2178 /* wind-snow.json */; };
+		79B0D9432B4DA6E6004A2178 /* wind-beaufort-8.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8572B4DA6E0004A2178 /* wind-beaufort-8.json */; };
+		79B0D9442B4DA6E6004A2178 /* cloud-up.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8582B4DA6E0004A2178 /* cloud-up.json */; };
+		79B0D9452B4DA6E6004A2178 /* alert-falling-rocks.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8592B4DA6E0004A2178 /* alert-falling-rocks.json */; };
+		79B0D9462B4DA6E6004A2178 /* partly-cloudy-day-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D85A2B4DA6E0004A2178 /* partly-cloudy-day-haze.json */; };
+		79B0D9472B4DA6E6004A2178 /* thunderstorms-night-overcast.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D85B2B4DA6E0004A2178 /* thunderstorms-night-overcast.json */; };
+		79B0D9482B4DA6E6004A2178 /* hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D85C2B4DA6E0004A2178 /* hail.json */; };
+		79B0D9492B4DA6E6004A2178 /* extreme-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D85D2B4DA6E0004A2178 /* extreme-smoke.json */; };
+		79B0D94A2B4DA6E6004A2178 /* partly-cloudy-day-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D85E2B4DA6E0004A2178 /* partly-cloudy-day-smoke.json */; };
+		79B0D94B2B4DA6E6004A2178 /* solar-eclipse.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D85F2B4DA6E0004A2178 /* solar-eclipse.json */; };
+		79B0D94C2B4DA6E6004A2178 /* tornado.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8602B4DA6E0004A2178 /* tornado.json */; };
+		79B0D94D2B4DA6E6004A2178 /* pressure-high-alt.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8612B4DA6E1004A2178 /* pressure-high-alt.json */; };
+		79B0D94E2B4DA6E6004A2178 /* raindrop-measure.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8622B4DA6E1004A2178 /* raindrop-measure.json */; };
+		79B0D94F2B4DA6E6004A2178 /* wind-offshore.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8632B4DA6E1004A2178 /* wind-offshore.json */; };
+		79B0D9502B4DA6E6004A2178 /* wind-onshore.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8642B4DA6E1004A2178 /* wind-onshore.json */; };
+		79B0D9512B4DA6E6004A2178 /* starry-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8652B4DA6E1004A2178 /* starry-night.json */; };
+		79B0D9522B4DA6E6004A2178 /* windsock.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8662B4DA6E1004A2178 /* windsock.json */; };
+		79B0D9532B4DA6E6004A2178 /* thunderstorms-extreme-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8672B4DA6E1004A2178 /* thunderstorms-extreme-rain.json */; };
+		79B0D9542B4DA6E6004A2178 /* extreme-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8682B4DA6E1004A2178 /* extreme-haze.json */; };
+		79B0D9552B4DA6E6004A2178 /* wind-beaufort-10.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8692B4DA6E1004A2178 /* wind-beaufort-10.json */; };
+		79B0D9562B4DA6E6004A2178 /* extreme-night-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D86A2B4DA6E1004A2178 /* extreme-night-sleet.json */; };
+		79B0D9572B4DA6E6004A2178 /* thermometer-glass.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D86B2B4DA6E1004A2178 /* thermometer-glass.json */; };
+		79B0D9582B4DA6E6004A2178 /* moon-full.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D86C2B4DA6E1004A2178 /* moon-full.json */; };
+		79B0D9592B4DA6E6004A2178 /* thunderstorms-night-overcast-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D86D2B4DA6E1004A2178 /* thunderstorms-night-overcast-rain.json */; };
+		79B0D95A2B4DA6E6004A2178 /* thermometer-moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D86E2B4DA6E1004A2178 /* thermometer-moon.json */; };
+		79B0D95B2B4DA6E6004A2178 /* overcast-night-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D86F2B4DA6E1004A2178 /* overcast-night-sleet.json */; };
+		79B0D95C2B4DA6E6004A2178 /* thermometer.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8702B4DA6E1004A2178 /* thermometer.json */; };
+		79B0D95D2B4DA6E6004A2178 /* celsius.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8712B4DA6E1004A2178 /* celsius.json */; };
+		79B0D95E2B4DA6E6004A2178 /* thunderstorms-night-overcast-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8722B4DA6E1004A2178 /* thunderstorms-night-overcast-snow.json */; };
+		79B0D95F2B4DA6E6004A2178 /* compass.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8732B4DA6E1004A2178 /* compass.json */; };
+		79B0D9602B4DA6E6004A2178 /* overcast-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8742B4DA6E1004A2178 /* overcast-day.json */; };
+		79B0D9612B4DA6E6004A2178 /* uv-index-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8752B4DA6E2004A2178 /* uv-index-1.json */; };
+		79B0D9622B4DA6E6004A2178 /* partly-cloudy-night-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8762B4DA6E2004A2178 /* partly-cloudy-night-fog.json */; };
+		79B0D9632B4DA6E6004A2178 /* thunderstorms-night-extreme-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8772B4DA6E2004A2178 /* thunderstorms-night-extreme-snow.json */; };
+		79B0D9642B4DA6E6004A2178 /* partly-cloudy-day-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8782B4DA6E2004A2178 /* partly-cloudy-day-snow.json */; };
+		79B0D9652B4DA6E6004A2178 /* thermometer-fahrenheit.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8792B4DA6E2004A2178 /* thermometer-fahrenheit.json */; };
+		79B0D9662B4DA6E6004A2178 /* glove.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D87A2B4DA6E2004A2178 /* glove.json */; };
+		79B0D9672B4DA6E6004A2178 /* overcast-day-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D87B2B4DA6E2004A2178 /* overcast-day-hail.json */; };
+		79B0D9682B4DA6E6004A2178 /* overcast-day-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D87C2B4DA6E2004A2178 /* overcast-day-smoke.json */; };
+		79B0D9692B4DA6E6004A2178 /* alert-avalanche-danger.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D87D2B4DA6E2004A2178 /* alert-avalanche-danger.json */; };
+		79B0D96A2B4DA6E6004A2178 /* thunderstorms-night-extreme-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D87E2B4DA6E2004A2178 /* thunderstorms-night-extreme-rain.json */; };
+		79B0D96B2B4DA6E6004A2178 /* time-late-afternoon.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D87F2B4DA6E2004A2178 /* time-late-afternoon.json */; };
+		79B0D96C2B4DA6E6004A2178 /* thunderstorms-day-extreme.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8802B4DA6E2004A2178 /* thunderstorms-day-extreme.json */; };
+		79B0D96D2B4DA6E6004A2178 /* uv-index-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8812B4DA6E2004A2178 /* uv-index-3.json */; };
+		79B0D96E2B4DA6E6004A2178 /* uv-index-5.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8822B4DA6E2004A2178 /* uv-index-5.json */; };
+		79B0D96F2B4DA6E6004A2178 /* overcast-night-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8832B4DA6E2004A2178 /* overcast-night-haze.json */; };
+		79B0D9702B4DA6E6004A2178 /* thunderstorms-overcast-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8842B4DA6E2004A2178 /* thunderstorms-overcast-rain.json */; };
+		79B0D9712B4DA6E6004A2178 /* sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8852B4DA6E2004A2178 /* sleet.json */; };
+		79B0D9722B4DA6E6004A2178 /* extreme-night-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8862B4DA6E2004A2178 /* extreme-night-smoke.json */; };
+		79B0D9732B4DA6E6004A2178 /* code-orange.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8872B4DA6E2004A2178 /* code-orange.json */; };
+		79B0D9742B4DA6E6004A2178 /* overcast-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8882B4DA6E3004A2178 /* overcast-haze.json */; };
+		79B0D9752B4DA6E6004A2178 /* overcast-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8892B4DA6E3004A2178 /* overcast-snow.json */; };
+		79B0D9762B4DA6E6004A2178 /* thunderstorms-night-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D88A2B4DA6E3004A2178 /* thunderstorms-night-snow.json */; };
+		79B0D9772B4DA6E6004A2178 /* extreme-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D88B2B4DA6E3004A2178 /* extreme-night.json */; };
+		79B0D9782B4DA6E6004A2178 /* partly-cloudy-night-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D88C2B4DA6E3004A2178 /* partly-cloudy-night-snow.json */; };
+		79B0D9792B4DA6E6004A2178 /* extreme-day-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D88D2B4DA6E3004A2178 /* extreme-day-smoke.json */; };
+		79B0D97A2B4DA6E6004A2178 /* flag-small-craft-advisory.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D88E2B4DA6E3004A2178 /* flag-small-craft-advisory.json */; };
+		79B0D97B2B4DA6E6004A2178 /* smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D88F2B4DA6E3004A2178 /* smoke.json */; };
+		79B0D97C2B4DA6E6004A2178 /* flag-storm-warning.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8902B4DA6E3004A2178 /* flag-storm-warning.json */; };
+		79B0D97D2B4DA6E6004A2178 /* extreme-day-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8912B4DA6E3004A2178 /* extreme-day-snow.json */; };
+		79B0D97E2B4DA6E6004A2178 /* thermometer-mercury-cold.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8922B4DA6E3004A2178 /* thermometer-mercury-cold.json */; };
+		79B0D97F2B4DA6E6004A2178 /* partly-cloudy-day-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8932B4DA6E3004A2178 /* partly-cloudy-day-hail.json */; };
+		79B0D9802B4DA6E6004A2178 /* wind-beaufort-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8942B4DA6E3004A2178 /* wind-beaufort-4.json */; };
+		79B0D9812B4DA6E6004A2178 /* partly-cloudy-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8952B4DA6E3004A2178 /* partly-cloudy-night.json */; };
+		79B0D9822B4DA6E6004A2178 /* wind-beaufort-7.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8962B4DA6E3004A2178 /* wind-beaufort-7.json */; };
+		79B0D9832B4DA6E6004A2178 /* falling-stars.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8972B4DA6E3004A2178 /* falling-stars.json */; };
+		79B0D9842B4DA6E6004A2178 /* dust-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8982B4DA6E3004A2178 /* dust-day.json */; };
+		79B0D9852B4DA6E6004A2178 /* clear-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8992B4DA6E3004A2178 /* clear-day.json */; };
+		79B0D9862B4DA6E6004A2178 /* uv-index-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D89A2B4DA6E3004A2178 /* uv-index-4.json */; };
+		79B0D9872B4DA6E6004A2178 /* flag-gale-warning.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D89B2B4DA6E3004A2178 /* flag-gale-warning.json */; };
+		79B0D9882B4DA6E6004A2178 /* thunderstorms-extreme.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D89C2B4DA6E4004A2178 /* thunderstorms-extreme.json */; };
+		79B0D9892B4DA6E6004A2178 /* time-morning.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D89D2B4DA6E4004A2178 /* time-morning.json */; };
+		79B0D98A2B4DA6E6004A2178 /* time-late-evening.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D89E2B4DA6E4004A2178 /* time-late-evening.json */; };
+		79B0D98B2B4DA6E6004A2178 /* overcast-night-smoke.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D89F2B4DA6E4004A2178 /* overcast-night-smoke.json */; };
+		79B0D98C2B4DA6E6004A2178 /* thermometer-mercury.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A02B4DA6E4004A2178 /* thermometer-mercury.json */; };
+		79B0D98D2B4DA6E6004A2178 /* uv-index-10.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A12B4DA6E4004A2178 /* uv-index-10.json */; };
+		79B0D98E2B4DA6E6004A2178 /* pressure-low.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A22B4DA6E4004A2178 /* pressure-low.json */; };
+		79B0D98F2B4DA6E6004A2178 /* thermometer-celsius.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A32B4DA6E4004A2178 /* thermometer-celsius.json */; };
+		79B0D9902B4DA6E6004A2178 /* fog-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A42B4DA6E4004A2178 /* fog-night.json */; };
+		79B0D9912B4DA6E6004A2178 /* time-late-morning.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A52B4DA6E4004A2178 /* time-late-morning.json */; };
+		79B0D9922B4DA6E6004A2178 /* uv-index-6.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A62B4DA6E4004A2178 /* uv-index-6.json */; };
+		79B0D9932B4DA6E6004A2178 /* thunderstorms-day-overcast-snow.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A72B4DA6E4004A2178 /* thunderstorms-day-overcast-snow.json */; };
+		79B0D9942B4DA6E6004A2178 /* umbrella-wind.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A82B4DA6E4004A2178 /* umbrella-wind.json */; };
+		79B0D9952B4DA6E6004A2178 /* overcast-drizzle.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8A92B4DA6E4004A2178 /* overcast-drizzle.json */; };
+		79B0D9962B4DA6E6004A2178 /* uv-index-7.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8AA2B4DA6E4004A2178 /* uv-index-7.json */; };
+		79B0D9972B4DA6E6004A2178 /* wind-beaufort-12.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8AB2B4DA6E4004A2178 /* wind-beaufort-12.json */; };
+		79B0D9982B4DA6E6004A2178 /* moonset.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8AC2B4DA6E4004A2178 /* moonset.json */; };
+		79B0D9992B4DA6E6004A2178 /* time-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8AD2B4DA6E4004A2178 /* time-night.json */; };
+		79B0D99A2B4DA6E6004A2178 /* clear-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8AE2B4DA6E4004A2178 /* clear-night.json */; };
+		79B0D99B2B4DA6E6004A2178 /* overcast-day-haze.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8AF2B4DA6E4004A2178 /* overcast-day-haze.json */; };
+		79B0D99C2B4DA6E6004A2178 /* extreme-fog.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B02B4DA6E5004A2178 /* extreme-fog.json */; };
+		79B0D99D2B4DA6E6004A2178 /* haze-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B12B4DA6E5004A2178 /* haze-night.json */; };
+		79B0D99E2B4DA6E6004A2178 /* rainbow-clear.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B22B4DA6E5004A2178 /* rainbow-clear.json */; };
+		79B0D99F2B4DA6E6004A2178 /* moon-waxing-gibbous.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B32B4DA6E5004A2178 /* moon-waxing-gibbous.json */; };
+		79B0D9A02B4DA6E6004A2178 /* overcast-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B42B4DA6E5004A2178 /* overcast-sleet.json */; };
+		79B0D9A12B4DA6E6004A2178 /* thunderstorms-day-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B52B4DA6E5004A2178 /* thunderstorms-day-rain.json */; };
+		79B0D9A22B4DA6E6004A2178 /* barometer.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B62B4DA6E5004A2178 /* barometer.json */; };
+		79B0D9A32B4DA6E6004A2178 /* pollen-tree.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B72B4DA6E5004A2178 /* pollen-tree.json */; };
+		79B0D9A42B4DA6E6004A2178 /* uv-index-9.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B82B4DA6E5004A2178 /* uv-index-9.json */; };
+		79B0D9A52B4DA6E6004A2178 /* extreme-night-hail.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8B92B4DA6E5004A2178 /* extreme-night-hail.json */; };
+		79B0D9A62B4DA6E6004A2178 /* partly-cloudy-night-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8BA2B4DA6E5004A2178 /* partly-cloudy-night-rain.json */; };
+		79B0D9A72B4DA6E6004A2178 /* partly-cloudy-night-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8BB2B4DA6E5004A2178 /* partly-cloudy-night-sleet.json */; };
+		79B0D9A82B4DA6E6004A2178 /* pressure-high.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8BC2B4DA6E5004A2178 /* pressure-high.json */; };
+		79B0D9A92B4DA6E6004A2178 /* umbrella-wind-alt.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8BD2B4DA6E5004A2178 /* umbrella-wind-alt.json */; };
+		79B0D9AA2B4DA6E6004A2178 /* time-afternoon.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8BE2B4DA6E5004A2178 /* time-afternoon.json */; };
+		79B0D9AB2B4DA6E6004A2178 /* extreme-rain.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8BF2B4DA6E5004A2178 /* extreme-rain.json */; };
+		79B0D9AC2B4DA6E6004A2178 /* extreme-day.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8C02B4DA6E5004A2178 /* extreme-day.json */; };
+		79B0D9AD2B4DA6E6004A2178 /* snowflake.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8C12B4DA6E5004A2178 /* snowflake.json */; };
+		79B0D9AE2B4DA6E6004A2178 /* smoke-particles.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8C22B4DA6E5004A2178 /* smoke-particles.json */; };
+		79B0D9AF2B4DA6E6004A2178 /* wind-beaufort-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8C32B4DA6E5004A2178 /* wind-beaufort-2.json */; };
+		79B0D9B02B4DA6E6004A2178 /* dust-night.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8C42B4DA6E6004A2178 /* dust-night.json */; };
+		79B0D9B12B4DA6E6004A2178 /* partly-cloudy-day-sleet.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B0D8C52B4DA6E6004A2178 /* partly-cloudy-day-sleet.json */; };
 		7C8D8584C006957BDD3EB4C4 /* Pods_whatseason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F98590EB53F4954B9836A /* Pods_whatseason.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +273,242 @@
 		799EAAAF2B445DBB006F7C14 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		799EAAB92B4472D1006F7C14 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		799EAAC82B449087006F7C14 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		79B0D7DA2B4DA6DA004A2178 /* extreme-day-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-haze.json"; sourceTree = "<group>"; };
+		79B0D7DB2B4DA6DA004A2178 /* thunderstorms-day-overcast-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-overcast-rain.json"; sourceTree = "<group>"; };
+		79B0D7DC2B4DA6DA004A2178 /* thunderstorms-night-extreme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-extreme.json"; sourceTree = "<group>"; };
+		79B0D7DD2B4DA6DA004A2178 /* thermometer-glass-fahrenheit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-glass-fahrenheit.json"; sourceTree = "<group>"; };
+		79B0D7DE2B4DA6DA004A2178 /* time-evening.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-evening.json"; sourceTree = "<group>"; };
+		79B0D7DF2B4DA6DA004A2178 /* flag-hurricane-warning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "flag-hurricane-warning.json"; sourceTree = "<group>"; };
+		79B0D7E02B4DA6DA004A2178 /* uv-index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index.json"; sourceTree = "<group>"; };
+		79B0D7E12B4DA6DA004A2178 /* time-late-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-late-night.json"; sourceTree = "<group>"; };
+		79B0D7E22B4DA6DA004A2178 /* thermometer-sun.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-sun.json"; sourceTree = "<group>"; };
+		79B0D7E32B4DA6DA004A2178 /* partly-cloudy-day-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-fog.json"; sourceTree = "<group>"; };
+		79B0D7E42B4DA6DA004A2178 /* thermometer-glass-celsius.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-glass-celsius.json"; sourceTree = "<group>"; };
+		79B0D7E52B4DA6DA004A2178 /* moon-waning-crescent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-waning-crescent.json"; sourceTree = "<group>"; };
+		79B0D7E62B4DA6DA004A2178 /* thunderstorms-day-extreme-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-extreme-snow.json"; sourceTree = "<group>"; };
+		79B0D7E72B4DA6DB004A2178 /* uv-index-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-2.json"; sourceTree = "<group>"; };
+		79B0D7E82B4DA6DB004A2178 /* wind.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wind.json; sourceTree = "<group>"; };
+		79B0D7E92B4DA6DB004A2178 /* thunderstorms-day-overcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-overcast.json"; sourceTree = "<group>"; };
+		79B0D7EA2B4DA6DB004A2178 /* not-available.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "not-available.json"; sourceTree = "<group>"; };
+		79B0D7EB2B4DA6DB004A2178 /* sunset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunset.json; sourceTree = "<group>"; };
+		79B0D7EC2B4DA6DB004A2178 /* mist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mist.json; sourceTree = "<group>"; };
+		79B0D7ED2B4DA6DB004A2178 /* haze-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "haze-day.json"; sourceTree = "<group>"; };
+		79B0D7EE2B4DA6DB004A2178 /* overcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = overcast.json; sourceTree = "<group>"; };
+		79B0D7EF2B4DA6DB004A2178 /* thunderstorms-overcast-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-overcast-snow.json"; sourceTree = "<group>"; };
+		79B0D7F02B4DA6DB004A2178 /* raindrops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = raindrops.json; sourceTree = "<group>"; };
+		79B0D7F12B4DA6DB004A2178 /* thunderstorms-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day.json"; sourceTree = "<group>"; };
+		79B0D7F22B4DA6DB004A2178 /* wind-beaufort-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-1.json"; sourceTree = "<group>"; };
+		79B0D7F32B4DA6DB004A2178 /* thunderstorms-night-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-rain.json"; sourceTree = "<group>"; };
+		79B0D7F42B4DA6DB004A2178 /* dust-wind.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dust-wind.json"; sourceTree = "<group>"; };
+		79B0D7F52B4DA6DB004A2178 /* thermometer-raindrop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-raindrop.json"; sourceTree = "<group>"; };
+		79B0D7F62B4DA6DB004A2178 /* code-yellow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "code-yellow.json"; sourceTree = "<group>"; };
+		79B0D7F72B4DA6DB004A2178 /* overcast-day-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-drizzle.json"; sourceTree = "<group>"; };
+		79B0D7F82B4DA6DB004A2178 /* pollen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pollen.json; sourceTree = "<group>"; };
+		79B0D7F92B4DA6DB004A2178 /* overcast-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-rain.json"; sourceTree = "<group>"; };
+		79B0D7FA2B4DA6DB004A2178 /* overcast-night-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-drizzle.json"; sourceTree = "<group>"; };
+		79B0D7FB2B4DA6DB004A2178 /* extreme-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-hail.json"; sourceTree = "<group>"; };
+		79B0D7FC2B4DA6DC004A2178 /* partly-cloudy-day-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-rain.json"; sourceTree = "<group>"; };
+		79B0D7FD2B4DA6DC004A2178 /* partly-cloudy-night-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-hail.json"; sourceTree = "<group>"; };
+		79B0D7FE2B4DA6DC004A2178 /* wind-beaufort-6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-6.json"; sourceTree = "<group>"; };
+		79B0D7FF2B4DA6DC004A2178 /* thunderstorms-overcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-overcast.json"; sourceTree = "<group>"; };
+		79B0D8002B4DA6DC004A2178 /* partly-cloudy-day-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-drizzle.json"; sourceTree = "<group>"; };
+		79B0D8012B4DA6DC004A2178 /* wind-beaufort-9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-9.json"; sourceTree = "<group>"; };
+		79B0D8022B4DA6DC004A2178 /* humidity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = humidity.json; sourceTree = "<group>"; };
+		79B0D8032B4DA6DC004A2178 /* fahrenheit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fahrenheit.json; sourceTree = "<group>"; };
+		79B0D8042B4DA6DC004A2178 /* wind-beaufort-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-0.json"; sourceTree = "<group>"; };
+		79B0D8052B4DA6DC004A2178 /* extreme-night-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-rain.json"; sourceTree = "<group>"; };
+		79B0D8062B4DA6DC004A2178 /* haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = haze.json; sourceTree = "<group>"; };
+		79B0D8072B4DA6DC004A2178 /* wind-beaufort-5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-5.json"; sourceTree = "<group>"; };
+		79B0D8082B4DA6DC004A2178 /* thunderstorms-extreme-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-extreme-snow.json"; sourceTree = "<group>"; };
+		79B0D8092B4DA6DC004A2178 /* thermometer-warmer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-warmer.json"; sourceTree = "<group>"; };
+		79B0D80A2B4DA6DC004A2178 /* rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rain.json; sourceTree = "<group>"; };
+		79B0D80B2B4DA6DC004A2178 /* windsock-weak.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "windsock-weak.json"; sourceTree = "<group>"; };
+		79B0D80C2B4DA6DC004A2178 /* uv-index-11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-11.json"; sourceTree = "<group>"; };
+		79B0D80D2B4DA6DC004A2178 /* pollen-grass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pollen-grass.json"; sourceTree = "<group>"; };
+		79B0D80E2B4DA6DC004A2178 /* snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snow.json; sourceTree = "<group>"; };
+		79B0D80F2B4DA6DC004A2178 /* moon-first-quarter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-first-quarter.json"; sourceTree = "<group>"; };
+		79B0D8102B4DA6DC004A2178 /* wind-beaufort-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-3.json"; sourceTree = "<group>"; };
+		79B0D8112B4DA6DD004A2178 /* moon-new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-new.json"; sourceTree = "<group>"; };
+		79B0D8122B4DA6DD004A2178 /* fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fog.json; sourceTree = "<group>"; };
+		79B0D8132B4DA6DD004A2178 /* overcast-night-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-hail.json"; sourceTree = "<group>"; };
+		79B0D8142B4DA6DD004A2178 /* extreme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = extreme.json; sourceTree = "<group>"; };
+		79B0D8152B4DA6DD004A2178 /* dust.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dust.json; sourceTree = "<group>"; };
+		79B0D8162B4DA6DD004A2178 /* extreme-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-snow.json"; sourceTree = "<group>"; };
+		79B0D8172B4DA6DD004A2178 /* raindrop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = raindrop.json; sourceTree = "<group>"; };
+		79B0D8182B4DA6DD004A2178 /* code-green.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "code-green.json"; sourceTree = "<group>"; };
+		79B0D8192B4DA6DD004A2178 /* thunderstorms-day-extreme-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-extreme-rain.json"; sourceTree = "<group>"; };
+		79B0D81A2B4DA6DD004A2178 /* code-red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "code-red.json"; sourceTree = "<group>"; };
+		79B0D81B2B4DA6DD004A2178 /* fog-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fog-day.json"; sourceTree = "<group>"; };
+		79B0D81C2B4DA6DD004A2178 /* thunderstorms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thunderstorms.json; sourceTree = "<group>"; };
+		79B0D81D2B4DA6DD004A2178 /* tide-low.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tide-low.json"; sourceTree = "<group>"; };
+		79B0D81E2B4DA6DD004A2178 /* thermometer-water.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-water.json"; sourceTree = "<group>"; };
+		79B0D81F2B4DA6DD004A2178 /* pressure-low-alt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pressure-low-alt.json"; sourceTree = "<group>"; };
+		79B0D8202B4DA6DD004A2178 /* moon-waning-gibbous.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-waning-gibbous.json"; sourceTree = "<group>"; };
+		79B0D8212B4DA6DD004A2178 /* thermometer-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-snow.json"; sourceTree = "<group>"; };
+		79B0D8222B4DA6DD004A2178 /* wind-beaufort-11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-11.json"; sourceTree = "<group>"; };
+		79B0D8232B4DA6DD004A2178 /* extreme-day-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-rain.json"; sourceTree = "<group>"; };
+		79B0D8242B4DA6DE004A2178 /* tide-high.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tide-high.json"; sourceTree = "<group>"; };
+		79B0D8252B4DA6DE004A2178 /* sun-hot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sun-hot.json"; sourceTree = "<group>"; };
+		79B0D8262B4DA6DE004A2178 /* extreme-night-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-haze.json"; sourceTree = "<group>"; };
+		79B0D8272B4DA6DE004A2178 /* wind-alert.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-alert.json"; sourceTree = "<group>"; };
+		79B0D8282B4DA6DE004A2178 /* moon-last-quarter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-last-quarter.json"; sourceTree = "<group>"; };
+		79B0D8292B4DA6DE004A2178 /* thermometer-colder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-colder.json"; sourceTree = "<group>"; };
+		79B0D82A2B4DA6DE004A2178 /* overcast-night-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-fog.json"; sourceTree = "<group>"; };
+		79B0D82B2B4DA6DE004A2178 /* beanie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beanie.json; sourceTree = "<group>"; };
+		79B0D82C2B4DA6DE004A2178 /* extreme-day-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-hail.json"; sourceTree = "<group>"; };
+		79B0D82D2B4DA6DE004A2178 /* rainbow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rainbow.json; sourceTree = "<group>"; };
+		79B0D82E2B4DA6DE004A2178 /* moonrise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moonrise.json; sourceTree = "<group>"; };
+		79B0D82F2B4DA6DE004A2178 /* overcast-day-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-fog.json"; sourceTree = "<group>"; };
+		79B0D8302B4DA6DE004A2178 /* overcast-night-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-rain.json"; sourceTree = "<group>"; };
+		79B0D8312B4DA6DE004A2178 /* cloudy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cloudy.json; sourceTree = "<group>"; };
+		79B0D8322B4DA6DE004A2178 /* extreme-night-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-drizzle.json"; sourceTree = "<group>"; };
+		79B0D8332B4DA6DE004A2178 /* overcast-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-fog.json"; sourceTree = "<group>"; };
+		79B0D8342B4DA6DE004A2178 /* cloud-down.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cloud-down.json"; sourceTree = "<group>"; };
+		79B0D8352B4DA6DE004A2178 /* moon-waxing-crescent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-waxing-crescent.json"; sourceTree = "<group>"; };
+		79B0D8362B4DA6DE004A2178 /* thunderstorms-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-rain.json"; sourceTree = "<group>"; };
+		79B0D8372B4DA6DE004A2178 /* extreme-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-sleet.json"; sourceTree = "<group>"; };
+		79B0D8382B4DA6DE004A2178 /* thunderstorms-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night.json"; sourceTree = "<group>"; };
+		79B0D8392B4DA6DF004A2178 /* extreme-night-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-snow.json"; sourceTree = "<group>"; };
+		79B0D83A2B4DA6DF004A2178 /* overcast-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-hail.json"; sourceTree = "<group>"; };
+		79B0D83B2B4DA6DF004A2178 /* thunderstorms-day-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-snow.json"; sourceTree = "<group>"; };
+		79B0D83C2B4DA6DF004A2178 /* overcast-day-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-sleet.json"; sourceTree = "<group>"; };
+		79B0D83D2B4DA6DF004A2178 /* umbrella.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = umbrella.json; sourceTree = "<group>"; };
+		79B0D83E2B4DA6DF004A2178 /* extreme-day-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-sleet.json"; sourceTree = "<group>"; };
+		79B0D83F2B4DA6DF004A2178 /* extreme-day-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-fog.json"; sourceTree = "<group>"; };
+		79B0D8402B4DA6DF004A2178 /* overcast-day-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-snow.json"; sourceTree = "<group>"; };
+		79B0D8412B4DA6DF004A2178 /* hurricane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hurricane.json; sourceTree = "<group>"; };
+		79B0D8422B4DA6DF004A2178 /* extreme-day-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-drizzle.json"; sourceTree = "<group>"; };
+		79B0D8432B4DA6DF004A2178 /* pollen-flower.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pollen-flower.json"; sourceTree = "<group>"; };
+		79B0D8442B4DA6DF004A2178 /* extreme-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-drizzle.json"; sourceTree = "<group>"; };
+		79B0D8452B4DA6DF004A2178 /* overcast-day-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-rain.json"; sourceTree = "<group>"; };
+		79B0D8462B4DA6DF004A2178 /* snowman.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snowman.json; sourceTree = "<group>"; };
+		79B0D8472B4DA6DF004A2178 /* star.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = star.json; sourceTree = "<group>"; };
+		79B0D8482B4DA6DF004A2178 /* partly-cloudy-night-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-haze.json"; sourceTree = "<group>"; };
+		79B0D8492B4DA6DF004A2178 /* overcast-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-smoke.json"; sourceTree = "<group>"; };
+		79B0D84A2B4DA6DF004A2178 /* horizon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = horizon.json; sourceTree = "<group>"; };
+		79B0D84B2B4DA6DF004A2178 /* overcast-night-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-snow.json"; sourceTree = "<group>"; };
+		79B0D84C2B4DA6DF004A2178 /* thunderstorms-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-snow.json"; sourceTree = "<group>"; };
+		79B0D84D2B4DA6E0004A2178 /* drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = drizzle.json; sourceTree = "<group>"; };
+		79B0D84E2B4DA6E0004A2178 /* lightning-bolt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lightning-bolt.json"; sourceTree = "<group>"; };
+		79B0D84F2B4DA6E0004A2178 /* partly-cloudy-night-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-drizzle.json"; sourceTree = "<group>"; };
+		79B0D8502B4DA6E0004A2178 /* sunrise.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sunrise.json; sourceTree = "<group>"; };
+		79B0D8512B4DA6E0004A2178 /* extreme-night-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-fog.json"; sourceTree = "<group>"; };
+		79B0D8522B4DA6E0004A2178 /* partly-cloudy-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day.json"; sourceTree = "<group>"; };
+		79B0D8532B4DA6E0004A2178 /* uv-index-8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-8.json"; sourceTree = "<group>"; };
+		79B0D8542B4DA6E0004A2178 /* partly-cloudy-night-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-smoke.json"; sourceTree = "<group>"; };
+		79B0D8552B4DA6E0004A2178 /* overcast-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night.json"; sourceTree = "<group>"; };
+		79B0D8562B4DA6E0004A2178 /* wind-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-snow.json"; sourceTree = "<group>"; };
+		79B0D8572B4DA6E0004A2178 /* wind-beaufort-8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-8.json"; sourceTree = "<group>"; };
+		79B0D8582B4DA6E0004A2178 /* cloud-up.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cloud-up.json"; sourceTree = "<group>"; };
+		79B0D8592B4DA6E0004A2178 /* alert-falling-rocks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "alert-falling-rocks.json"; sourceTree = "<group>"; };
+		79B0D85A2B4DA6E0004A2178 /* partly-cloudy-day-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-haze.json"; sourceTree = "<group>"; };
+		79B0D85B2B4DA6E0004A2178 /* thunderstorms-night-overcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-overcast.json"; sourceTree = "<group>"; };
+		79B0D85C2B4DA6E0004A2178 /* hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hail.json; sourceTree = "<group>"; };
+		79B0D85D2B4DA6E0004A2178 /* extreme-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-smoke.json"; sourceTree = "<group>"; };
+		79B0D85E2B4DA6E0004A2178 /* partly-cloudy-day-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-smoke.json"; sourceTree = "<group>"; };
+		79B0D85F2B4DA6E0004A2178 /* solar-eclipse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "solar-eclipse.json"; sourceTree = "<group>"; };
+		79B0D8602B4DA6E0004A2178 /* tornado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tornado.json; sourceTree = "<group>"; };
+		79B0D8612B4DA6E1004A2178 /* pressure-high-alt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pressure-high-alt.json"; sourceTree = "<group>"; };
+		79B0D8622B4DA6E1004A2178 /* raindrop-measure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "raindrop-measure.json"; sourceTree = "<group>"; };
+		79B0D8632B4DA6E1004A2178 /* wind-offshore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-offshore.json"; sourceTree = "<group>"; };
+		79B0D8642B4DA6E1004A2178 /* wind-onshore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-onshore.json"; sourceTree = "<group>"; };
+		79B0D8652B4DA6E1004A2178 /* starry-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "starry-night.json"; sourceTree = "<group>"; };
+		79B0D8662B4DA6E1004A2178 /* windsock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = windsock.json; sourceTree = "<group>"; };
+		79B0D8672B4DA6E1004A2178 /* thunderstorms-extreme-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-extreme-rain.json"; sourceTree = "<group>"; };
+		79B0D8682B4DA6E1004A2178 /* extreme-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-haze.json"; sourceTree = "<group>"; };
+		79B0D8692B4DA6E1004A2178 /* wind-beaufort-10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-10.json"; sourceTree = "<group>"; };
+		79B0D86A2B4DA6E1004A2178 /* extreme-night-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-sleet.json"; sourceTree = "<group>"; };
+		79B0D86B2B4DA6E1004A2178 /* thermometer-glass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-glass.json"; sourceTree = "<group>"; };
+		79B0D86C2B4DA6E1004A2178 /* moon-full.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-full.json"; sourceTree = "<group>"; };
+		79B0D86D2B4DA6E1004A2178 /* thunderstorms-night-overcast-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-overcast-rain.json"; sourceTree = "<group>"; };
+		79B0D86E2B4DA6E1004A2178 /* thermometer-moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-moon.json"; sourceTree = "<group>"; };
+		79B0D86F2B4DA6E1004A2178 /* overcast-night-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-sleet.json"; sourceTree = "<group>"; };
+		79B0D8702B4DA6E1004A2178 /* thermometer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thermometer.json; sourceTree = "<group>"; };
+		79B0D8712B4DA6E1004A2178 /* celsius.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = celsius.json; sourceTree = "<group>"; };
+		79B0D8722B4DA6E1004A2178 /* thunderstorms-night-overcast-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-overcast-snow.json"; sourceTree = "<group>"; };
+		79B0D8732B4DA6E1004A2178 /* compass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compass.json; sourceTree = "<group>"; };
+		79B0D8742B4DA6E1004A2178 /* overcast-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day.json"; sourceTree = "<group>"; };
+		79B0D8752B4DA6E2004A2178 /* uv-index-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-1.json"; sourceTree = "<group>"; };
+		79B0D8762B4DA6E2004A2178 /* partly-cloudy-night-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-fog.json"; sourceTree = "<group>"; };
+		79B0D8772B4DA6E2004A2178 /* thunderstorms-night-extreme-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-extreme-snow.json"; sourceTree = "<group>"; };
+		79B0D8782B4DA6E2004A2178 /* partly-cloudy-day-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-snow.json"; sourceTree = "<group>"; };
+		79B0D8792B4DA6E2004A2178 /* thermometer-fahrenheit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-fahrenheit.json"; sourceTree = "<group>"; };
+		79B0D87A2B4DA6E2004A2178 /* glove.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glove.json; sourceTree = "<group>"; };
+		79B0D87B2B4DA6E2004A2178 /* overcast-day-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-hail.json"; sourceTree = "<group>"; };
+		79B0D87C2B4DA6E2004A2178 /* overcast-day-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-smoke.json"; sourceTree = "<group>"; };
+		79B0D87D2B4DA6E2004A2178 /* alert-avalanche-danger.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "alert-avalanche-danger.json"; sourceTree = "<group>"; };
+		79B0D87E2B4DA6E2004A2178 /* thunderstorms-night-extreme-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-extreme-rain.json"; sourceTree = "<group>"; };
+		79B0D87F2B4DA6E2004A2178 /* time-late-afternoon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-late-afternoon.json"; sourceTree = "<group>"; };
+		79B0D8802B4DA6E2004A2178 /* thunderstorms-day-extreme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-extreme.json"; sourceTree = "<group>"; };
+		79B0D8812B4DA6E2004A2178 /* uv-index-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-3.json"; sourceTree = "<group>"; };
+		79B0D8822B4DA6E2004A2178 /* uv-index-5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-5.json"; sourceTree = "<group>"; };
+		79B0D8832B4DA6E2004A2178 /* overcast-night-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-haze.json"; sourceTree = "<group>"; };
+		79B0D8842B4DA6E2004A2178 /* thunderstorms-overcast-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-overcast-rain.json"; sourceTree = "<group>"; };
+		79B0D8852B4DA6E2004A2178 /* sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sleet.json; sourceTree = "<group>"; };
+		79B0D8862B4DA6E2004A2178 /* extreme-night-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-smoke.json"; sourceTree = "<group>"; };
+		79B0D8872B4DA6E2004A2178 /* code-orange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "code-orange.json"; sourceTree = "<group>"; };
+		79B0D8882B4DA6E3004A2178 /* overcast-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-haze.json"; sourceTree = "<group>"; };
+		79B0D8892B4DA6E3004A2178 /* overcast-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-snow.json"; sourceTree = "<group>"; };
+		79B0D88A2B4DA6E3004A2178 /* thunderstorms-night-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-night-snow.json"; sourceTree = "<group>"; };
+		79B0D88B2B4DA6E3004A2178 /* extreme-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night.json"; sourceTree = "<group>"; };
+		79B0D88C2B4DA6E3004A2178 /* partly-cloudy-night-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-snow.json"; sourceTree = "<group>"; };
+		79B0D88D2B4DA6E3004A2178 /* extreme-day-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-smoke.json"; sourceTree = "<group>"; };
+		79B0D88E2B4DA6E3004A2178 /* flag-small-craft-advisory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "flag-small-craft-advisory.json"; sourceTree = "<group>"; };
+		79B0D88F2B4DA6E3004A2178 /* smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smoke.json; sourceTree = "<group>"; };
+		79B0D8902B4DA6E3004A2178 /* flag-storm-warning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "flag-storm-warning.json"; sourceTree = "<group>"; };
+		79B0D8912B4DA6E3004A2178 /* extreme-day-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day-snow.json"; sourceTree = "<group>"; };
+		79B0D8922B4DA6E3004A2178 /* thermometer-mercury-cold.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-mercury-cold.json"; sourceTree = "<group>"; };
+		79B0D8932B4DA6E3004A2178 /* partly-cloudy-day-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-hail.json"; sourceTree = "<group>"; };
+		79B0D8942B4DA6E3004A2178 /* wind-beaufort-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-4.json"; sourceTree = "<group>"; };
+		79B0D8952B4DA6E3004A2178 /* partly-cloudy-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night.json"; sourceTree = "<group>"; };
+		79B0D8962B4DA6E3004A2178 /* wind-beaufort-7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-7.json"; sourceTree = "<group>"; };
+		79B0D8972B4DA6E3004A2178 /* falling-stars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "falling-stars.json"; sourceTree = "<group>"; };
+		79B0D8982B4DA6E3004A2178 /* dust-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dust-day.json"; sourceTree = "<group>"; };
+		79B0D8992B4DA6E3004A2178 /* clear-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-day.json"; sourceTree = "<group>"; };
+		79B0D89A2B4DA6E3004A2178 /* uv-index-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-4.json"; sourceTree = "<group>"; };
+		79B0D89B2B4DA6E3004A2178 /* flag-gale-warning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "flag-gale-warning.json"; sourceTree = "<group>"; };
+		79B0D89C2B4DA6E4004A2178 /* thunderstorms-extreme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-extreme.json"; sourceTree = "<group>"; };
+		79B0D89D2B4DA6E4004A2178 /* time-morning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-morning.json"; sourceTree = "<group>"; };
+		79B0D89E2B4DA6E4004A2178 /* time-late-evening.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-late-evening.json"; sourceTree = "<group>"; };
+		79B0D89F2B4DA6E4004A2178 /* overcast-night-smoke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-night-smoke.json"; sourceTree = "<group>"; };
+		79B0D8A02B4DA6E4004A2178 /* thermometer-mercury.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-mercury.json"; sourceTree = "<group>"; };
+		79B0D8A12B4DA6E4004A2178 /* uv-index-10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-10.json"; sourceTree = "<group>"; };
+		79B0D8A22B4DA6E4004A2178 /* pressure-low.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pressure-low.json"; sourceTree = "<group>"; };
+		79B0D8A32B4DA6E4004A2178 /* thermometer-celsius.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thermometer-celsius.json"; sourceTree = "<group>"; };
+		79B0D8A42B4DA6E4004A2178 /* fog-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fog-night.json"; sourceTree = "<group>"; };
+		79B0D8A52B4DA6E4004A2178 /* time-late-morning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-late-morning.json"; sourceTree = "<group>"; };
+		79B0D8A62B4DA6E4004A2178 /* uv-index-6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-6.json"; sourceTree = "<group>"; };
+		79B0D8A72B4DA6E4004A2178 /* thunderstorms-day-overcast-snow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-overcast-snow.json"; sourceTree = "<group>"; };
+		79B0D8A82B4DA6E4004A2178 /* umbrella-wind.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "umbrella-wind.json"; sourceTree = "<group>"; };
+		79B0D8A92B4DA6E4004A2178 /* overcast-drizzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-drizzle.json"; sourceTree = "<group>"; };
+		79B0D8AA2B4DA6E4004A2178 /* uv-index-7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-7.json"; sourceTree = "<group>"; };
+		79B0D8AB2B4DA6E4004A2178 /* wind-beaufort-12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-12.json"; sourceTree = "<group>"; };
+		79B0D8AC2B4DA6E4004A2178 /* moonset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moonset.json; sourceTree = "<group>"; };
+		79B0D8AD2B4DA6E4004A2178 /* time-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-night.json"; sourceTree = "<group>"; };
+		79B0D8AE2B4DA6E4004A2178 /* clear-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-night.json"; sourceTree = "<group>"; };
+		79B0D8AF2B4DA6E4004A2178 /* overcast-day-haze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-day-haze.json"; sourceTree = "<group>"; };
+		79B0D8B02B4DA6E5004A2178 /* extreme-fog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-fog.json"; sourceTree = "<group>"; };
+		79B0D8B12B4DA6E5004A2178 /* haze-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "haze-night.json"; sourceTree = "<group>"; };
+		79B0D8B22B4DA6E5004A2178 /* rainbow-clear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rainbow-clear.json"; sourceTree = "<group>"; };
+		79B0D8B32B4DA6E5004A2178 /* moon-waxing-gibbous.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "moon-waxing-gibbous.json"; sourceTree = "<group>"; };
+		79B0D8B42B4DA6E5004A2178 /* overcast-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "overcast-sleet.json"; sourceTree = "<group>"; };
+		79B0D8B52B4DA6E5004A2178 /* thunderstorms-day-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "thunderstorms-day-rain.json"; sourceTree = "<group>"; };
+		79B0D8B62B4DA6E5004A2178 /* barometer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = barometer.json; sourceTree = "<group>"; };
+		79B0D8B72B4DA6E5004A2178 /* pollen-tree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pollen-tree.json"; sourceTree = "<group>"; };
+		79B0D8B82B4DA6E5004A2178 /* uv-index-9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uv-index-9.json"; sourceTree = "<group>"; };
+		79B0D8B92B4DA6E5004A2178 /* extreme-night-hail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-night-hail.json"; sourceTree = "<group>"; };
+		79B0D8BA2B4DA6E5004A2178 /* partly-cloudy-night-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-rain.json"; sourceTree = "<group>"; };
+		79B0D8BB2B4DA6E5004A2178 /* partly-cloudy-night-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-night-sleet.json"; sourceTree = "<group>"; };
+		79B0D8BC2B4DA6E5004A2178 /* pressure-high.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pressure-high.json"; sourceTree = "<group>"; };
+		79B0D8BD2B4DA6E5004A2178 /* umbrella-wind-alt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "umbrella-wind-alt.json"; sourceTree = "<group>"; };
+		79B0D8BE2B4DA6E5004A2178 /* time-afternoon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "time-afternoon.json"; sourceTree = "<group>"; };
+		79B0D8BF2B4DA6E5004A2178 /* extreme-rain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-rain.json"; sourceTree = "<group>"; };
+		79B0D8C02B4DA6E5004A2178 /* extreme-day.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "extreme-day.json"; sourceTree = "<group>"; };
+		79B0D8C12B4DA6E5004A2178 /* snowflake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = snowflake.json; sourceTree = "<group>"; };
+		79B0D8C22B4DA6E5004A2178 /* smoke-particles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "smoke-particles.json"; sourceTree = "<group>"; };
+		79B0D8C32B4DA6E5004A2178 /* wind-beaufort-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "wind-beaufort-2.json"; sourceTree = "<group>"; };
+		79B0D8C42B4DA6E6004A2178 /* dust-night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dust-night.json"; sourceTree = "<group>"; };
+		79B0D8C52B4DA6E6004A2178 /* partly-cloudy-day-sleet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "partly-cloudy-day-sleet.json"; sourceTree = "<group>"; };
 		85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.release.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.release.xcconfig"; sourceTree = "<group>"; };
 		A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.debug.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,11 +597,255 @@
 		799EAAAE2B445D23006F7C14 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				79B0D7D92B4DA6C5004A2178 /* Lottie */,
 				790621D82B4439B800D50F45 /* Assets.xcassets */,
 				799EAAC82B449087006F7C14 /* Main.storyboard */,
 				790621DA2B4439B800D50F45 /* LaunchScreen.storyboard */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		79B0D7D92B4DA6C5004A2178 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				79B0D87D2B4DA6E2004A2178 /* alert-avalanche-danger.json */,
+				79B0D8592B4DA6E0004A2178 /* alert-falling-rocks.json */,
+				79B0D8B62B4DA6E5004A2178 /* barometer.json */,
+				79B0D82B2B4DA6DE004A2178 /* beanie.json */,
+				79B0D8712B4DA6E1004A2178 /* celsius.json */,
+				79B0D8992B4DA6E3004A2178 /* clear-day.json */,
+				79B0D8AE2B4DA6E4004A2178 /* clear-night.json */,
+				79B0D8342B4DA6DE004A2178 /* cloud-down.json */,
+				79B0D8582B4DA6E0004A2178 /* cloud-up.json */,
+				79B0D8312B4DA6DE004A2178 /* cloudy.json */,
+				79B0D8182B4DA6DD004A2178 /* code-green.json */,
+				79B0D8872B4DA6E2004A2178 /* code-orange.json */,
+				79B0D81A2B4DA6DD004A2178 /* code-red.json */,
+				79B0D7F62B4DA6DB004A2178 /* code-yellow.json */,
+				79B0D8732B4DA6E1004A2178 /* compass.json */,
+				79B0D84D2B4DA6E0004A2178 /* drizzle.json */,
+				79B0D8982B4DA6E3004A2178 /* dust-day.json */,
+				79B0D8C42B4DA6E6004A2178 /* dust-night.json */,
+				79B0D7F42B4DA6DB004A2178 /* dust-wind.json */,
+				79B0D8152B4DA6DD004A2178 /* dust.json */,
+				79B0D8422B4DA6DF004A2178 /* extreme-day-drizzle.json */,
+				79B0D83F2B4DA6DF004A2178 /* extreme-day-fog.json */,
+				79B0D82C2B4DA6DE004A2178 /* extreme-day-hail.json */,
+				79B0D7DA2B4DA6DA004A2178 /* extreme-day-haze.json */,
+				79B0D8232B4DA6DD004A2178 /* extreme-day-rain.json */,
+				79B0D83E2B4DA6DF004A2178 /* extreme-day-sleet.json */,
+				79B0D88D2B4DA6E3004A2178 /* extreme-day-smoke.json */,
+				79B0D8912B4DA6E3004A2178 /* extreme-day-snow.json */,
+				79B0D8C02B4DA6E5004A2178 /* extreme-day.json */,
+				79B0D8442B4DA6DF004A2178 /* extreme-drizzle.json */,
+				79B0D8B02B4DA6E5004A2178 /* extreme-fog.json */,
+				79B0D7FB2B4DA6DB004A2178 /* extreme-hail.json */,
+				79B0D8682B4DA6E1004A2178 /* extreme-haze.json */,
+				79B0D8322B4DA6DE004A2178 /* extreme-night-drizzle.json */,
+				79B0D8512B4DA6E0004A2178 /* extreme-night-fog.json */,
+				79B0D8B92B4DA6E5004A2178 /* extreme-night-hail.json */,
+				79B0D8262B4DA6DE004A2178 /* extreme-night-haze.json */,
+				79B0D8052B4DA6DC004A2178 /* extreme-night-rain.json */,
+				79B0D86A2B4DA6E1004A2178 /* extreme-night-sleet.json */,
+				79B0D8862B4DA6E2004A2178 /* extreme-night-smoke.json */,
+				79B0D8392B4DA6DF004A2178 /* extreme-night-snow.json */,
+				79B0D88B2B4DA6E3004A2178 /* extreme-night.json */,
+				79B0D8BF2B4DA6E5004A2178 /* extreme-rain.json */,
+				79B0D8372B4DA6DE004A2178 /* extreme-sleet.json */,
+				79B0D85D2B4DA6E0004A2178 /* extreme-smoke.json */,
+				79B0D8162B4DA6DD004A2178 /* extreme-snow.json */,
+				79B0D8142B4DA6DD004A2178 /* extreme.json */,
+				79B0D8032B4DA6DC004A2178 /* fahrenheit.json */,
+				79B0D8972B4DA6E3004A2178 /* falling-stars.json */,
+				79B0D89B2B4DA6E3004A2178 /* flag-gale-warning.json */,
+				79B0D7DF2B4DA6DA004A2178 /* flag-hurricane-warning.json */,
+				79B0D88E2B4DA6E3004A2178 /* flag-small-craft-advisory.json */,
+				79B0D8902B4DA6E3004A2178 /* flag-storm-warning.json */,
+				79B0D81B2B4DA6DD004A2178 /* fog-day.json */,
+				79B0D8A42B4DA6E4004A2178 /* fog-night.json */,
+				79B0D8122B4DA6DD004A2178 /* fog.json */,
+				79B0D87A2B4DA6E2004A2178 /* glove.json */,
+				79B0D85C2B4DA6E0004A2178 /* hail.json */,
+				79B0D7ED2B4DA6DB004A2178 /* haze-day.json */,
+				79B0D8B12B4DA6E5004A2178 /* haze-night.json */,
+				79B0D8062B4DA6DC004A2178 /* haze.json */,
+				79B0D84A2B4DA6DF004A2178 /* horizon.json */,
+				79B0D8022B4DA6DC004A2178 /* humidity.json */,
+				79B0D8412B4DA6DF004A2178 /* hurricane.json */,
+				79B0D84E2B4DA6E0004A2178 /* lightning-bolt.json */,
+				79B0D7EC2B4DA6DB004A2178 /* mist.json */,
+				79B0D80F2B4DA6DC004A2178 /* moon-first-quarter.json */,
+				79B0D86C2B4DA6E1004A2178 /* moon-full.json */,
+				79B0D8282B4DA6DE004A2178 /* moon-last-quarter.json */,
+				79B0D8112B4DA6DD004A2178 /* moon-new.json */,
+				79B0D7E52B4DA6DA004A2178 /* moon-waning-crescent.json */,
+				79B0D8202B4DA6DD004A2178 /* moon-waning-gibbous.json */,
+				79B0D8352B4DA6DE004A2178 /* moon-waxing-crescent.json */,
+				79B0D8B32B4DA6E5004A2178 /* moon-waxing-gibbous.json */,
+				79B0D82E2B4DA6DE004A2178 /* moonrise.json */,
+				79B0D8AC2B4DA6E4004A2178 /* moonset.json */,
+				79B0D7EA2B4DA6DB004A2178 /* not-available.json */,
+				79B0D7F72B4DA6DB004A2178 /* overcast-day-drizzle.json */,
+				79B0D82F2B4DA6DE004A2178 /* overcast-day-fog.json */,
+				79B0D87B2B4DA6E2004A2178 /* overcast-day-hail.json */,
+				79B0D8AF2B4DA6E4004A2178 /* overcast-day-haze.json */,
+				79B0D8452B4DA6DF004A2178 /* overcast-day-rain.json */,
+				79B0D83C2B4DA6DF004A2178 /* overcast-day-sleet.json */,
+				79B0D87C2B4DA6E2004A2178 /* overcast-day-smoke.json */,
+				79B0D8402B4DA6DF004A2178 /* overcast-day-snow.json */,
+				79B0D8742B4DA6E1004A2178 /* overcast-day.json */,
+				79B0D8A92B4DA6E4004A2178 /* overcast-drizzle.json */,
+				79B0D8332B4DA6DE004A2178 /* overcast-fog.json */,
+				79B0D83A2B4DA6DF004A2178 /* overcast-hail.json */,
+				79B0D8882B4DA6E3004A2178 /* overcast-haze.json */,
+				79B0D7FA2B4DA6DB004A2178 /* overcast-night-drizzle.json */,
+				79B0D82A2B4DA6DE004A2178 /* overcast-night-fog.json */,
+				79B0D8132B4DA6DD004A2178 /* overcast-night-hail.json */,
+				79B0D8832B4DA6E2004A2178 /* overcast-night-haze.json */,
+				79B0D8302B4DA6DE004A2178 /* overcast-night-rain.json */,
+				79B0D86F2B4DA6E1004A2178 /* overcast-night-sleet.json */,
+				79B0D89F2B4DA6E4004A2178 /* overcast-night-smoke.json */,
+				79B0D84B2B4DA6DF004A2178 /* overcast-night-snow.json */,
+				79B0D8552B4DA6E0004A2178 /* overcast-night.json */,
+				79B0D7F92B4DA6DB004A2178 /* overcast-rain.json */,
+				79B0D8B42B4DA6E5004A2178 /* overcast-sleet.json */,
+				79B0D8492B4DA6DF004A2178 /* overcast-smoke.json */,
+				79B0D8892B4DA6E3004A2178 /* overcast-snow.json */,
+				79B0D7EE2B4DA6DB004A2178 /* overcast.json */,
+				79B0D8002B4DA6DC004A2178 /* partly-cloudy-day-drizzle.json */,
+				79B0D7E32B4DA6DA004A2178 /* partly-cloudy-day-fog.json */,
+				79B0D8932B4DA6E3004A2178 /* partly-cloudy-day-hail.json */,
+				79B0D85A2B4DA6E0004A2178 /* partly-cloudy-day-haze.json */,
+				79B0D7FC2B4DA6DC004A2178 /* partly-cloudy-day-rain.json */,
+				79B0D8C52B4DA6E6004A2178 /* partly-cloudy-day-sleet.json */,
+				79B0D85E2B4DA6E0004A2178 /* partly-cloudy-day-smoke.json */,
+				79B0D8782B4DA6E2004A2178 /* partly-cloudy-day-snow.json */,
+				79B0D8522B4DA6E0004A2178 /* partly-cloudy-day.json */,
+				79B0D84F2B4DA6E0004A2178 /* partly-cloudy-night-drizzle.json */,
+				79B0D8762B4DA6E2004A2178 /* partly-cloudy-night-fog.json */,
+				79B0D7FD2B4DA6DC004A2178 /* partly-cloudy-night-hail.json */,
+				79B0D8482B4DA6DF004A2178 /* partly-cloudy-night-haze.json */,
+				79B0D8BA2B4DA6E5004A2178 /* partly-cloudy-night-rain.json */,
+				79B0D8BB2B4DA6E5004A2178 /* partly-cloudy-night-sleet.json */,
+				79B0D8542B4DA6E0004A2178 /* partly-cloudy-night-smoke.json */,
+				79B0D88C2B4DA6E3004A2178 /* partly-cloudy-night-snow.json */,
+				79B0D8952B4DA6E3004A2178 /* partly-cloudy-night.json */,
+				79B0D8432B4DA6DF004A2178 /* pollen-flower.json */,
+				79B0D80D2B4DA6DC004A2178 /* pollen-grass.json */,
+				79B0D8B72B4DA6E5004A2178 /* pollen-tree.json */,
+				79B0D7F82B4DA6DB004A2178 /* pollen.json */,
+				79B0D8612B4DA6E1004A2178 /* pressure-high-alt.json */,
+				79B0D8BC2B4DA6E5004A2178 /* pressure-high.json */,
+				79B0D81F2B4DA6DD004A2178 /* pressure-low-alt.json */,
+				79B0D8A22B4DA6E4004A2178 /* pressure-low.json */,
+				79B0D80A2B4DA6DC004A2178 /* rain.json */,
+				79B0D8B22B4DA6E5004A2178 /* rainbow-clear.json */,
+				79B0D82D2B4DA6DE004A2178 /* rainbow.json */,
+				79B0D8622B4DA6E1004A2178 /* raindrop-measure.json */,
+				79B0D8172B4DA6DD004A2178 /* raindrop.json */,
+				79B0D7F02B4DA6DB004A2178 /* raindrops.json */,
+				79B0D8852B4DA6E2004A2178 /* sleet.json */,
+				79B0D8C22B4DA6E5004A2178 /* smoke-particles.json */,
+				79B0D88F2B4DA6E3004A2178 /* smoke.json */,
+				79B0D80E2B4DA6DC004A2178 /* snow.json */,
+				79B0D8C12B4DA6E5004A2178 /* snowflake.json */,
+				79B0D8462B4DA6DF004A2178 /* snowman.json */,
+				79B0D85F2B4DA6E0004A2178 /* solar-eclipse.json */,
+				79B0D8472B4DA6DF004A2178 /* star.json */,
+				79B0D8652B4DA6E1004A2178 /* starry-night.json */,
+				79B0D8252B4DA6DE004A2178 /* sun-hot.json */,
+				79B0D8502B4DA6E0004A2178 /* sunrise.json */,
+				79B0D7EB2B4DA6DB004A2178 /* sunset.json */,
+				79B0D8A32B4DA6E4004A2178 /* thermometer-celsius.json */,
+				79B0D8292B4DA6DE004A2178 /* thermometer-colder.json */,
+				79B0D8792B4DA6E2004A2178 /* thermometer-fahrenheit.json */,
+				79B0D7E42B4DA6DA004A2178 /* thermometer-glass-celsius.json */,
+				79B0D7DD2B4DA6DA004A2178 /* thermometer-glass-fahrenheit.json */,
+				79B0D86B2B4DA6E1004A2178 /* thermometer-glass.json */,
+				79B0D8922B4DA6E3004A2178 /* thermometer-mercury-cold.json */,
+				79B0D8A02B4DA6E4004A2178 /* thermometer-mercury.json */,
+				79B0D86E2B4DA6E1004A2178 /* thermometer-moon.json */,
+				79B0D7F52B4DA6DB004A2178 /* thermometer-raindrop.json */,
+				79B0D8212B4DA6DD004A2178 /* thermometer-snow.json */,
+				79B0D7E22B4DA6DA004A2178 /* thermometer-sun.json */,
+				79B0D8092B4DA6DC004A2178 /* thermometer-warmer.json */,
+				79B0D81E2B4DA6DD004A2178 /* thermometer-water.json */,
+				79B0D8702B4DA6E1004A2178 /* thermometer.json */,
+				79B0D8192B4DA6DD004A2178 /* thunderstorms-day-extreme-rain.json */,
+				79B0D7E62B4DA6DA004A2178 /* thunderstorms-day-extreme-snow.json */,
+				79B0D8802B4DA6E2004A2178 /* thunderstorms-day-extreme.json */,
+				79B0D7DB2B4DA6DA004A2178 /* thunderstorms-day-overcast-rain.json */,
+				79B0D8A72B4DA6E4004A2178 /* thunderstorms-day-overcast-snow.json */,
+				79B0D7E92B4DA6DB004A2178 /* thunderstorms-day-overcast.json */,
+				79B0D8B52B4DA6E5004A2178 /* thunderstorms-day-rain.json */,
+				79B0D83B2B4DA6DF004A2178 /* thunderstorms-day-snow.json */,
+				79B0D7F12B4DA6DB004A2178 /* thunderstorms-day.json */,
+				79B0D8672B4DA6E1004A2178 /* thunderstorms-extreme-rain.json */,
+				79B0D8082B4DA6DC004A2178 /* thunderstorms-extreme-snow.json */,
+				79B0D89C2B4DA6E4004A2178 /* thunderstorms-extreme.json */,
+				79B0D87E2B4DA6E2004A2178 /* thunderstorms-night-extreme-rain.json */,
+				79B0D8772B4DA6E2004A2178 /* thunderstorms-night-extreme-snow.json */,
+				79B0D7DC2B4DA6DA004A2178 /* thunderstorms-night-extreme.json */,
+				79B0D86D2B4DA6E1004A2178 /* thunderstorms-night-overcast-rain.json */,
+				79B0D8722B4DA6E1004A2178 /* thunderstorms-night-overcast-snow.json */,
+				79B0D85B2B4DA6E0004A2178 /* thunderstorms-night-overcast.json */,
+				79B0D7F32B4DA6DB004A2178 /* thunderstorms-night-rain.json */,
+				79B0D88A2B4DA6E3004A2178 /* thunderstorms-night-snow.json */,
+				79B0D8382B4DA6DE004A2178 /* thunderstorms-night.json */,
+				79B0D8842B4DA6E2004A2178 /* thunderstorms-overcast-rain.json */,
+				79B0D7EF2B4DA6DB004A2178 /* thunderstorms-overcast-snow.json */,
+				79B0D7FF2B4DA6DC004A2178 /* thunderstorms-overcast.json */,
+				79B0D8362B4DA6DE004A2178 /* thunderstorms-rain.json */,
+				79B0D84C2B4DA6DF004A2178 /* thunderstorms-snow.json */,
+				79B0D81C2B4DA6DD004A2178 /* thunderstorms.json */,
+				79B0D8242B4DA6DE004A2178 /* tide-high.json */,
+				79B0D81D2B4DA6DD004A2178 /* tide-low.json */,
+				79B0D8BE2B4DA6E5004A2178 /* time-afternoon.json */,
+				79B0D7DE2B4DA6DA004A2178 /* time-evening.json */,
+				79B0D87F2B4DA6E2004A2178 /* time-late-afternoon.json */,
+				79B0D89E2B4DA6E4004A2178 /* time-late-evening.json */,
+				79B0D8A52B4DA6E4004A2178 /* time-late-morning.json */,
+				79B0D7E12B4DA6DA004A2178 /* time-late-night.json */,
+				79B0D89D2B4DA6E4004A2178 /* time-morning.json */,
+				79B0D8AD2B4DA6E4004A2178 /* time-night.json */,
+				79B0D8602B4DA6E0004A2178 /* tornado.json */,
+				79B0D8BD2B4DA6E5004A2178 /* umbrella-wind-alt.json */,
+				79B0D8A82B4DA6E4004A2178 /* umbrella-wind.json */,
+				79B0D83D2B4DA6DF004A2178 /* umbrella.json */,
+				79B0D8752B4DA6E2004A2178 /* uv-index-1.json */,
+				79B0D7E72B4DA6DB004A2178 /* uv-index-2.json */,
+				79B0D8812B4DA6E2004A2178 /* uv-index-3.json */,
+				79B0D89A2B4DA6E3004A2178 /* uv-index-4.json */,
+				79B0D8822B4DA6E2004A2178 /* uv-index-5.json */,
+				79B0D8A62B4DA6E4004A2178 /* uv-index-6.json */,
+				79B0D8AA2B4DA6E4004A2178 /* uv-index-7.json */,
+				79B0D8532B4DA6E0004A2178 /* uv-index-8.json */,
+				79B0D8B82B4DA6E5004A2178 /* uv-index-9.json */,
+				79B0D8A12B4DA6E4004A2178 /* uv-index-10.json */,
+				79B0D80C2B4DA6DC004A2178 /* uv-index-11.json */,
+				79B0D7E02B4DA6DA004A2178 /* uv-index.json */,
+				79B0D8272B4DA6DE004A2178 /* wind-alert.json */,
+				79B0D8042B4DA6DC004A2178 /* wind-beaufort-0.json */,
+				79B0D7F22B4DA6DB004A2178 /* wind-beaufort-1.json */,
+				79B0D8C32B4DA6E5004A2178 /* wind-beaufort-2.json */,
+				79B0D8102B4DA6DC004A2178 /* wind-beaufort-3.json */,
+				79B0D8942B4DA6E3004A2178 /* wind-beaufort-4.json */,
+				79B0D8072B4DA6DC004A2178 /* wind-beaufort-5.json */,
+				79B0D7FE2B4DA6DC004A2178 /* wind-beaufort-6.json */,
+				79B0D8962B4DA6E3004A2178 /* wind-beaufort-7.json */,
+				79B0D8572B4DA6E0004A2178 /* wind-beaufort-8.json */,
+				79B0D8012B4DA6DC004A2178 /* wind-beaufort-9.json */,
+				79B0D8692B4DA6E1004A2178 /* wind-beaufort-10.json */,
+				79B0D8222B4DA6DD004A2178 /* wind-beaufort-11.json */,
+				79B0D8AB2B4DA6E4004A2178 /* wind-beaufort-12.json */,
+				79B0D8632B4DA6E1004A2178 /* wind-offshore.json */,
+				79B0D8642B4DA6E1004A2178 /* wind-onshore.json */,
+				79B0D8562B4DA6E0004A2178 /* wind-snow.json */,
+				79B0D7E82B4DA6DB004A2178 /* wind.json */,
+				79B0D80B2B4DA6DC004A2178 /* windsock-weak.json */,
+				79B0D8662B4DA6E1004A2178 /* windsock.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		85D0BBBFD7D8312D1E23B339 /* Frameworks */ = {
@@ -200,9 +916,245 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B0D8F02B4DA6E6004A2178 /* wind-beaufort-0.json in Resources */,
 				799EAAC92B449087006F7C14 /* Main.storyboard in Resources */,
+				79B0D8CA2B4DA6E6004A2178 /* time-evening.json in Resources */,
+				79B0D9872B4DA6E6004A2178 /* flag-gale-warning.json in Resources */,
+				79B0D93B2B4DA6E6004A2178 /* partly-cloudy-night-drizzle.json in Resources */,
+				79B0D97C2B4DA6E6004A2178 /* flag-storm-warning.json in Resources */,
+				79B0D9672B4DA6E6004A2178 /* overcast-day-hail.json in Resources */,
+				79B0D9552B4DA6E6004A2178 /* wind-beaufort-10.json in Resources */,
+				79B0D8FB2B4DA6E6004A2178 /* moon-first-quarter.json in Resources */,
+				79B0D93F2B4DA6E6004A2178 /* uv-index-8.json in Resources */,
+				79B0D9092B4DA6E6004A2178 /* tide-low.json in Resources */,
+				79B0D9842B4DA6E6004A2178 /* dust-day.json in Resources */,
+				79B0D9782B4DA6E6004A2178 /* partly-cloudy-night-snow.json in Resources */,
+				79B0D9142B4DA6E6004A2178 /* moon-last-quarter.json in Resources */,
+				79B0D93D2B4DA6E6004A2178 /* extreme-night-fog.json in Resources */,
+				79B0D9882B4DA6E6004A2178 /* thunderstorms-extreme.json in Resources */,
+				79B0D9292B4DA6E6004A2178 /* umbrella.json in Resources */,
+				79B0D8E92B4DA6E6004A2178 /* partly-cloudy-night-hail.json in Resources */,
+				79B0D9B02B4DA6E6004A2178 /* dust-night.json in Resources */,
+				79B0D8E12B4DA6E6004A2178 /* thermometer-raindrop.json in Resources */,
+				79B0D9972B4DA6E6004A2178 /* wind-beaufort-12.json in Resources */,
+				79B0D9462B4DA6E6004A2178 /* partly-cloudy-day-haze.json in Resources */,
+				79B0D8F82B4DA6E6004A2178 /* uv-index-11.json in Resources */,
+				79B0D90C2B4DA6E6004A2178 /* moon-waning-gibbous.json in Resources */,
+				79B0D9382B4DA6E6004A2178 /* thunderstorms-snow.json in Resources */,
+				79B0D8E42B4DA6E6004A2178 /* pollen.json in Resources */,
+				79B0D9052B4DA6E6004A2178 /* thunderstorms-day-extreme-rain.json in Resources */,
+				79B0D9112B4DA6E6004A2178 /* sun-hot.json in Resources */,
+				79B0D9752B4DA6E6004A2178 /* overcast-snow.json in Resources */,
+				79B0D8FE2B4DA6E6004A2178 /* fog.json in Resources */,
+				79B0D8F42B4DA6E6004A2178 /* thunderstorms-extreme-snow.json in Resources */,
+				79B0D8E82B4DA6E6004A2178 /* partly-cloudy-day-rain.json in Resources */,
+				79B0D96D2B4DA6E6004A2178 /* uv-index-3.json in Resources */,
+				79B0D96C2B4DA6E6004A2178 /* thunderstorms-day-extreme.json in Resources */,
+				79B0D8EA2B4DA6E6004A2178 /* wind-beaufort-6.json in Resources */,
+				79B0D9522B4DA6E6004A2178 /* windsock.json in Resources */,
+				79B0D9072B4DA6E6004A2178 /* fog-day.json in Resources */,
+				79B0D92D2B4DA6E6004A2178 /* hurricane.json in Resources */,
+				79B0D97D2B4DA6E6004A2178 /* extreme-day-snow.json in Resources */,
+				79B0D95D2B4DA6E6004A2178 /* celsius.json in Resources */,
+				79B0D8D82B4DA6E6004A2178 /* mist.json in Resources */,
+				79B0D9532B4DA6E6004A2178 /* thunderstorms-extreme-rain.json in Resources */,
+				79B0D8C72B4DA6E6004A2178 /* thunderstorms-day-overcast-rain.json in Resources */,
+				79B0D8FC2B4DA6E6004A2178 /* wind-beaufort-3.json in Resources */,
+				79B0D9AE2B4DA6E6004A2178 /* smoke-particles.json in Resources */,
+				79B0D94A2B4DA6E6004A2178 /* partly-cloudy-day-smoke.json in Resources */,
+				79B0D9A62B4DA6E6004A2178 /* partly-cloudy-night-rain.json in Resources */,
+				79B0D8EF2B4DA6E6004A2178 /* fahrenheit.json in Resources */,
+				79B0D9422B4DA6E6004A2178 /* wind-snow.json in Resources */,
+				79B0D9162B4DA6E6004A2178 /* overcast-night-fog.json in Resources */,
+				79B0D9982B4DA6E6004A2178 /* moonset.json in Resources */,
+				79B0D9562B4DA6E6004A2178 /* extreme-night-sleet.json in Resources */,
+				79B0D9352B4DA6E6004A2178 /* overcast-smoke.json in Resources */,
+				79B0D9192B4DA6E6004A2178 /* rainbow.json in Resources */,
+				79B0D9312B4DA6E6004A2178 /* overcast-day-rain.json in Resources */,
+				79B0D99F2B4DA6E6004A2178 /* moon-waxing-gibbous.json in Resources */,
+				79B0D90F2B4DA6E6004A2178 /* extreme-day-rain.json in Resources */,
+				79B0D8D52B4DA6E6004A2178 /* thunderstorms-day-overcast.json in Resources */,
+				79B0D8CF2B4DA6E6004A2178 /* partly-cloudy-day-fog.json in Resources */,
+				79B0D8FD2B4DA6E6004A2178 /* moon-new.json in Resources */,
+				79B0D9862B4DA6E6004A2178 /* uv-index-4.json in Resources */,
+				79B0D9592B4DA6E6004A2178 /* thunderstorms-night-overcast-rain.json in Resources */,
+				79B0D9A92B4DA6E6004A2178 /* umbrella-wind-alt.json in Resources */,
+				79B0D9622B4DA6E6004A2178 /* partly-cloudy-night-fog.json in Resources */,
+				79B0D9582B4DA6E6004A2178 /* moon-full.json in Resources */,
+				79B0D8F72B4DA6E6004A2178 /* windsock-weak.json in Resources */,
+				79B0D99C2B4DA6E6004A2178 /* extreme-fog.json in Resources */,
+				79B0D9A82B4DA6E6004A2178 /* pressure-high.json in Resources */,
+				79B0D9A32B4DA6E6004A2178 /* pollen-tree.json in Resources */,
 				790621DC2B4439B800D50F45 /* LaunchScreen.storyboard in Resources */,
+				79B0D91F2B4DA6E6004A2178 /* overcast-fog.json in Resources */,
 				790621D92B4439B800D50F45 /* Assets.xcassets in Resources */,
+				79B0D8DC2B4DA6E6004A2178 /* raindrops.json in Resources */,
+				79B0D9542B4DA6E6004A2178 /* extreme-haze.json in Resources */,
+				79B0D97B2B4DA6E6004A2178 /* smoke.json in Resources */,
+				79B0D9492B4DA6E6004A2178 /* extreme-smoke.json in Resources */,
+				79B0D90B2B4DA6E6004A2178 /* pressure-low-alt.json in Resources */,
+				79B0D9502B4DA6E6004A2178 /* wind-onshore.json in Resources */,
+				79B0D95E2B4DA6E6004A2178 /* thunderstorms-night-overcast-snow.json in Resources */,
+				79B0D9102B4DA6E6004A2178 /* tide-high.json in Resources */,
+				79B0D9722B4DA6E6004A2178 /* extreme-night-smoke.json in Resources */,
+				79B0D90A2B4DA6E6004A2178 /* thermometer-water.json in Resources */,
+				79B0D9702B4DA6E6004A2178 /* thunderstorms-overcast-rain.json in Resources */,
+				79B0D8DB2B4DA6E6004A2178 /* thunderstorms-overcast-snow.json in Resources */,
+				79B0D9252B4DA6E6004A2178 /* extreme-night-snow.json in Resources */,
+				79B0D9AC2B4DA6E6004A2178 /* extreme-day.json in Resources */,
+				79B0D9AF2B4DA6E6004A2178 /* wind-beaufort-2.json in Resources */,
+				79B0D9712B4DA6E6004A2178 /* sleet.json in Resources */,
+				79B0D8CB2B4DA6E6004A2178 /* flag-hurricane-warning.json in Resources */,
+				79B0D9792B4DA6E6004A2178 /* extreme-day-smoke.json in Resources */,
+				79B0D94F2B4DA6E6004A2178 /* wind-offshore.json in Resources */,
+				79B0D9012B4DA6E6004A2178 /* dust.json in Resources */,
+				79B0D9912B4DA6E6004A2178 /* time-late-morning.json in Resources */,
+				79B0D8ED2B4DA6E6004A2178 /* wind-beaufort-9.json in Resources */,
+				79B0D8C82B4DA6E6004A2178 /* thunderstorms-night-extreme.json in Resources */,
+				79B0D95A2B4DA6E6004A2178 /* thermometer-moon.json in Resources */,
+				79B0D9572B4DA6E6004A2178 /* thermometer-glass.json in Resources */,
+				79B0D9682B4DA6E6004A2178 /* overcast-day-smoke.json in Resources */,
+				79B0D8EB2B4DA6E6004A2178 /* thunderstorms-overcast.json in Resources */,
+				79B0D9962B4DA6E6004A2178 /* uv-index-7.json in Resources */,
+				79B0D9832B4DA6E6004A2178 /* falling-stars.json in Resources */,
+				79B0D91A2B4DA6E6004A2178 /* moonrise.json in Resources */,
+				79B0D9A02B4DA6E6004A2178 /* overcast-sleet.json in Resources */,
+				79B0D9652B4DA6E6004A2178 /* thermometer-fahrenheit.json in Resources */,
+				79B0D8F52B4DA6E6004A2178 /* thermometer-warmer.json in Resources */,
+				79B0D8FF2B4DA6E6004A2178 /* overcast-night-hail.json in Resources */,
+				79B0D96B2B4DA6E6004A2178 /* time-late-afternoon.json in Resources */,
+				79B0D9172B4DA6E6004A2178 /* beanie.json in Resources */,
+				79B0D8F62B4DA6E6004A2178 /* rain.json in Resources */,
+				79B0D9602B4DA6E6004A2178 /* overcast-day.json in Resources */,
+				79B0D92F2B4DA6E6004A2178 /* pollen-flower.json in Resources */,
+				79B0D9612B4DA6E6004A2178 /* uv-index-1.json in Resources */,
+				79B0D9362B4DA6E6004A2178 /* horizon.json in Resources */,
+				79B0D8CE2B4DA6E6004A2178 /* thermometer-sun.json in Resources */,
+				79B0D8DD2B4DA6E6004A2178 /* thunderstorms-day.json in Resources */,
+				79B0D9472B4DA6E6004A2178 /* thunderstorms-night-overcast.json in Resources */,
+				79B0D9802B4DA6E6004A2178 /* wind-beaufort-4.json in Resources */,
+				79B0D98F2B4DA6E6004A2178 /* thermometer-celsius.json in Resources */,
+				79B0D8C62B4DA6E6004A2178 /* extreme-day-haze.json in Resources */,
+				79B0D9452B4DA6E6004A2178 /* alert-falling-rocks.json in Resources */,
+				79B0D9922B4DA6E6004A2178 /* uv-index-6.json in Resources */,
+				79B0D9152B4DA6E6004A2178 /* thermometer-colder.json in Resources */,
+				79B0D8DA2B4DA6E6004A2178 /* overcast.json in Resources */,
+				79B0D9942B4DA6E6004A2178 /* umbrella-wind.json in Resources */,
+				79B0D8D12B4DA6E6004A2178 /* moon-waning-crescent.json in Resources */,
+				79B0D90E2B4DA6E6004A2178 /* wind-beaufort-11.json in Resources */,
+				79B0D96E2B4DA6E6004A2178 /* uv-index-5.json in Resources */,
+				79B0D9AA2B4DA6E6004A2178 /* time-afternoon.json in Resources */,
+				79B0D9A72B4DA6E6004A2178 /* partly-cloudy-night-sleet.json in Resources */,
+				79B0D9A22B4DA6E6004A2178 /* barometer.json in Resources */,
+				79B0D98B2B4DA6E6004A2178 /* overcast-night-smoke.json in Resources */,
+				79B0D8D22B4DA6E6004A2178 /* thunderstorms-day-extreme-snow.json in Resources */,
+				79B0D8C92B4DA6E6004A2178 /* thermometer-glass-fahrenheit.json in Resources */,
+				79B0D9222B4DA6E6004A2178 /* thunderstorms-rain.json in Resources */,
+				79B0D9022B4DA6E6004A2178 /* extreme-snow.json in Resources */,
+				79B0D9042B4DA6E6004A2178 /* code-green.json in Resources */,
+				79B0D9B12B4DA6E6004A2178 /* partly-cloudy-day-sleet.json in Resources */,
+				79B0D8D72B4DA6E6004A2178 /* sunset.json in Resources */,
+				79B0D8D42B4DA6E6004A2178 /* wind.json in Resources */,
+				79B0D9432B4DA6E6004A2178 /* wind-beaufort-8.json in Resources */,
+				79B0D9062B4DA6E6004A2178 /* code-red.json in Resources */,
+				79B0D91B2B4DA6E6004A2178 /* overcast-day-fog.json in Resources */,
+				79B0D8DF2B4DA6E6004A2178 /* thunderstorms-night-rain.json in Resources */,
+				79B0D9662B4DA6E6004A2178 /* glove.json in Resources */,
+				79B0D98D2B4DA6E6004A2178 /* uv-index-10.json in Resources */,
+				79B0D95B2B4DA6E6004A2178 /* overcast-night-sleet.json in Resources */,
+				79B0D9202B4DA6E6004A2178 /* cloud-down.json in Resources */,
+				79B0D9A42B4DA6E6004A2178 /* uv-index-9.json in Resources */,
+				79B0D94C2B4DA6E6004A2178 /* tornado.json in Resources */,
+				79B0D8DE2B4DA6E6004A2178 /* wind-beaufort-1.json in Resources */,
+				79B0D9322B4DA6E6004A2178 /* snowman.json in Resources */,
+				79B0D9852B4DA6E6004A2178 /* clear-day.json in Resources */,
+				79B0D92C2B4DA6E6004A2178 /* overcast-day-snow.json in Resources */,
+				79B0D92E2B4DA6E6004A2178 /* extreme-day-drizzle.json in Resources */,
+				79B0D9032B4DA6E6004A2178 /* raindrop.json in Resources */,
+				79B0D9932B4DA6E6004A2178 /* thunderstorms-day-overcast-snow.json in Resources */,
+				79B0D9812B4DA6E6004A2178 /* partly-cloudy-night.json in Resources */,
+				79B0D9412B4DA6E6004A2178 /* overcast-night.json in Resources */,
+				79B0D9302B4DA6E6004A2178 /* extreme-drizzle.json in Resources */,
+				79B0D92A2B4DA6E6004A2178 /* extreme-day-sleet.json in Resources */,
+				79B0D91E2B4DA6E6004A2178 /* extreme-night-drizzle.json in Resources */,
+				79B0D8D32B4DA6E6004A2178 /* uv-index-2.json in Resources */,
+				79B0D8E52B4DA6E6004A2178 /* overcast-rain.json in Resources */,
+				79B0D9692B4DA6E6004A2178 /* alert-avalanche-danger.json in Resources */,
+				79B0D9342B4DA6E6004A2178 /* partly-cloudy-night-haze.json in Resources */,
+				79B0D9642B4DA6E6004A2178 /* partly-cloudy-day-snow.json in Resources */,
+				79B0D93E2B4DA6E6004A2178 /* partly-cloudy-day.json in Resources */,
+				79B0D8F92B4DA6E6004A2178 /* pollen-grass.json in Resources */,
+				79B0D97F2B4DA6E6004A2178 /* partly-cloudy-day-hail.json in Resources */,
+				79B0D93A2B4DA6E6004A2178 /* lightning-bolt.json in Resources */,
+				79B0D9402B4DA6E6004A2178 /* partly-cloudy-night-smoke.json in Resources */,
+				79B0D96F2B4DA6E6004A2178 /* overcast-night-haze.json in Resources */,
+				79B0D8CD2B4DA6E6004A2178 /* time-late-night.json in Resources */,
+				79B0D9632B4DA6E6004A2178 /* thunderstorms-night-extreme-snow.json in Resources */,
+				79B0D9992B4DA6E6004A2178 /* time-night.json in Resources */,
+				79B0D99E2B4DA6E6004A2178 /* rainbow-clear.json in Resources */,
+				79B0D8E02B4DA6E6004A2178 /* dust-wind.json in Resources */,
+				79B0D9242B4DA6E6004A2178 /* thunderstorms-night.json in Resources */,
+				79B0D9902B4DA6E6004A2178 /* fog-night.json in Resources */,
+				79B0D9892B4DA6E6004A2178 /* time-morning.json in Resources */,
+				79B0D94B2B4DA6E6004A2178 /* solar-eclipse.json in Resources */,
+				79B0D9232B4DA6E6004A2178 /* extreme-sleet.json in Resources */,
+				79B0D98A2B4DA6E6004A2178 /* time-late-evening.json in Resources */,
+				79B0D9A12B4DA6E6004A2178 /* thunderstorms-day-rain.json in Resources */,
+				79B0D99A2B4DA6E6004A2178 /* clear-night.json in Resources */,
+				79B0D8EC2B4DA6E6004A2178 /* partly-cloudy-day-drizzle.json in Resources */,
+				79B0D97E2B4DA6E6004A2178 /* thermometer-mercury-cold.json in Resources */,
+				79B0D9372B4DA6E6004A2178 /* overcast-night-snow.json in Resources */,
+				79B0D9212B4DA6E6004A2178 /* moon-waxing-crescent.json in Resources */,
+				79B0D8D62B4DA6E6004A2178 /* not-available.json in Resources */,
+				79B0D9822B4DA6E6004A2178 /* wind-beaufort-7.json in Resources */,
+				79B0D91D2B4DA6E6004A2178 /* cloudy.json in Resources */,
+				79B0D97A2B4DA6E6004A2178 /* flag-small-craft-advisory.json in Resources */,
+				79B0D8F32B4DA6E6004A2178 /* wind-beaufort-5.json in Resources */,
+				79B0D9A52B4DA6E6004A2178 /* extreme-night-hail.json in Resources */,
+				79B0D98C2B4DA6E6004A2178 /* thermometer-mercury.json in Resources */,
+				79B0D8F12B4DA6E6004A2178 /* extreme-night-rain.json in Resources */,
+				79B0D9952B4DA6E6004A2178 /* overcast-drizzle.json in Resources */,
+				79B0D9732B4DA6E6004A2178 /* code-orange.json in Resources */,
+				79B0D8E62B4DA6E6004A2178 /* overcast-night-drizzle.json in Resources */,
+				79B0D9272B4DA6E6004A2178 /* thunderstorms-day-snow.json in Resources */,
+				79B0D9182B4DA6E6004A2178 /* extreme-day-hail.json in Resources */,
+				79B0D9AD2B4DA6E6004A2178 /* snowflake.json in Resources */,
+				79B0D9482B4DA6E6004A2178 /* hail.json in Resources */,
+				79B0D96A2B4DA6E6004A2178 /* thunderstorms-night-extreme-rain.json in Resources */,
+				79B0D98E2B4DA6E6004A2178 /* pressure-low.json in Resources */,
+				79B0D9262B4DA6E6004A2178 /* overcast-hail.json in Resources */,
+				79B0D9392B4DA6E6004A2178 /* drizzle.json in Resources */,
+				79B0D9772B4DA6E6004A2178 /* extreme-night.json in Resources */,
+				79B0D8E22B4DA6E6004A2178 /* code-yellow.json in Resources */,
+				79B0D9132B4DA6E6004A2178 /* wind-alert.json in Resources */,
+				79B0D8FA2B4DA6E6004A2178 /* snow.json in Resources */,
+				79B0D92B2B4DA6E6004A2178 /* extreme-day-fog.json in Resources */,
+				79B0D93C2B4DA6E6004A2178 /* sunrise.json in Resources */,
+				79B0D9122B4DA6E6004A2178 /* extreme-night-haze.json in Resources */,
+				79B0D8F22B4DA6E6004A2178 /* haze.json in Resources */,
+				79B0D90D2B4DA6E6004A2178 /* thermometer-snow.json in Resources */,
+				79B0D9AB2B4DA6E6004A2178 /* extreme-rain.json in Resources */,
+				79B0D9742B4DA6E6004A2178 /* overcast-haze.json in Resources */,
+				79B0D9442B4DA6E6004A2178 /* cloud-up.json in Resources */,
+				79B0D9512B4DA6E6004A2178 /* starry-night.json in Resources */,
+				79B0D91C2B4DA6E6004A2178 /* overcast-night-rain.json in Resources */,
+				79B0D9082B4DA6E6004A2178 /* thunderstorms.json in Resources */,
+				79B0D9762B4DA6E6004A2178 /* thunderstorms-night-snow.json in Resources */,
+				79B0D9332B4DA6E6004A2178 /* star.json in Resources */,
+				79B0D8EE2B4DA6E6004A2178 /* humidity.json in Resources */,
+				79B0D95F2B4DA6E6004A2178 /* compass.json in Resources */,
+				79B0D8D02B4DA6E6004A2178 /* thermometer-glass-celsius.json in Resources */,
+				79B0D94D2B4DA6E6004A2178 /* pressure-high-alt.json in Resources */,
+				79B0D99D2B4DA6E6004A2178 /* haze-night.json in Resources */,
+				79B0D8D92B4DA6E6004A2178 /* haze-day.json in Resources */,
+				79B0D8CC2B4DA6E6004A2178 /* uv-index.json in Resources */,
+				79B0D8E72B4DA6E6004A2178 /* extreme-hail.json in Resources */,
+				79B0D9282B4DA6E6004A2178 /* overcast-day-sleet.json in Resources */,
+				79B0D9002B4DA6E6004A2178 /* extreme.json in Resources */,
+				79B0D99B2B4DA6E6004A2178 /* overcast-day-haze.json in Resources */,
+				79B0D8E32B4DA6E6004A2178 /* overcast-day-drizzle.json in Resources */,
+				79B0D95C2B4DA6E6004A2178 /* thermometer.json in Resources */,
+				79B0D94E2B4DA6E6004A2178 /* raindrop-measure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

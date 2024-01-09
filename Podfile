@@ -8,5 +8,6 @@ target 'whatseason' do
   # Pods for whatseason
   pod 'SnapKit', '~> 5.6.0'
   pod 'Then', '~> 3.0.0'
+  pod 'lottie-ios'
 
 end
