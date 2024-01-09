@@ -41,41 +41,33 @@ class WeatherVC: UIViewController {
     }
     
     /// 위치 정보와 도시명을 파라미터로 받아 날씨 데이터를 불러옵니다.
-    func getWeather(location: CLLocation, city: String) {
+    func getWeather(_ location: CLLocation, _ city: String) {
         Task {
             do {
-                let result = try await service.weather(
-                    for: location
-                )
+                let result = try await service.weather(for: location)
                 
                 result.hourlyForecast.forecast.forEach { hourWeather in
                     self.hourly.append(hourWeather)
                 }
                 result.dailyForecast.forecast.forEach { dayWeather in
-                    self.daily.append(
-                        dayWeather
-                    )
+                    self.daily.append(dayWeather)
                 }
-                
-                // 뷰 업데이트
-                weatherView.configure(
-                    with: result,
-                    city: city
-                )
-                weatherView.tableView.reloadData()
+                updateWeatherView(result, city)
                 
             } catch {
-                print(
-                    String(
-                        describing: error
-                    )
-                )
+                print(String(describing: error))
             }
         }
     }
     
+    /// 날씨 데이터를 받아 화면을 업데이트합니다.
+    func updateWeatherView(_ result: Weather, _ city: String) {
+        weatherView.configure(with: result, city: city)
+        weatherView.tableView.reloadData()
+    }
+    
     /// Date 데이터를 설정합니다.
-    func converDate(_ to: Date) -> String {
+    func convertDate(_ to: Date) -> String {
         let df = DateFormatter()
         df.timeZone = .current
         df.locale = Locale(identifier: "ko")
@@ -83,7 +75,7 @@ class WeatherVC: UIViewController {
         return df.string(from: to)
     }
     
-    /// 테이블뷰의 identifier와 datasource를 설정합니다.
+    /// 테이블뷰의 Identifier와 Datasource를 설정합니다.
     func setUpTableView() {
         weatherView.tableView.register(
             DailyCell.self,
@@ -100,24 +92,13 @@ extension WeatherVC: CLLocationManagerDelegate {
     func locationManager(
         _ manager: CLLocationManager,
         didUpdateLocations locations: [CLLocation]
-    ) {
-        guard let location = locations.first else {
-            return
-        }
+    ) { guard let location = locations.first else { return }
         locationManager.stopUpdatingLocation()
         
         // 위치 정보로 도시명을 받아 날씨 데이터 파싱
-        location.fetchCity {
-            city,
-            error in
-            guard let city = city,
-                  error == nil else {
-                return
-            }
-            self.getWeather(
-                location: location,
-                city: city
-            )
+        location.fetchCity { city, error in
+            guard let city = city, error == nil else { return }
+            self.getWeather(location, city)
         }
     }
 }
@@ -125,26 +106,17 @@ extension WeatherVC: CLLocationManagerDelegate {
 // MARK: - 테이블뷰데이터소스
 extension WeatherVC: UITableViewDataSource {
     
-    // 셀 행 개수 업데이트
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
+    // Row 개수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         daily.count
     }
     
-    // 셀 내용 업데이트
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: "dailyCell",
-            for: indexPath
-        ) as! DailyCell
+    // Cell 업데이트
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dailyCell", for: indexPath) as! DailyCell
         
         let dayWeather = daily[indexPath.row]
-        let date = converDate(dayWeather.date)
+        let date = convertDate(dayWeather.date)
         cell.dateLabel.text = "\(date)"
         cell.lowTempLable.text = "\(Int(dayWeather.lowTemperature.value.rounded()))"
         cell.highTempLable.text = "\(Int(dayWeather.highTemperature.value.rounded()))"
