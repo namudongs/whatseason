@@ -14,24 +14,24 @@ import Lottie
 class WeatherView: UIView {
     
     // MARK: - 프로퍼티
-    let tableView = UITableView().then {
-        $0.rowHeight = 50
+    let testView = UIView().then {
+        $0.backgroundColor = .clear
     }
     
     let testView1 = UIView().then {
-        $0.backgroundColor = .systemRed
+        $0.backgroundColor = .white.withAlphaComponent(0.7)
     }
     
     let testView2 = UIView().then {
-        $0.backgroundColor = .systemBlue
+        $0.backgroundColor = .white.withAlphaComponent(0.7)
     }
     
     let testView3 = UIView().then {
-        $0.backgroundColor = .systemGreen
+        $0.backgroundColor = .white.withAlphaComponent(0.7)
     }
     
     let testView4 = UIView().then {
-        $0.backgroundColor = .systemYellow
+        $0.backgroundColor = .white.withAlphaComponent(0.7)
     }
     
     let testViewStack = UIStackView().then {
@@ -66,7 +66,6 @@ class WeatherView: UIView {
     // MARK: - 생성자
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {
@@ -90,6 +89,8 @@ class WeatherView: UIView {
             $0.animationSpeed = 1.0
             $0.play()
         }
+        self.backgroundColor = .black
+        lottieBackground.alpha = 0.9
         
         addSubview(lottieBackground)
         lottieBackground.snp.makeConstraints { make in
@@ -106,21 +107,26 @@ class WeatherView: UIView {
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.bottom.equalToSuperview()
+            
         }
         
+        testViewStack.addArrangedSubview(testView)
         testViewStack.addArrangedSubview(testView1)
         testViewStack.addArrangedSubview(testView2)
         testViewStack.addArrangedSubview(testView3)
         testViewStack.addArrangedSubview(testView4)
         
         testViewStack.snp.makeConstraints { make in
-            make.top.equalTo(scrollView.contentLayoutGuide.snp.top).offset(400)
-            make.leading.equalTo(scrollView.contentLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(scrollView.contentLayoutGuide.snp.trailing).offset(20)
+            make.top.equalTo(scrollView.contentLayoutGuide.snp.top)
+            make.leading.equalTo(scrollView.contentLayoutGuide.snp.leading)
+            make.trailing.equalTo(scrollView.contentLayoutGuide.snp.trailing)
             make.bottom.equalTo(scrollView.contentLayoutGuide.snp.bottom).offset(-10)
-            make.width.equalTo(scrollView.frameLayoutGuide.snp.width).offset(-40)
+            make.width.equalTo(scrollView.frameLayoutGuide.snp.width)
         }
         
+        testView.snp.makeConstraints { make in
+            make.height.equalTo(400)
+        }
         testView1.snp.makeConstraints { make in
             make.height.equalTo(100)
         }

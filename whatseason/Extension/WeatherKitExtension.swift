@@ -92,7 +92,7 @@ extension WeatherCondition {
              return "cloudy-bg"
              */
         default:
-            return "blob"
+            return "spring-bg"
         }
     }
 }
