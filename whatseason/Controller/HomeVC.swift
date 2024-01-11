@@ -62,14 +62,10 @@ class HomeVC: UIViewController {
     /// 날씨 데이터를 받아 화면을 업데이트합니다.
     func updateWeatherView(_ result: Weather, _ city: String) {
         let currentWeather = result.currentWeather
-        
         let date = currentWeather.date.toFormattedKoreanString()
         homeView.configure(result, city, date)
-//        let lottieName = currentWeather.condition.conditionToLottieName()
-//        homeView.addBackgroundLottie(lottieName)
-        homeView.addBackgroundLottie("spring-bg")
-        homeView.homeMainView.addWeatherLottie("clear-day")
-        
+        let lottieName = currentWeather.condition.conditionToLottieName()
+        homeView.addBackgroundLottie(lottieName)
         homeView.setUpView()
     }
 }
