@@ -1,5 +1,5 @@
 //
-//  WeatherView.swift
+//  HomeView.swift
 //  whatseason
 //
 //  Created by namdghyun on 1/3/24.
@@ -11,27 +11,33 @@ import SnapKit
 import Then
 import Lottie
 
-class WeatherView: UIView {
+class HomeView: UIView {
     
     // MARK: - 프로퍼티
-    let testView = UIView().then {
-        $0.backgroundColor = .clear
-    }
+    let homeMainView = HomeMainView()
     
     let testView1 = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.7)
+        $0.layer.cornerRadius = 20
+        $0.clipsToBounds = true
     }
     
     let testView2 = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.7)
+        $0.layer.cornerRadius = 20
+        $0.clipsToBounds = true
     }
     
     let testView3 = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.7)
+        $0.layer.cornerRadius = 20
+        $0.clipsToBounds = true
     }
     
     let testView4 = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.7)
+        $0.layer.cornerRadius = 20
+        $0.clipsToBounds = true
     }
     
     let testViewStack = UIStackView().then {
@@ -41,26 +47,6 @@ class WeatherView: UIView {
     
     let scrollView = UIScrollView().then {
         $0.showsVerticalScrollIndicator = false
-    }
-    
-    let locationLabel = UILabel().then {
-        $0.text = "--"
-        $0.font = UIFont.boldSystemFont(ofSize: 20)
-    }
-    
-    let temperatureLabel = UILabel().then {
-        $0.text = "--"
-        $0.font = UIFont.systemFont(ofSize: 100, weight: .ultraLight, width: .standard)
-    }
-    
-    let conditionLabel = UILabel().then {
-        $0.text = "--"
-        $0.font = UIFont.systemFont(ofSize: 15, weight: .thin)
-    }
-    
-    let dateLabel = UILabel().then {
-        $0.text = "--"
-        $0.font = UIFont.systemFont(ofSize: 20)
     }
     
     // MARK: - 생성자
@@ -77,8 +63,15 @@ class WeatherView: UIView {
     func configure(_ with: Weather, _ city: String, _ date: String) {
         let currentWeather = with.currentWeather
         let condition = currentWeather.condition.translateWeatherCondition()
-        print("\(date) \(city)의 날씨는 \(condition)입니다.")
+        let temp = Int(round(currentWeather.temperature.value))
+        let humidity = Int(round(currentWeather.humidity * 100))
+        print("\(date) \(city)의 날씨는 \(condition)")
         
+        homeMainView.dateLabel.text = "\(date) 기준"
+        homeMainView.cityLabel.text = "\(city)"
+        homeMainView.conditionLabel.text = "\(condition)"
+        homeMainView.temperatureLabel.text = "\(temp)°"
+        homeMainView.humidityLabel.text = "\(humidity)%"
     }
     
     /// Lottie 배경을 추가하는 메서드입니다.
@@ -90,7 +83,7 @@ class WeatherView: UIView {
             $0.play()
         }
         self.backgroundColor = .black
-        lottieBackground.alpha = 0.9
+        lottieBackground.alpha = 0.7
         
         addSubview(lottieBackground)
         lottieBackground.snp.makeConstraints { make in
@@ -110,7 +103,7 @@ class WeatherView: UIView {
             
         }
         
-        testViewStack.addArrangedSubview(testView)
+        testViewStack.addArrangedSubview(homeMainView)
         testViewStack.addArrangedSubview(testView1)
         testViewStack.addArrangedSubview(testView2)
         testViewStack.addArrangedSubview(testView3)
@@ -118,14 +111,14 @@ class WeatherView: UIView {
         
         testViewStack.snp.makeConstraints { make in
             make.top.equalTo(scrollView.contentLayoutGuide.snp.top)
-            make.leading.equalTo(scrollView.contentLayoutGuide.snp.leading)
-            make.trailing.equalTo(scrollView.contentLayoutGuide.snp.trailing)
+            make.leading.equalTo(scrollView.contentLayoutGuide.snp.leading).offset(15)
+            make.trailing.equalTo(scrollView.contentLayoutGuide.snp.trailing).offset(15)
             make.bottom.equalTo(scrollView.contentLayoutGuide.snp.bottom).offset(-10)
-            make.width.equalTo(scrollView.frameLayoutGuide.snp.width)
+            make.width.equalTo(scrollView.frameLayoutGuide.snp.width).offset(-30)
         }
         
-        testView.snp.makeConstraints { make in
-            make.height.equalTo(400)
+        homeMainView.snp.makeConstraints { make in
+            make.height.equalTo(500)
         }
         testView1.snp.makeConstraints { make in
             make.height.equalTo(100)

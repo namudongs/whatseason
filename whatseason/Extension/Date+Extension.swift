@@ -13,7 +13,7 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = .current
         dateFormatter.locale = Locale(identifier: "ko")
-        dateFormatter.dateFormat = "M월 d일 E요일 H시 m분"
+        dateFormatter.dateFormat = "M월 d일 H시 m분"
         return dateFormatter.string(from: self)
     }
 }

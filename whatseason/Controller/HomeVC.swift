@@ -1,5 +1,5 @@
 //
-//  WeatherVC.swift
+//  HomeVC.swift
 //  whatseason
 //
 //  Created by namdghyun on 1/3/24.
@@ -9,10 +9,10 @@ import CoreLocation
 import WeatherKit
 import UIKit
 
-class WeatherVC: UIViewController {
+class HomeVC: UIViewController {
     
     // MARK: - 프로퍼티
-    var weatherView = WeatherView()
+    var homeView = HomeView()
     let locationManager = CLLocationManager()
     let service = WeatherService()
     
@@ -22,7 +22,7 @@ class WeatherVC: UIViewController {
     
     // MARK: - 라이프사이클
     override func loadView() {
-        view = weatherView
+        view = homeView
     }
     
     override func viewDidLoad() {
@@ -64,15 +64,18 @@ class WeatherVC: UIViewController {
         let currentWeather = result.currentWeather
         
         let date = currentWeather.date.toFormattedKoreanString()
-        weatherView.configure(result, city, date)
-        let lottieName = currentWeather.condition.conditionToLottieName()
-        weatherView.addBackgroundLottie(lottieName)
-        weatherView.setUpView()
+        homeView.configure(result, city, date)
+//        let lottieName = currentWeather.condition.conditionToLottieName()
+//        homeView.addBackgroundLottie(lottieName)
+        homeView.addBackgroundLottie("spring-bg")
+        homeView.homeMainView.addWeatherLottie("clear-day")
+        
+        homeView.setUpView()
     }
 }
 
 // MARK: - 코어로케이션델리게이트
-extension WeatherVC: CLLocationManagerDelegate {
+extension HomeVC: CLLocationManagerDelegate {
     
     // 위치 정보가 업데이트되면 호출
     func locationManager(

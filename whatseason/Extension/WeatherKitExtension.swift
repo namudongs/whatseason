@@ -87,12 +87,12 @@ extension WeatherCondition {
     /// 날씨 상태에 맞는 Lottie 배경 Asset 이름을 반환하는 메서드입니다.
     func conditionToLottieName() -> String {
         switch self {
-            /*
-             case .mostlyCloudy:
-             return "cloudy-bg"
-             */
+        case .partlyCloudy:
+            return "cloudy-bg"
+        case .mostlyCloudy:
+            return "cloudy-bg"
         default:
-            return "spring-bg"
+            return "cloudy-bg"
         }
     }
 }
