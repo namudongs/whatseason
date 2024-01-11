@@ -28,7 +28,6 @@ class WeatherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserLocation()
-        setUpTableView()
     }
     
     // MARK: - 메서드
@@ -40,8 +39,8 @@ class WeatherVC: UIViewController {
         locationManager.startUpdatingLocation()
     }
     
-    /// 위치 정보와 도시명을 파라미터로 받아 날씨 데이터를 불러옵니다.
-    func getWeather(_ location: CLLocation, _ city: String) {
+    /// 위치 정보와 도시명을 파라미터로 받아 애플 날씨 데이터를 불러옵니다.
+    func getAppleWeather(_ location: CLLocation, _ city: String) {
         Task {
             do {
                 let result = try await service.weather(for: location)
@@ -62,27 +61,13 @@ class WeatherVC: UIViewController {
     
     /// 날씨 데이터를 받아 화면을 업데이트합니다.
     func updateWeatherView(_ result: Weather, _ city: String) {
-        let date = convertDate(result.currentWeather.date)
+        let currentWeather = result.currentWeather
+        
+        let date = currentWeather.date.toFormattedKoreanString()
         weatherView.configure(result, city, date)
-        weatherView.tableView.reloadData()
-    }
-    
-    /// Date 데이터를 설정합니다.
-    func convertDate(_ to: Date) -> String {
-        let df = DateFormatter()
-        df.timeZone = .current
-        df.locale = Locale(identifier: "ko")
-        df.dateFormat = "M월 d일 E요일 H시 m분"
-        return df.string(from: to)
-    }
-    
-    /// 테이블뷰의 Identifier와 Datasource를 설정합니다.
-    func setUpTableView() {
-        weatherView.tableView.register(
-            DailyCell.self,
-            forCellReuseIdentifier: "dailyCell"
-        )
-        weatherView.tableView.dataSource = self
+        let lottieName = currentWeather.condition.conditionToLottieName()
+        weatherView.addBackgroundLottie(lottieName)
+        weatherView.setUpView()
     }
 }
 
@@ -96,31 +81,10 @@ extension WeatherVC: CLLocationManagerDelegate {
     ) { guard let location = locations.first else { return }
         locationManager.stopUpdatingLocation()
         
-        // 위치 정보로 도시명을 받아 날씨 데이터 파싱
+        // 위치 정보로 도시명을 받아 애플 날씨 데이터 파싱
         location.fetchCity { city, error in
             guard let city = city, error == nil else { return }
-            self.getWeather(location, city)
+            self.getAppleWeather(location, city)
         }
-    }
-}
-
-// MARK: - 테이블뷰데이터소스
-extension WeatherVC: UITableViewDataSource {
-    
-    // Row 개수
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        daily.count
-    }
-    
-    // Cell 업데이트
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dailyCell", for: indexPath) as! DailyCell
-        
-        let dayWeather = daily[indexPath.row]
-        let date = convertDate(dayWeather.date)
-        cell.dateLabel.text = "\(date)"
-        cell.lowTempLable.text = "\(Int(dayWeather.lowTemperature.value.rounded()))"
-        cell.highTempLable.text = "\(Int(dayWeather.highTemperature.value.rounded()))"
-        return cell
     }
 }

@@ -11,6 +11,13 @@
 		790621D22B4439B700D50F45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790621D12B4439B700D50F45 /* SceneDelegate.swift */; };
 		790621D92B4439B800D50F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790621D82B4439B800D50F45 /* Assets.xcassets */; };
 		790621DC2B4439B800D50F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790621DA2B4439B800D50F45 /* LaunchScreen.storyboard */; };
+		79371B322B502D9000D4DA97 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79371B312B502D9000D4DA97 /* Date+Extension.swift */; };
+		79371B342B502F4C00D4DA97 /* WeatherKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79371B332B502F4C00D4DA97 /* WeatherKitExtension.swift */; };
+		7981AB0F2B4F1C7400DFA751 /* clear-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB0E2B4F1C7400DFA751 /* clear-bg.json */; };
+		7981AB132B4F1DBC00DFA751 /* spring-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB102B4F1DBC00DFA751 /* spring-bg.json */; };
+		7981AB142B4F1DBC00DFA751 /* cloudy-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */; };
+		7981AB152B4F1DBC00DFA751 /* rain-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB122B4F1DBC00DFA751 /* rain-bg.json */; };
+		7981AB172B4F226800DFA751 /* blob.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB162B4F226800DFA751 /* blob.json */; };
 		799B4FCE2B46A47800AFBA21 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */; };
 		799B4FD22B46BA8E00AFBA21 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD12B46BA8E00AFBA21 /* DailyCell.swift */; };
 		799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */; };
@@ -266,6 +273,13 @@
 		790621DB2B4439B800D50F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		790621DD2B4439B800D50F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79267CAD2B444170001BFF15 /* whatseason.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = whatseason.entitlements; sourceTree = "<group>"; };
+		79371B312B502D9000D4DA97 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		79371B332B502F4C00D4DA97 /* WeatherKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitExtension.swift; sourceTree = "<group>"; };
+		7981AB0E2B4F1C7400DFA751 /* clear-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-bg.json"; sourceTree = "<group>"; };
+		7981AB102B4F1DBC00DFA751 /* spring-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "spring-bg.json"; sourceTree = "<group>"; };
+		7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cloudy-bg.json"; sourceTree = "<group>"; };
+		7981AB122B4F1DBC00DFA751 /* rain-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rain-bg.json"; sourceTree = "<group>"; };
+		7981AB162B4F226800DFA751 /* blob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blob.json; sourceTree = "<group>"; };
 		799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		799B4FD12B46BA8E00AFBA21 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
 		799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -556,7 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				799EAAAE2B445D23006F7C14 /* Util */,
-				799B4FCC2B46A45A00AFBA21 /* Helpers */,
+				799B4FCC2B46A45A00AFBA21 /* Extension */,
 				799EAAAC2B445D0A006F7C14 /* Weather */,
 				799EAAAD2B445D0E006F7C14 /* Controller */,
 				790621CF2B4439B700D50F45 /* AppDelegate.swift */,
@@ -567,14 +581,28 @@
 			path = whatseason;
 			sourceTree = "<group>";
 		};
-		799B4FCC2B46A45A00AFBA21 /* Helpers */ = {
+		7981AB0D2B4F1C6A00DFA751 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				7981AB162B4F226800DFA751 /* blob.json */,
+				7981AB0E2B4F1C7400DFA751 /* clear-bg.json */,
+				7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */,
+				7981AB122B4F1DBC00DFA751 /* rain-bg.json */,
+				7981AB102B4F1DBC00DFA751 /* spring-bg.json */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		799B4FCC2B46A45A00AFBA21 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */,
 				799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */,
 				799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */,
+				79371B312B502D9000D4DA97 /* Date+Extension.swift */,
+				79371B332B502F4C00D4DA97 /* WeatherKitExtension.swift */,
 			);
-			path = Helpers;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		799EAAAC2B445D0A006F7C14 /* Weather */ = {
@@ -597,7 +625,8 @@
 		799EAAAE2B445D23006F7C14 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				79B0D7D92B4DA6C5004A2178 /* Lottie */,
+				7981AB0D2B4F1C6A00DFA751 /* Background */,
+				79B0D7D92B4DA6C5004A2178 /* WeatherIcon */,
 				790621D82B4439B800D50F45 /* Assets.xcassets */,
 				799EAAC82B449087006F7C14 /* Main.storyboard */,
 				790621DA2B4439B800D50F45 /* LaunchScreen.storyboard */,
@@ -605,7 +634,7 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		79B0D7D92B4DA6C5004A2178 /* Lottie */ = {
+		79B0D7D92B4DA6C5004A2178 /* WeatherIcon */ = {
 			isa = PBXGroup;
 			children = (
 				79B0D87D2B4DA6E2004A2178 /* alert-avalanche-danger.json */,
@@ -845,7 +874,7 @@
 				79B0D80B2B4DA6DC004A2178 /* windsock-weak.json */,
 				79B0D8662B4DA6E1004A2178 /* windsock.json */,
 			);
-			path = Lottie;
+			path = WeatherIcon;
 			sourceTree = "<group>";
 		};
 		85D0BBBFD7D8312D1E23B339 /* Frameworks */ = {
@@ -949,6 +978,7 @@
 				79B0D8F42B4DA6E6004A2178 /* thunderstorms-extreme-snow.json in Resources */,
 				79B0D8E82B4DA6E6004A2178 /* partly-cloudy-day-rain.json in Resources */,
 				79B0D96D2B4DA6E6004A2178 /* uv-index-3.json in Resources */,
+				7981AB0F2B4F1C7400DFA751 /* clear-bg.json in Resources */,
 				79B0D96C2B4DA6E6004A2178 /* thunderstorms-day-extreme.json in Resources */,
 				79B0D8EA2B4DA6E6004A2178 /* wind-beaufort-6.json in Resources */,
 				79B0D9522B4DA6E6004A2178 /* windsock.json in Resources */,
@@ -997,6 +1027,7 @@
 				79B0D95E2B4DA6E6004A2178 /* thunderstorms-night-overcast-snow.json in Resources */,
 				79B0D9102B4DA6E6004A2178 /* tide-high.json in Resources */,
 				79B0D9722B4DA6E6004A2178 /* extreme-night-smoke.json in Resources */,
+				7981AB152B4F1DBC00DFA751 /* rain-bg.json in Resources */,
 				79B0D90A2B4DA6E6004A2178 /* thermometer-water.json in Resources */,
 				79B0D9702B4DA6E6004A2178 /* thunderstorms-overcast-rain.json in Resources */,
 				79B0D8DB2B4DA6E6004A2178 /* thunderstorms-overcast-snow.json in Resources */,
@@ -1043,6 +1074,7 @@
 				79B0D8D12B4DA6E6004A2178 /* moon-waning-crescent.json in Resources */,
 				79B0D90E2B4DA6E6004A2178 /* wind-beaufort-11.json in Resources */,
 				79B0D96E2B4DA6E6004A2178 /* uv-index-5.json in Resources */,
+				7981AB132B4F1DBC00DFA751 /* spring-bg.json in Resources */,
 				79B0D9AA2B4DA6E6004A2178 /* time-afternoon.json in Resources */,
 				79B0D9A72B4DA6E6004A2178 /* partly-cloudy-night-sleet.json in Resources */,
 				79B0D9A22B4DA6E6004A2178 /* barometer.json in Resources */,
@@ -1063,11 +1095,13 @@
 				79B0D98D2B4DA6E6004A2178 /* uv-index-10.json in Resources */,
 				79B0D95B2B4DA6E6004A2178 /* overcast-night-sleet.json in Resources */,
 				79B0D9202B4DA6E6004A2178 /* cloud-down.json in Resources */,
+				7981AB142B4F1DBC00DFA751 /* cloudy-bg.json in Resources */,
 				79B0D9A42B4DA6E6004A2178 /* uv-index-9.json in Resources */,
 				79B0D94C2B4DA6E6004A2178 /* tornado.json in Resources */,
 				79B0D8DE2B4DA6E6004A2178 /* wind-beaufort-1.json in Resources */,
 				79B0D9322B4DA6E6004A2178 /* snowman.json in Resources */,
 				79B0D9852B4DA6E6004A2178 /* clear-day.json in Resources */,
+				7981AB172B4F226800DFA751 /* blob.json in Resources */,
 				79B0D92C2B4DA6E6004A2178 /* overcast-day-snow.json in Resources */,
 				79B0D92E2B4DA6E6004A2178 /* extreme-day-drizzle.json in Resources */,
 				79B0D9032B4DA6E6004A2178 /* raindrop.json in Resources */,
@@ -1208,6 +1242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				790621D02B4439B700D50F45 /* AppDelegate.swift in Sources */,
+				79371B342B502F4C00D4DA97 /* WeatherKitExtension.swift in Sources */,
+				79371B322B502D9000D4DA97 /* Date+Extension.swift in Sources */,
 				799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */,
 				799EAABA2B4472D1006F7C14 /* WeatherVC.swift in Sources */,
 				799B4FD62B4C748500AFBA21 /* UIColors+Extension.swift in Sources */,
