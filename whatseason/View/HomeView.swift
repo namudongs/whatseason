@@ -17,19 +17,19 @@ class HomeView: UIView {
     let homeMainView = HomeMainView()
     
     let testView1 = UIView().then {
-        $0.backgroundColor = .black.withAlphaComponent(0.9)
+        $0.backgroundColor = .white.withAlphaComponent(0.9)
     }
     
     let testView2 = UIView().then {
-        $0.backgroundColor = .black.withAlphaComponent(0.9)
+        $0.backgroundColor = .white.withAlphaComponent(0.9)
     }
     
     let testView3 = UIView().then {
-        $0.backgroundColor = .black.withAlphaComponent(0.9)
+        $0.backgroundColor = .white.withAlphaComponent(0.9)
     }
     
     let testView4 = UIView().then {
-        $0.backgroundColor = .black.withAlphaComponent(0.9)
+        $0.backgroundColor = .white.withAlphaComponent(0.9)
     }
     
     let homeViewStack = UIStackView().then {
@@ -57,7 +57,6 @@ class HomeView: UIView {
         let condition = currentWeather.condition.translateWeatherCondition()
         let temp = Int(round(currentWeather.temperature.value))
         let humidity = Int(round(currentWeather.humidity * 100))
-        let airQuality = currentWeather.dewPoint
         print("\(date) \(city)의 날씨는 \(condition) 온도는 \(temp), 습도는 \(humidity)")
         
         homeMainView.dateLabel.text = "\(date) 기준"
@@ -75,19 +74,34 @@ class HomeView: UIView {
     }
     
     /// Lottie 배경을 추가하는 메서드입니다.
-    func addBackgroundLottie(_ lottieName: String) {
+    func addBackgroundLottie(_ lottieName: String, _ lottieName2: String = "blob") {
         let lottieBackground = LottieAnimationView(name: lottieName).then {
             $0.contentMode = .scaleAspectFill
             $0.loopMode = .loop
             $0.animationSpeed = 1.0
             $0.play()
         }
+        
+        let lottieBackground2 = LottieAnimationView(name: lottieName2).then {
+            $0.contentMode = .scaleAspectFill
+            $0.loopMode = .loop
+            $0.animationSpeed = 1.0
+            $0.play()
+        }
+        
         self.backgroundColor = .black
-        lottieBackground.alpha = 0.6
+        lottieBackground.alpha = 0.7
+        lottieBackground2.alpha = 0.7
         
         addSubview(lottieBackground)
+        addSubview(lottieBackground2)
         lottieBackground.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        
+        lottieBackground2.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.height * 1.5)
         }
     }
     

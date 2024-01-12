@@ -45,12 +45,15 @@ class HomeVC: UIViewController {
             do {
                 let result = try await service.weather(for: location)
                 
+                // 예보 데이터를 배열에 담습니다.
                 result.hourlyForecast.forecast.forEach { hourWeather in
                     self.hourly.append(hourWeather)
                 }
                 result.dailyForecast.forecast.forEach { dayWeather in
                     self.daily.append(dayWeather)
                 }
+                
+                
                 updateWeatherView(result, city)
                 
             } catch {
@@ -65,7 +68,7 @@ class HomeVC: UIViewController {
         let date = currentWeather.date.toFormattedKoreanString()
         homeView.configure(result, city, date)
         let lottieName = currentWeather.condition.conditionToLottieName()
-        homeView.addBackgroundLottie(lottieName)
+        homeView.addBackgroundLottie(lottieName, "blob")
         homeView.setUpView()
     }
 }
