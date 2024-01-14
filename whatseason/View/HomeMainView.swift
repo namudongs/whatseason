@@ -40,13 +40,6 @@ class HomeMainView: UIView {
         $0.textColor = .white
     }
     
-    let airSubLabel = UILabel().then {
-        $0.text = "대기질은 ···"
-        $0.textAlignment = .center
-        $0.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        $0.textColor = .white
-    }
-    
     let airLabel = UILabel().then {
         $0.text = "--"
         $0.textAlignment = .center
@@ -92,7 +85,6 @@ class HomeMainView: UIView {
         addSubview(cityLabel)
         addSubview(conditionLabel)
         addSubview(temperatureLabel)
-        addSubview(airSubLabel)
         addSubview(airLabel)
         
         dateLabel.snp.makeConstraints { make in
@@ -114,12 +106,6 @@ class HomeMainView: UIView {
             make.bottom.equalToSuperview().offset(-10)
             make.leading.equalToSuperview().offset(20)
         }
-        
-//        airSubLabel.snp.makeConstraints { make in
-//            make.bottom.equalTo(airLabel.snp.top).offset(-3)
-//            make.leading.equalTo(airLabel.snp.leading)
-//            make.trailing.equalTo(airLabel.snp.trailing)
-//        }
         
         airLabel.snp.makeConstraints { make in
             make.top.equalTo(temperatureLabel.snp.top)
