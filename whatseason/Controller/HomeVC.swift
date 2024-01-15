@@ -68,7 +68,9 @@ class HomeVC: UIViewController {
         let date = currentWeather.date.toFormattedKoreanString()
         homeView.configure(result, city, date)
         let lottieName = currentWeather.condition.conditionToLottieName()
-        homeView.addBackgroundLottie(lottieName, "blob")
+        let lottieName2 = currentWeather.condition.conditionToLottieName2()
+        homeView.addBackgroundLottie(lottieName, lottieName2)
+//        homeView.addBackgroundLottie("cloudy-bg", "cloudy-blob")
         homeView.setUpView()
     }
 }

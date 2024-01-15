@@ -254,7 +254,9 @@
 		7981AB132B4F1DBC00DFA751 /* spring-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB102B4F1DBC00DFA751 /* spring-bg.json */; };
 		7981AB142B4F1DBC00DFA751 /* cloudy-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */; };
 		7981AB152B4F1DBC00DFA751 /* rain-bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB122B4F1DBC00DFA751 /* rain-bg.json */; };
-		7981AB172B4F226800DFA751 /* blob.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB162B4F226800DFA751 /* blob.json */; };
+		7981AB172B4F226800DFA751 /* sun-blob.json in Resources */ = {isa = PBXBuildFile; fileRef = 7981AB162B4F226800DFA751 /* sun-blob.json */; };
+		798DDABB2B550F0800A86290 /* cloudy-blob.json in Resources */ = {isa = PBXBuildFile; fileRef = 798DDABA2B550F0800A86290 /* cloudy-blob.json */; };
+		798DDABD2B55106300A86290 /* rain-blob.json in Resources */ = {isa = PBXBuildFile; fileRef = 798DDABC2B55106300A86290 /* rain-blob.json */; };
 		799B4FCE2B46A47800AFBA21 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */; };
 		799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */; };
 		799B4FD62B4C748500AFBA21 /* UIColors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */; };
@@ -516,7 +518,9 @@
 		7981AB102B4F1DBC00DFA751 /* spring-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "spring-bg.json"; sourceTree = "<group>"; };
 		7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cloudy-bg.json"; sourceTree = "<group>"; };
 		7981AB122B4F1DBC00DFA751 /* rain-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rain-bg.json"; sourceTree = "<group>"; };
-		7981AB162B4F226800DFA751 /* blob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blob.json; sourceTree = "<group>"; };
+		7981AB162B4F226800DFA751 /* sun-blob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sun-blob.json"; sourceTree = "<group>"; };
+		798DDABA2B550F0800A86290 /* cloudy-blob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "cloudy-blob.json"; path = "../../../../../../../Downloads/cloudy-blob.json"; sourceTree = "<group>"; };
+		798DDABC2B55106300A86290 /* rain-blob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rain-blob.json"; sourceTree = "<group>"; };
 		799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extension.swift"; sourceTree = "<group>"; };
@@ -584,13 +588,23 @@
 		7981AB0D2B4F1C6A00DFA751 /* Background */ = {
 			isa = PBXGroup;
 			children = (
-				7981AB162B4F226800DFA751 /* blob.json */,
+				798DDAB72B54E23600A86290 /* blob */,
 				7981AB0E2B4F1C7400DFA751 /* clear-bg.json */,
 				7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */,
 				7981AB122B4F1DBC00DFA751 /* rain-bg.json */,
 				7981AB102B4F1DBC00DFA751 /* spring-bg.json */,
 			);
 			path = Background;
+			sourceTree = "<group>";
+		};
+		798DDAB72B54E23600A86290 /* blob */ = {
+			isa = PBXGroup;
+			children = (
+				7981AB162B4F226800DFA751 /* sun-blob.json */,
+				798DDABA2B550F0800A86290 /* cloudy-blob.json */,
+				798DDABC2B55106300A86290 /* rain-blob.json */,
+			);
+			path = blob;
 			sourceTree = "<group>";
 		};
 		799B4FCC2B46A45A00AFBA21 /* Extension */ = {
@@ -977,6 +991,7 @@
 				79371C792B5063C000D4DA97 /* falling-stars.json in Resources */,
 				79371CA02B5063C000D4DA97 /* partly-cloudy-day-sleet.json in Resources */,
 				79371CA32B5063C000D4DA97 /* time-late-afternoon.json in Resources */,
+				798DDABB2B550F0800A86290 /* cloudy-blob.json in Resources */,
 				79371CE22B5063C000D4DA97 /* thunderstorms-overcast.json in Resources */,
 				79371C652B5063C000D4DA97 /* extreme-day-smoke.json in Resources */,
 				79371CEF2B5063C000D4DA97 /* overcast-day-hail.json in Resources */,
@@ -1132,6 +1147,7 @@
 				79371C9A2B5063C000D4DA97 /* overcast-night-snow.json in Resources */,
 				79371D0E2B5063C000D4DA97 /* pollen-flower.json in Resources */,
 				79371D042B5063C000D4DA97 /* windsock-weak.json in Resources */,
+				798DDABD2B55106300A86290 /* rain-blob.json in Resources */,
 				79371C7F2B5063C000D4DA97 /* thunderstorms-night-rain.json in Resources */,
 				79371CE72B5063C000D4DA97 /* extreme-night-haze.json in Resources */,
 				79371CDC2B5063C000D4DA97 /* overcast-snow.json in Resources */,
@@ -1186,7 +1202,7 @@
 				79371C532B5063C000D4DA97 /* extreme-night.json in Resources */,
 				79371C5B2B5063C000D4DA97 /* uv-index-3.json in Resources */,
 				79371CF12B5063C000D4DA97 /* extreme-day-haze.json in Resources */,
-				7981AB172B4F226800DFA751 /* blob.json in Resources */,
+				7981AB172B4F226800DFA751 /* sun-blob.json in Resources */,
 				79371C492B5063C000D4DA97 /* raindrops.json in Resources */,
 				79371CD02B5063C000D4DA97 /* raindrop-measure.json in Resources */,
 			);

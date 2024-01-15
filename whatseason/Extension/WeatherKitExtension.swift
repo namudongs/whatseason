@@ -234,4 +234,82 @@ extension WeatherCondition {
             return "알 수 없음"
         }
     }
+    
+    /// 날씨 상태에 맞는 Lottie 배경 Asset 이름을 반환하는 메서드입니다.
+    /// Blob Asset의 이름을 반환합니다.
+    func conditionToLottieName2() -> String {
+        switch self {
+        case .blizzard:
+            return "cloudy-blob"
+        case .blowingDust:
+            return "cloudy-blob"
+        case .blowingSnow:
+            return "cloudy-blob"
+        case .breezy:
+            return "cloudy-blob"
+        case .clear:
+            return "sun-blob"
+        case .cloudy:
+            return "cloudy-blob"
+        case .drizzle:
+            return "rain-blob"
+        case .flurries:
+            return "rain-blob"
+        case .foggy:
+            return "cloudy-blob"
+        case .freezingDrizzle:
+            return "rain-blob"
+        case .freezingRain:
+            return "rain-blob"
+        case .frigid:
+            return "cloudy-blob"
+        case .hail:
+            return "cloudy-blob"
+        case .haze:
+            return "cloudy-blob"
+        case .heavyRain:
+            return "rain-blob"
+        case .heavySnow:
+            return "cloudy-blob"
+        case .hot:
+            return "sun-blob"
+        case .hurricane:
+            return "rain-blob"
+        case .isolatedThunderstorms:
+            return "rain-blob"
+        case .mostlyClear:
+            return "sun-blob"
+        case .mostlyCloudy:
+            return "cloudy-blob"
+        case .partlyCloudy:
+            return "cloudy-blob"
+        case .rain:
+            return "rain-blob"
+        case .scatteredThunderstorms:
+            return "rain-blob"
+        case .sleet:
+            return "rain-blob"
+        case .smoky:
+            return "cloudy-blob"
+        case .snow:
+            return "cloudy-blob"
+        case .strongStorms:
+            return "cloudy-blob"
+        case .sunFlurries:
+            return "sun-blob"
+        case .sunShowers:
+            return "sun-blob"
+        case .thunderstorms:
+            return "cloudy-blob"
+        case .tropicalStorm:
+            return "rain-blob"
+        case .windy:
+            return "spring-blob"
+        case .wintryMix:
+            return "cloudy-blob"
+        default:
+            return "알 수 없음"
+        }
+    }
+
 }
