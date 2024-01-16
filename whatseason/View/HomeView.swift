@@ -16,9 +16,7 @@ class HomeView: UIView {
     // MARK: - 프로퍼티
     let homeMainView = HomeMainView()
     
-    let testView1 = UIView().then {
-        $0.backgroundColor = .white.withAlphaComponent(0.9)
-    }
+    let homeView1 = HomeView1()
     
     let testView2 = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.9)
@@ -57,10 +55,10 @@ class HomeView: UIView {
         let condition = currentWeather.condition.translateWeatherCondition()
         let temp = Int(round(currentWeather.temperature.value))
         let humidity = Int(round(currentWeather.humidity * 100))
-        print("\(date) \(city)의 날씨는 \(condition) 온도는 \(temp), 습도는 \(humidity)")
+        print("\(date) \(city)의 날씨는 \(condition) 온도는 \(temp) 습도는 \(humidity)")
         
         homeMainView.dateLabel.text = "\(date) 기준"
-        homeMainView.cityLabel.text = "\(city)의 하늘은 ···"
+        homeMainView.cityLabel.text = "\(city)의 날씨는 ···"
         homeMainView.conditionLabel.text = "\(condition)"
         homeMainView.temperatureLabel.text = "\(temp)°"
         
@@ -71,6 +69,8 @@ class HomeView: UIView {
         homeMainView.airLabel.text = "보통"
         homeMainView.airLabel.backgroundColor = .systemGreen.withAlphaComponent(0.7)
         
+        // HomeView1에 데이터 전달
+        homeView1.configure(weather: with.currentWeather)
     }
     
     /// Lottie 배경을 추가하는 메서드입니다.
@@ -118,7 +118,7 @@ class HomeView: UIView {
         }
         
         homeViewStack.addArrangedSubview(homeMainView)
-        homeViewStack.addArrangedSubview(testView1)
+        homeViewStack.addArrangedSubview(homeView1)
         homeViewStack.addArrangedSubview(testView2)
         homeViewStack.addArrangedSubview(testView3)
         homeViewStack.addArrangedSubview(testView4)
@@ -134,8 +134,8 @@ class HomeView: UIView {
         homeMainView.snp.makeConstraints { make in
             make.height.equalTo(UIScreen.main.bounds.height * 0.7)
         }
-        testView1.snp.makeConstraints { make in
-            make.height.equalTo(100)
+        homeView1.snp.makeConstraints { make in
+            make.height.equalTo(120)
         }
         testView2.snp.makeConstraints { make in
             make.height.equalTo(400)
