@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeView2: UIView {
+class HomeThirdView: UIView {
     // MARK: - 프로퍼티
     let mainLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 16, weight: .regular)

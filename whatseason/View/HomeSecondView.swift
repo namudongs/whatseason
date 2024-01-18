@@ -9,7 +9,7 @@ import UIKit
 import WeatherKit
 import Lottie
 
-class HomeView1: UIView {
+class HomeSecondView: UIView {
     
     // MARK: - 프로퍼티
     // 메인 레이블
@@ -41,7 +41,7 @@ class HomeView1: UIView {
     let tempValueLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 13, weight: .regular)
         $0.textColor = .black
-        $0.text = "12°"
+        $0.text = "--°"
     }
     
     // 체감온도 스택
@@ -59,7 +59,7 @@ class HomeView1: UIView {
     let apperentTempValueLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 13, weight: .regular)
         $0.textColor = .black
-        $0.text = "10°"
+        $0.text = "--°"
     }
     
     // 습도 스택
@@ -77,7 +77,7 @@ class HomeView1: UIView {
     let humidityValueLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 13, weight: .regular)
         $0.textColor = .black
-        $0.text = "45%"
+        $0.text = "--%"
     }
     
     // 바람 스택
@@ -95,7 +95,7 @@ class HomeView1: UIView {
     let windValueLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 13, weight: .regular)
         $0.textColor = .black
-        $0.text = "북서풍 2m/s"
+        $0.text = "--풍 -m/s"
     }
     
     // MARK: - 생성자
@@ -111,19 +111,20 @@ class HomeView1: UIView {
     
     
     // MARK: - 메서드
-    func configure(weather: CurrentWeather) {
-        let temp = Int(round(weather.temperature.value))
-        let apperentTemp = Int(round(weather.apparentTemperature.value))
-        let humidity = Int(round(weather.humidity * 100))
-        let windDirection = weather.wind.translateWindDirection()
-        let windSpeed = String(format: "%.1f", Measurement(value: weather.wind.speed.value, unit: UnitSpeed.kilometersPerHour).converted(to: .metersPerSecond).value)
-        print(windSpeed)
+    func configure(_ weather: AnyWeather) {
+//        let apple = weather.apple!.currentWeather
+        let kma = weather.kma!
+        
+        let temp = Int(round(kma.temperature))
+        let humidity = kma.humidity
+        let windSpeed = kma.windSpeed
+        let windDirection = kma.translateWindDirection()
+        let kmaApperent = Int(round(kma.calculateFeelsLikeTemperature()))
         
         tempValueLabel.text = "\(temp)°"
-        apperentTempValueLabel.text = "\(apperentTemp)°"
+        apperentTempValueLabel.text = "\(kmaApperent)°"
         humidityValueLabel.text = "\(humidity)%"
         windValueLabel.text = "\(windDirection)풍 \(windSpeed)m/s"
-        
     }
     
     func setUpView() {

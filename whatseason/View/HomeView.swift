@@ -14,17 +14,17 @@ import Lottie
 class HomeView: UIView {
     
     // MARK: - 프로퍼티
-    let homeMainView = HomeMainView()
+    let homeFirstView = HomeFirstView()
     
-    let homeView1 = HomeView1()
+    let homeSecondView = HomeSecondView()
     
-    let homeView2 = HomeView2()
+    let homeThirdView = HomeThirdView()
     
-    let testView3 = UIView().then {
+    let homeFourthView = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.9)
     }
     
-    let testView4 = UIView().then {
+    let homeFifthView = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.9)
     }
     
@@ -47,29 +47,13 @@ class HomeView: UIView {
     }
     
     // MARK: - 메서드
-    /// 날씨와 도시명을 받아 WeatherView를 업데이트하는 메서드입니다.
-    func configure(_ with: Weather, _ city: String, _ date: String) {
-        let currentWeather = with.currentWeather
-        let condition = currentWeather.condition.translateWeatherCondition()
-        let temp = Int(round(currentWeather.temperature.value))
-        let humidity = Int(round(currentWeather.humidity * 100))
-        print(currentWeather.wind.direction.value)
-        print("\(date) \(city)의 날씨는 \(condition) 온도는 \(temp) 습도는 \(humidity)")
+    /// 애플날씨와 도시명을 받아 WeatherView를 업데이트하는 메서드입니다.
+    func configure(_ weather: AnyWeather, _ address: String) {
+        // HomeFirstView에 데이터 전달
+        homeFirstView.configure(weather, address)
         
-        homeMainView.dateLabel.text = "\(date) 기준"
-        homeMainView.cityLabel.text = "\(city)의 날씨는 ···"
-        homeMainView.conditionLabel.text = "\(condition)"
-        homeMainView.temperatureLabel.text = "\(temp)°"
-        
-        // Condition에 따라 Icon 변경
-        homeMainView.addWeatherLottie("\(currentWeather.condition.conditionToDayIconName())")
-        
-        // 미세먼지에 따라 변경
-        homeMainView.airLabel.text = "보통"
-        homeMainView.airLabel.backgroundColor = .systemGreen.withAlphaComponent(0.7)
-        
-        // HomeView1에 데이터 전달
-        homeView1.configure(weather: with.currentWeather)
+        // HomeSecondView에 데이터 전달
+        homeSecondView.configure(weather)
     }
     
     /// Lottie 배경을 추가하는 메서드입니다.
@@ -116,11 +100,11 @@ class HomeView: UIView {
             
         }
         
-        homeViewStack.addArrangedSubview(homeMainView)
-        homeViewStack.addArrangedSubview(homeView1)
-        homeViewStack.addArrangedSubview(homeView2)
-        homeViewStack.addArrangedSubview(testView3)
-        homeViewStack.addArrangedSubview(testView4)
+        homeViewStack.addArrangedSubview(homeFirstView)
+        homeViewStack.addArrangedSubview(homeSecondView)
+        homeViewStack.addArrangedSubview(homeThirdView)
+        homeViewStack.addArrangedSubview(homeFourthView)
+        homeViewStack.addArrangedSubview(homeFifthView)
         
         homeViewStack.snp.makeConstraints { make in
             make.top.equalTo(scrollView.contentLayoutGuide.snp.top)
@@ -130,19 +114,19 @@ class HomeView: UIView {
             make.width.equalTo(scrollView.frameLayoutGuide.snp.width)
         }
         
-        homeMainView.snp.makeConstraints { make in
+        homeFirstView.snp.makeConstraints { make in
             make.height.equalTo(UIScreen.main.bounds.height * 0.5)
         }
-        homeView1.snp.makeConstraints { make in
+        homeSecondView.snp.makeConstraints { make in
             make.height.equalTo(120)
         }
-        homeView2.snp.makeConstraints { make in
+        homeThirdView.snp.makeConstraints { make in
             make.height.equalTo(400)
         }
-        testView3.snp.makeConstraints { make in
+        homeFourthView.snp.makeConstraints { make in
             make.height.equalTo(300)
         }
-        testView4.snp.makeConstraints { make in
+        homeFifthView.snp.makeConstraints { make in
             make.height.equalTo(200)
         }
     }

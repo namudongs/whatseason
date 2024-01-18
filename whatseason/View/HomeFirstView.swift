@@ -10,7 +10,7 @@ import SnapKit
 import Then
 import Lottie
 
-class HomeMainView: UIView {
+class HomeFirstView: UIView {
     // MARK: - 프로퍼티
     let dateLabel = UILabel().then {
         $0.text = "--"
@@ -62,6 +62,28 @@ class HomeMainView: UIView {
     }
 
     // MARK: - 메서드
+    func configure(_ weather: AnyWeather, _ address: String) {
+        let apple = weather.apple!.currentWeather
+        let kma = weather.kma!
+        
+        let temp = Int(kma.temperature)
+        let date = Date().toFormattedKoreanString()
+        let condition = apple.condition.translateWeatherCondition()
+        let conditionIcon = apple.condition.conditionToDayIconName()
+        
+        temperatureLabel.text = "\(temp)°"
+        dateLabel.text = "\(date) 기준"
+        cityLabel.text = "\(address)의 날씨는 ···"
+        conditionLabel.text = "\(condition)"
+        
+        // Condition에 따라 Icon 변경
+        addWeatherLottie("\(conditionIcon)")
+        
+        // 미세먼지에 따라 변경
+        airLabel.text = "보통"
+        airLabel.backgroundColor = .systemGreen.withAlphaComponent(0.7)
+    }
+    
     func addWeatherLottie(_ lottieName: String) {
         let lottieIcon = LottieAnimationView(name: lottieName).then {
             $0.contentMode = .scaleAspectFill
