@@ -7,6 +7,33 @@
 
 import WeatherKit
 
+extension Wind {
+    func translateWindDirection() -> String {
+        let direction = self.direction.value
+        
+        switch direction {
+        case 0..<22.5:
+            return "북"
+        case 22.5..<67.5:
+            return "북동"
+        case 67.5..<112.5:
+            return "동"
+        case 112.5..<157.5:
+            return "남동"
+        case 157.5..<202.5:
+            return "남"
+        case 202.5..<247.5:
+            return "남서"
+        case 247.5..<292.5:
+            return "서"
+        case 292.5..<337.5:
+            return "북서"
+        default:
+            return "북"
+        }
+    }
+}
+
 extension WeatherCondition {
     /// 날씨 상태를 한글로 변환하는 메서드입니다.
     func translateWeatherCondition() -> String {

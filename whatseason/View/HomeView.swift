@@ -18,9 +18,7 @@ class HomeView: UIView {
     
     let homeView1 = HomeView1()
     
-    let testView2 = UIView().then {
-        $0.backgroundColor = .white.withAlphaComponent(0.9)
-    }
+    let homeView2 = HomeView2()
     
     let testView3 = UIView().then {
         $0.backgroundColor = .white.withAlphaComponent(0.9)
@@ -55,6 +53,7 @@ class HomeView: UIView {
         let condition = currentWeather.condition.translateWeatherCondition()
         let temp = Int(round(currentWeather.temperature.value))
         let humidity = Int(round(currentWeather.humidity * 100))
+        print(currentWeather.wind.direction.value)
         print("\(date) \(city)의 날씨는 \(condition) 온도는 \(temp) 습도는 \(humidity)")
         
         homeMainView.dateLabel.text = "\(date) 기준"
@@ -119,7 +118,7 @@ class HomeView: UIView {
         
         homeViewStack.addArrangedSubview(homeMainView)
         homeViewStack.addArrangedSubview(homeView1)
-        homeViewStack.addArrangedSubview(testView2)
+        homeViewStack.addArrangedSubview(homeView2)
         homeViewStack.addArrangedSubview(testView3)
         homeViewStack.addArrangedSubview(testView4)
         
@@ -132,12 +131,12 @@ class HomeView: UIView {
         }
         
         homeMainView.snp.makeConstraints { make in
-            make.height.equalTo(UIScreen.main.bounds.height * 0.7)
+            make.height.equalTo(UIScreen.main.bounds.height * 0.5)
         }
         homeView1.snp.makeConstraints { make in
             make.height.equalTo(120)
         }
-        testView2.snp.makeConstraints { make in
+        homeView2.snp.makeConstraints { make in
             make.height.equalTo(400)
         }
         testView3.snp.makeConstraints { make in

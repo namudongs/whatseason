@@ -259,6 +259,7 @@
 		798DDABD2B55106300A86290 /* rain-blob.json in Resources */ = {isa = PBXBuildFile; fileRef = 798DDABC2B55106300A86290 /* rain-blob.json */; };
 		798DDABF2B5513AF00A86290 /* HomeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DDABE2B5513AF00A86290 /* HomeView1.swift */; };
 		798DDAC32B556E9D00A86290 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DDAC22B556E9D00A86290 /* WeatherData.swift */; };
+		798DDAC52B593EFC00A86290 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DDAC42B593EFC00A86290 /* HomeView2.swift */; };
 		799B4FCE2B46A47800AFBA21 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */; };
 		799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */; };
 		799B4FD62B4C748500AFBA21 /* UIColors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */; };
@@ -525,6 +526,7 @@
 		798DDABC2B55106300A86290 /* rain-blob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rain-blob.json"; sourceTree = "<group>"; };
 		798DDABE2B5513AF00A86290 /* HomeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView1.swift; sourceTree = "<group>"; };
 		798DDAC22B556E9D00A86290 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		798DDAC42B593EFC00A86290 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		799B4FCD2B46A47800AFBA21 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
 		799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extension.swift"; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 				799EAAAF2B445DBB006F7C14 /* HomeView.swift */,
 				79371B372B503B7700D4DA97 /* HomeMainView.swift */,
 				798DDABE2B5513AF00A86290 /* HomeView1.swift */,
+				798DDAC42B593EFC00A86290 /* HomeView2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1282,6 +1285,7 @@
 				799B4FCE2B46A47800AFBA21 /* CLLocation+Extension.swift in Sources */,
 				799EAAB02B445DBB006F7C14 /* HomeView.swift in Sources */,
 				798DDAC32B556E9D00A86290 /* WeatherData.swift in Sources */,
+				798DDAC52B593EFC00A86290 /* HomeView2.swift in Sources */,
 				79371B382B503B7700D4DA97 /* HomeMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
