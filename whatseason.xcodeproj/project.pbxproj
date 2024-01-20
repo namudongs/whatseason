@@ -269,6 +269,7 @@
 		798EDE032B5BD1130005FEB4 /* DailyWService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE022B5BD1130005FEB4 /* DailyWService.swift */; };
 		798EDE052B5BEE750005FEB4 /* KMAHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE042B5BEE750005FEB4 /* KMAHelper.swift */; };
 		798EDE072B5C05960005FEB4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE062B5C05960005FEB4 /* NetworkHelper.swift */; };
+		79907BF32B5C15FB0078403E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79907BF22B5C15FB0078403E /* LoadingView.swift */; };
 		799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */; };
 		799B4FD62B4C748500AFBA21 /* UIColors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */; };
 		799EAAB02B445DBB006F7C14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAAF2B445DBB006F7C14 /* HomeView.swift */; };
@@ -545,6 +546,7 @@
 		798EDE022B5BD1130005FEB4 /* DailyWService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWService.swift; sourceTree = "<group>"; };
 		798EDE042B5BEE750005FEB4 /* KMAHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMAHelper.swift; sourceTree = "<group>"; };
 		798EDE062B5C05960005FEB4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		79907BF22B5C15FB0078403E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		799B4FD52B4C748500AFBA21 /* UIColors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extension.swift"; sourceTree = "<group>"; };
 		799EAAAF2B445DBB006F7C14 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 		799EAAAC2B445D0A006F7C14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79907BF22B5C15FB0078403E /* LoadingView.swift */,
 				799EAAAF2B445DBB006F7C14 /* HomeView.swift */,
 				79371B372B503B7700D4DA97 /* HomeFirstView.swift */,
 				798DDABE2B5513AF00A86290 /* HomeSecondView.swift */,
@@ -1319,6 +1322,7 @@
 				790621D02B4439B700D50F45 /* AppDelegate.swift in Sources */,
 				798EDE012B5BD10B0005FEB4 /* DailyW.swift in Sources */,
 				79371B342B502F4C00D4DA97 /* WeatherKit+Extension.swift in Sources */,
+				79907BF32B5C15FB0078403E /* LoadingView.swift in Sources */,
 				79371B322B502D9000D4DA97 /* Date+Extension.swift in Sources */,
 				799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */,
 				799EAABA2B4472D1006F7C14 /* HomeVC.swift in Sources */,

@@ -25,6 +25,7 @@ class HomeVC: UIViewController {
     // 위치 정보를 불러왔는지 확인
     var hasReceivedLocationUpdate = false
     
+    let loadingView = LoadingView()
     // MARK: - 라이프사이클
     override func loadView() {
         view = homeView
@@ -32,6 +33,13 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeView.setUpView()
+        
+        view.addSubview(loadingView)
+        loadingView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         getUserLocation()
     }
     
@@ -68,6 +76,7 @@ class HomeVC: UIViewController {
             
             self.anyW.address = address
             self.updateFromAnyWeather(self.anyW, address)
+            self.loadingView.removeFromSuperview()
         }
     }
     
