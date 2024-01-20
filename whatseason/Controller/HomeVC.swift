@@ -18,16 +18,13 @@ class HomeVC: UIViewController {
     
     let currentWService = CurrentWService()
     let hourlyWService = HourlyWService()
+    let dailyWService = DailyWService()
     
-    var anyW = AnyW(apple: nil, currentW: nil, hourlyW: [], address: "")
+    var anyW = AnyW()
     let dispatchGroup = DispatchGroup()
     
     // 위치 정보를 불러왔는지 확인
     var hasReceivedLocationUpdate = false
-    
-    // 예보 데이터를 담을 배열
-    var hourly: [HourlyW] = []
-    var daily: [DayWeather] = []
     
     // MARK: - 라이프사이클
     override func loadView() {
@@ -59,19 +56,67 @@ class HomeVC: UIViewController {
         dispatchGroup.enter()
         getKMAHourly(date, x, y)
         
+        dispatchGroup.enter()
+        getKMADaily(date, x, y)
+        
         // Apple 날씨 데이터 요청
         dispatchGroup.enter()
         getWeatherKit(loc)
         
-        // 두 비동기 작업이 완료되면 UI 업데이트
         dispatchGroup.notify(queue: .main) {
-            print("KMACurrent = \(self.anyW.currentW?.date ?? Date()) Temp: \(self.anyW.currentW?.temperature ?? 0)")
-            print("KMAHourly = \(self.hourly.first?.date ?? Date()) Temp: \(self.hourly.first?.temperature ?? 0)")
-            print("Apple = \(self.anyW.apple?.currentWeather.temperature.value ?? 0)")
             print("비동기 작업 종료")
+            self.printTest(self.anyW)
             
             self.anyW.address = address
             self.updateFromAnyWeather(self.anyW, address)
+        }
+    }
+    
+    func printTest(_ with: AnyW) {
+        print(with.currentW!.date.toFormattedKoreanString())
+        print("기온: \(with.currentW!.temperature)")
+        print("습도: \(with.currentW!.humidity)")
+        print("강수형태: \(with.currentW!.rainType)")
+        print("강수량: \(with.currentW!.precipitation)")
+        
+        print("하늘상태[SKY] 코드: 맑음(1), 구름많음(3), 흐림(4)")
+        print("강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)")
+        
+        for hw in with.hourlyW! {
+            guard let hw = hw else { return }
+            print("초단기예보")
+            print(hw.date.toFormattedKoreanString())
+            print("기온: \(hw.temperature!)")
+            print("하늘상태: \(hw.skyStatus!)")
+            print("강수형태: \(hw.rainType!)")
+            print("강수량: \(hw.precipitation!)")
+        }
+        
+        for dw in with.dailyW! {
+            guard let dw = dw else { return }
+            print("단기예보")
+            print(dw.date.toFormattedKoreanString())
+            print("최저기온: \(dw.dailyLowTemp ?? 0.0)")
+            print("최고기온: \(dw.dailyHighTemp ?? 0.0) ")
+            print("일간기온: \(dw.hourlyTemp!)")
+            print("하늘상태: \(dw.skyStatus!)")
+            print("산적설: \(dw.snowProbability!)")
+            print("강수형태: \(dw.rainType!)")
+            print("강수량: \(dw.precipitation!)")
+        }
+    }
+    
+    func getKMADaily(_ date: Date, _ nx: Int, _ ny: Int) {
+        Task {
+            if let result = await dailyWService.fetchForecastData(date: date, nx: nx, ny: ny) {
+                DispatchQueue.main.async {
+                    self.anyW.dailyW = result
+                    print("기상청 단기예보를 불러왔습니다.")
+                    self.dispatchGroup.leave()
+                }
+            } else {
+                print("기상청 단기예보를 불러오는데에 실패했습니다.")
+            }
         }
     }
     
@@ -79,16 +124,8 @@ class HomeVC: UIViewController {
         Task {
             if let result = await hourlyWService.fetchForecastData(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
-                    self.hourly = result
+                    self.anyW.hourlyW = result
                     print("기상청 초단기예보를 불러왔습니다.")
-                    
-                    /*
-                    테스트 프린트
-                    for w in self.anyW.hourlyW {
-                        guard let w = w else { return }
-                        print("날짜: \(w.date.toFormattedKoreanString())\n\(String(describing: w.temperature)),\(String(describing: w.rainType)),\(String(describing: w.humidity)),\(String(describing: w.rainProbability)),\(String(describing: w.skyStatus)),\(String(describing: w.windSpeed)),\(String(describing: w.windDirection))")
-                    }
-                    */
                     
                     self.dispatchGroup.leave()
                 }
@@ -105,6 +142,7 @@ class HomeVC: UIViewController {
                 DispatchQueue.main.async {
                     self.anyW.currentW = result
                     print("기상청 초단기실황을 불러왔습니다.")
+                    
                     self.dispatchGroup.leave()
                 }
             } else {
@@ -114,7 +152,7 @@ class HomeVC: UIViewController {
         }
     }
     
-    /// 위치 정보와 도시명을 파라미터로 받아 애플 날씨 데이터를 불러옵니다.
+    /// 위치 정보와 도시명을 파라미터로 받아 WeatherKit 데이터를 불러옵니다.
     func getWeatherKit(_ location: CLLocation) {
         Task {
             do {

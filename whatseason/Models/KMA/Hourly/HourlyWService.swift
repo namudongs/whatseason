@@ -61,7 +61,7 @@ class HourlyWService {
             var forecast = forecastDict[forecastDate] ?? HourlyW(
                 date: forecastDate,
                 temperature: nil,
-                rainProbability: nil,
+                precipitation: nil,
                 skyStatus: nil,
                 rainType: nil,
                 humidity: nil,
@@ -73,7 +73,7 @@ class HourlyWService {
             case "T1H":
                 forecast.temperature = Double(value)
             case "RN1":
-                forecast.rainProbability = value // 강수량은 String 타입으로 처리
+                forecast.precipitation = value // 강수량은 String 타입으로 처리
             case "SKY":
                 forecast.skyStatus = Int(value)
             case "PTY":

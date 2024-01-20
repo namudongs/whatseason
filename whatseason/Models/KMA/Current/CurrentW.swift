@@ -9,13 +9,14 @@ import Foundation
 
 // MARK: - 초단기실황 모델
 struct CurrentW {
-    let date: Date  // 현재 날짜와 시간을 저장
-    let temperature: Double  // 기온
-    let precipitation: Int  // 1시간 강수량
-    let rainType: Int  // 강수 형태
-    let humidity: Int  // 습도
-    let windSpeed: Double  // 풍속
-    let windDirection: Int  // 풍향
+    let date: Date                  // [DATE]
+    var temperature: Double         // [T1H] 기온
+    var precipitation: Int          // [RN1] 1시간 강수량 (mm)
+    var rainType: Int               // [PTY] 강수형태
+    // 강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 빗방울(5), 빗방울눈날림(6), 눈날림(7)
+    var humidity: Int               // [REH] 습도
+    var windSpeed: Double           // [WSD] 풍속 (deg)
+    var windDirection: Int          // [VEC] 풍향 (m/s)
     
     func translateWindDirection() -> String {
         switch windDirection {

@@ -10,6 +10,7 @@ import WeatherKit
 struct AnyW {
     var apple: Weather?
     var currentW: CurrentW?
-    var hourlyW: [HourlyW?]
-    var address: String
+    var hourlyW: [HourlyW?]?
+    var dailyW: [DailyW?]?
+    var address: String?
 }

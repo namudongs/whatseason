@@ -9,14 +9,16 @@ import Foundation
 
 // MARK: - 초단기예보 모델
 struct HourlyW {
-    let date: Date            // 예보 날짜와 시간
-    var temperature: Double?  // 기온 예보
-    var rainProbability: String? // 강수 확률
-    var skyStatus: Int?       // 하늘 상태 (맑음, 구름 많음 등)
-    var rainType: Int?        // 강수 형태
-    var humidity: Int?        // 습도 예보
-    var windSpeed: Double?    // 풍속 예보
-    var windDirection: Int?   // 풍향 예보
+    let date: Date                  // [DATE]
+    var temperature: Double?        // [T1H] 기온
+    var precipitation: String?      // [RN1] 1시간 강수량 (mm)
+    var skyStatus: Int?             // [SKY] 하늘상태 (맑음, 구름 많음 등)
+    // 하늘상태[SKY] 코드: 맑음(1), 구름많음(3), 흐림(4)
+    var rainType: Int?              // [PTY] 강수형태
+    // 강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)
+    var humidity: Int?              // [REH] 습도
+    var windSpeed: Double?          // [WSD] 풍속 (deg)
+    var windDirection: Int?         // [VEC] 풍향 (m/s)
 }
 
 struct ForecastResponse: Decodable {
