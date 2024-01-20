@@ -90,5 +90,4 @@ class KMAHelper {
 
         return String(format: "%02d00", baseHour)
     }
-    
 }

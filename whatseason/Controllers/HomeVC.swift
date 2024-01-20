@@ -90,7 +90,6 @@ class HomeVC: UIViewController {
         
         print("하늘상태[SKY] 코드: 맑음(1), 구름많음(3), 흐림(4)")
         print("강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)")
-        
         for hw in with.hourlyW! {
             guard let hw = hw else { return }
             print("초단기예보")
@@ -99,14 +98,16 @@ class HomeVC: UIViewController {
             print("하늘상태: \(hw.skyStatus!)")
             print("강수형태: \(hw.rainType!)")
             print("강수량: \(hw.precipitation!)")
+            print("풍향: \(hw.translateWindDirection())")
+            print("풍속: \(hw.windSpeed!)")
         }
         
         for dw in with.dailyW! {
             guard let dw = dw else { continue }
             if dw.dailyLowTemp != nil {
-                print("\(dw.date.adding(days: 1).toFormattedKoreanString("M월 d일")) 최저온도 \(dw.dailyLowTemp!)")
+                print("\(dw.date.toFormattedKoreanString("M월 d일")) 최저온도 \(dw.dailyLowTemp!)")
             } else if dw.dailyHighTemp != nil {
-                print("\(dw.date.adding(days: 1).toFormattedKoreanString("M월 d일")) 최고온도 \(dw.dailyHighTemp!)")
+                print("\(dw.date.toFormattedKoreanString("M월 d일")) 최고온도 \(dw.dailyHighTemp!)")
             }
             
             //            print("시간별기온: \(dw.hourlyTemp!)")
@@ -118,7 +119,7 @@ class HomeVC: UIViewController {
         
     }
     
-    func getKMADaily(_ date: Date, _ nx: Int, _ ny: Int) {
+    func getKMADaily(_ date: Date, _ nx: Int, _ ny: Int, retryCount: Int = 0) {
         Task {
             if let result = await dailyWService.fetchW(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
@@ -127,12 +128,18 @@ class HomeVC: UIViewController {
                     self.dispatchGroup.leave()
                 }
             } else {
-                print("기상청 단기예보를 불러오는데에 실패했습니다.")
+                if retryCount < 3 {
+                    print("기상청 단기예보를 불러오는데에 실패했습니다. 재시도 중...")
+                    getKMADaily(date, nx, ny, retryCount: retryCount + 1)
+                } else {
+                    print("기상청 단기예보를 불러오는데 최종적으로 실패했습니다.")
+                    self.dispatchGroup.leave()
+                }
             }
         }
     }
     
-    func getKMAHourly(_ date: Date, _ nx: Int, _ ny: Int) {
+    func getKMAHourly(_ date: Date, _ nx: Int, _ ny: Int, retryCount: Int = 0) {
         Task {
             if let result = await hourlyWService.fetchW(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
@@ -142,13 +149,18 @@ class HomeVC: UIViewController {
                     self.dispatchGroup.leave()
                 }
             } else {
-                print("기상청 초단기예보를 불러오는데에 실패했습니다.")
-                self.dispatchGroup.leave()
+                if retryCount < 3 {
+                    print("기상청 초단기예보를 불러오는데에 실패했습니다. 재시도 중...")
+                    getKMAHourly(date, nx, ny, retryCount: retryCount + 1)
+                } else {
+                    print("기상청 초단기예보를 불러오는데 최종적으로 실패했습니다.")
+                    self.dispatchGroup.leave()
+                }
             }
         }
     }
     
-    func getKMACurrent(_ date: Date, _ nx: Int, _ ny: Int) {
+    func getKMACurrent(_ date: Date, _ nx: Int, _ ny: Int, retryCount: Int = 0) {
         Task {
             if let result = await currentWService.fetchW(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
@@ -158,8 +170,13 @@ class HomeVC: UIViewController {
                     self.dispatchGroup.leave()
                 }
             } else {
-                print("기상청 초단기실황을 불러오는데 실패했습니다.")
-                self.dispatchGroup.leave()
+                if retryCount < 3 {
+                    print("기상청 초단기실황을 불러오는데에 실패했습니다. 재시도 중...")
+                    getKMACurrent(date, nx, ny, retryCount: retryCount + 1)
+                } else {
+                    print("기상청 초단기실황을 불러오는데 최종적으로 실패했습니다.")
+                    self.dispatchGroup.leave()
+                }
             }
         }
     }

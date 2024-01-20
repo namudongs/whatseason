@@ -603,10 +603,10 @@
 		790621CE2B4439B700D50F45 /* whatseason */ = {
 			isa = PBXGroup;
 			children = (
+				798EDE0A2B5C11600005FEB4 /* Network */,
 				798DDAC12B556E7E00A86290 /* Models */,
 				799EAAAC2B445D0A006F7C14 /* Views */,
 				799EAAAD2B445D0E006F7C14 /* Controllers */,
-				798EDE0A2B5C11600005FEB4 /* Network */,
 				79640AC22B599F380065DCFE /* Helpers */,
 				799B4FCC2B46A45A00AFBA21 /* Extensions */,
 				790621D12B4439B700D50F45 /* SceneDelegate.swift */,
