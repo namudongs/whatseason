@@ -10,7 +10,6 @@ import WeatherKit
 import UIKit
 
 class HomeVC: UIViewController {
-    
     // MARK: - 프로퍼티
     var homeView = HomeView()
     let locationManager = CLLocationManager()
@@ -96,8 +95,8 @@ class HomeVC: UIViewController {
             guard let dw = dw else { return }
             print("단기예보")
             print(dw.date.toFormattedKoreanString())
-            print("최저기온: \(dw.dailyLowTemp ?? 0.0)")
-            print("최고기온: \(dw.dailyHighTemp ?? 0.0) ")
+            print("최저기온: \(String(describing: dw.dailyLowTemp ?? nil))")
+            print("최고기온: \(String(describing: dw.dailyHighTemp ?? nil))")
             print("일간기온: \(dw.hourlyTemp!)")
             print("하늘상태: \(dw.skyStatus!)")
             print("산적설: \(dw.snowProbability!)")
@@ -108,7 +107,7 @@ class HomeVC: UIViewController {
     
     func getKMADaily(_ date: Date, _ nx: Int, _ ny: Int) {
         Task {
-            if let result = await dailyWService.fetchForecastData(date: date, nx: nx, ny: ny) {
+            if let result = await dailyWService.fetchW(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
                     self.anyW.dailyW = result
                     print("기상청 단기예보를 불러왔습니다.")
@@ -122,7 +121,7 @@ class HomeVC: UIViewController {
     
     func getKMAHourly(_ date: Date, _ nx: Int, _ ny: Int) {
         Task {
-            if let result = await hourlyWService.fetchForecastData(date: date, nx: nx, ny: ny) {
+            if let result = await hourlyWService.fetchW(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
                     self.anyW.hourlyW = result
                     print("기상청 초단기예보를 불러왔습니다.")
@@ -138,7 +137,7 @@ class HomeVC: UIViewController {
     
     func getKMACurrent(_ date: Date, _ nx: Int, _ ny: Int) {
         Task {
-            if let result = await currentWService.fetchWeatherData(date: date, nx: nx, ny: ny) {
+            if let result = await currentWService.fetchW(date: date, nx: nx, ny: ny) {
                 DispatchQueue.main.async {
                     self.anyW.currentW = result
                     print("기상청 초단기실황을 불러왔습니다.")

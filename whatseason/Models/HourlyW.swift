@@ -20,36 +20,3 @@ struct HourlyW {
     var windSpeed: Double?          // [WSD] 풍속 (deg)
     var windDirection: Int?         // [VEC] 풍향 (m/s)
 }
-
-struct ForecastResponse: Decodable {
-    let response: ForecastBody
-}
-
-struct ForecastBody: Decodable {
-    let header: ForecastHeader
-    let body: ForecastItems
-}
-
-struct ForecastHeader: Decodable {
-    let resultCode: String
-    let resultMsg: String
-}
-
-struct ForecastItems: Decodable {
-    let items: ForecastData
-}
-
-struct ForecastData: Decodable {
-    let item: [ForecastItem]
-}
-
-struct ForecastItem: Decodable {
-    let baseDate: String
-    let baseTime: String
-    let category: String
-    let fcstDate: String
-    let fcstTime: String
-    let fcstValue: String
-    let nx: Int
-    let ny: Int
-}

@@ -11,7 +11,7 @@ import Foundation
 struct CurrentW {
     let date: Date                  // [DATE]
     var temperature: Double         // [T1H] 기온
-    var precipitation: Int          // [RN1] 1시간 강수량 (mm)
+    var precipitation: Double          // [RN1] 1시간 강수량 (mm)
     var rainType: Int               // [PTY] 강수형태
     // 강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 빗방울(5), 빗방울눈날림(6), 눈날림(7)
     var humidity: Int               // [REH] 습도
@@ -58,45 +58,5 @@ struct CurrentW {
             // 여름철 체감온도 계산
             return -0.2442 + 0.55399 * Tw + 0.45535 * temperature - 0.0022 * Tw * Tw + 0.00278 * Tw * temperature + 3.0
         }
-    }
-}
-
-struct WeatherResponse: Decodable {
-    let response: WeatherBody
-}
-
-struct WeatherBody: Decodable {
-    let header: WeatherHeader
-    let body: WeatherItems
-}
-
-struct WeatherHeader: Decodable {
-    let resultCode: String
-    let resultMsg: String
-}
-
-struct WeatherItems: Decodable {
-    let items: WeatherData
-}
-
-struct WeatherData: Decodable {
-    let item: [WeatherItem]
-}
-
-struct WeatherItem: Decodable {
-    let baseDate: String
-    let baseTime: String
-    let category: String
-    let nx: Int
-    let ny: Int
-    let obsrValue: String
-    
-    enum CodingKeys: String, CodingKey {
-        case baseDate
-        case baseTime
-        case category
-        case nx
-        case ny
-        case obsrValue
     }
 }

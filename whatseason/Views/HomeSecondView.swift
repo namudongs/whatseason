@@ -6,11 +6,8 @@
 //
 
 import UIKit
-import WeatherKit
-import Lottie
 
 class HomeSecondView: UIView {
-    
     // MARK: - 프로퍼티
     // 메인 레이블
     let mainLabel = UILabel().then {

@@ -12,7 +12,6 @@ import Then
 import Lottie
 
 class HomeView: UIView {
-    
     // MARK: - 프로퍼티
     let homeFirstView = HomeFirstView()
     
@@ -115,7 +114,7 @@ class HomeView: UIView {
         }
         
         homeFirstView.snp.makeConstraints { make in
-            make.height.equalTo(UIScreen.main.bounds.height * 0.5)
+            make.height.equalTo(UIScreen.main.bounds.height * 0.35)
         }
         homeSecondView.snp.makeConstraints { make in
             make.height.equalTo(120)

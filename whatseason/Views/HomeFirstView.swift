@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import SnapKit
-import Then
 import Lottie
 
 class HomeFirstView: UIView {
@@ -73,7 +71,7 @@ class HomeFirstView: UIView {
         
         temperatureLabel.text = "\(temp)°"
         dateLabel.text = "\(date) 기준"
-        cityLabel.text = "\(address)의 날씨는 ···"
+        cityLabel.text = "\(address)"
         conditionLabel.text = "\(condition)"
         
         // Condition에 따라 Icon 변경
@@ -106,8 +104,8 @@ class HomeFirstView: UIView {
         addSubview(dateLabel)
         addSubview(cityLabel)
         addSubview(conditionLabel)
-        addSubview(temperatureLabel)
-        addSubview(airLabel)
+//        addSubview(temperatureLabel)
+//        addSubview(airLabel)
         
         dateLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(5)
@@ -120,21 +118,21 @@ class HomeFirstView: UIView {
         }
         
         conditionLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(55)
+            make.centerX.equalTo(safeAreaLayoutGuide)
         }
         
-        temperatureLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-10)
-            make.leading.equalToSuperview().offset(20)
-        }
+//        temperatureLabel.snp.makeConstraints { make in
+//            make.bottom.equalToSuperview().offset(-10)
+//            make.leading.equalToSuperview().offset(20)
+//        }
         
-        airLabel.snp.makeConstraints { make in
-            make.top.equalTo(temperatureLabel.snp.top)
-            make.bottom.equalTo(temperatureLabel.snp.bottom)
-            make.trailing.equalToSuperview().offset(-20)
-            make.width.equalTo(80)
-        }
+//        airLabel.snp.makeConstraints { make in
+//            make.top.equalTo(temperatureLabel.snp.top)
+//            make.bottom.equalTo(temperatureLabel.snp.bottom)
+//            make.trailing.equalToSuperview().offset(-20)
+//            make.width.equalTo(80)
+//        }
         
     }
 }
