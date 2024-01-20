@@ -81,6 +81,7 @@ class HomeVC: UIViewController {
     }
     
     func printTest(_ with: AnyW) {
+        print("초단기실황")
         print(with.currentW!.date.toFormattedKoreanString())
         print("기온: \(with.currentW!.temperature)")
         print("습도: \(with.currentW!.humidity)")
@@ -101,17 +102,20 @@ class HomeVC: UIViewController {
         }
         
         for dw in with.dailyW! {
-            guard let dw = dw else { return }
-            print("단기예보")
-            print(dw.date.toFormattedKoreanString())
-            print("최저기온: \(String(describing: dw.dailyLowTemp ?? nil))")
-            print("최고기온: \(String(describing: dw.dailyHighTemp ?? nil))")
-            print("일간기온: \(dw.hourlyTemp!)")
-            print("하늘상태: \(dw.skyStatus!)")
-            print("산적설: \(dw.snowProbability!)")
-            print("강수형태: \(dw.rainType!)")
-            print("강수량: \(dw.precipitation!)")
+            guard let dw = dw else { continue }
+            if dw.dailyLowTemp != nil {
+                print("\(dw.date.adding(days: 1).toFormattedKoreanString("M월 d일")) 최저온도 \(dw.dailyLowTemp!)")
+            } else if dw.dailyHighTemp != nil {
+                print("\(dw.date.adding(days: 1).toFormattedKoreanString("M월 d일")) 최고온도 \(dw.dailyHighTemp!)")
+            }
+            
+            //            print("시간별기온: \(dw.hourlyTemp!)")
+            //            print("하늘상태: \(dw.skyStatus!)")
+            //            print("산적설: \(dw.snowProbability!)")
+            //            print("강수형태: \(dw.rainType!)")
+            //            print("강수량: \(dw.precipitation!)")
         }
+        
     }
     
     func getKMADaily(_ date: Date, _ nx: Int, _ ny: Int) {
@@ -167,14 +171,14 @@ class HomeVC: UIViewController {
                 let result = try await weatherKitservice.weather(for: location)
                 
                 /*
-                // 예보 데이터를 배열에 담습니다.
-                result.hourlyForecast.forecast.forEach { hourWeather in
-                    self.hourly.append(hourWeather)
-                }
-                result.dailyForecast.forecast.forEach { dayWeather in
-                    self.daily.append(dayWeather)
-                }
-                */
+                 // 예보 데이터를 배열에 담습니다.
+                 result.hourlyForecast.forecast.forEach { hourWeather in
+                 self.hourly.append(hourWeather)
+                 }
+                 result.dailyForecast.forecast.forEach { dayWeather in
+                 self.daily.append(dayWeather)
+                 }
+                 */
                 
                 self.anyW.apple = result
                 print("애플 날씨 정보를 불러왔습니다.")
@@ -225,7 +229,24 @@ extension HomeVC: CLLocationManagerDelegate {
         let local: Locale = Locale(identifier: "Ko-kr") // Korea
         geoCoder.reverseGeocodeLocation(findLocation, preferredLocale: local) { (place, error) in
             if let address: [CLPlacemark] = place {
-                print("(longitude, latitude) = (\(x), \(y))")
+                let locality = address.last?.locality ?? ""
+                
+                // 중기기온예보구역코드 반환
+                if let regions = loadRegions() {
+                    if let regId = regions[String(locality.dropLast(1))] {
+                        // 중기육상예보구역코드 반환
+                        let groupKey = String(regId.prefix(4))
+                        if let group = regionGroups[groupKey + "0000"] {
+                            let (regName, stnId) = group
+                            print("\(locality): \(regName) \(regId), \(stnId)")
+                        }
+                        else {
+                            print("그룹을 찾을 수 없습니다.")
+                        }
+                    } else {
+                        print("구역코드를 찾을 수 없습니다:  \(String(locality.dropLast(1)))")
+                    }
+                }
                 let address = "\(address.last?.locality ?? "") \(address.last?.subLocality ?? "")"
                 
                 self.getAllWeather(date: Date(), x: x, y: y, loc: location, address: address)

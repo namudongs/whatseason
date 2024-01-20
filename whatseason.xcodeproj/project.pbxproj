@@ -275,6 +275,9 @@
 		799EAAB02B445DBB006F7C14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAAF2B445DBB006F7C14 /* HomeView.swift */; };
 		799EAABA2B4472D1006F7C14 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAB92B4472D1006F7C14 /* HomeVC.swift */; };
 		799EAAC92B449087006F7C14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799EAAC82B449087006F7C14 /* Main.storyboard */; };
+		79B051D02B5C256E0031BD10 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 79B051CF2B5C256E0031BD10 /* Config.xcconfig */; };
+		79B051D22B5C63A90031BD10 /* region.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B051D12B5C63A90031BD10 /* region.json */; };
+		79B051D42B5C64410031BD10 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B051D32B5C64410031BD10 /* Region.swift */; };
 		7C8D8584C006957BDD3EB4C4 /* Pods_whatseason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F98590EB53F4954B9836A /* Pods_whatseason.framework */; };
 /* End PBXBuildFile section */
 
@@ -529,7 +532,6 @@
 		79640ABE2B598A5F0065DCFE /* CurrentWService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWService.swift; sourceTree = "<group>"; };
 		79640AC32B599F450065DCFE /* ConvertXY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertXY.swift; sourceTree = "<group>"; };
 		7964E1FE2B59BF2B00DCECE3 /* AnyW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyW.swift; sourceTree = "<group>"; };
-		7964E2002B59CE7D00DCECE3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7981AB0E2B4F1C7400DFA751 /* clear-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clear-bg.json"; sourceTree = "<group>"; };
 		7981AB102B4F1DBC00DFA751 /* spring-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "spring-bg.json"; sourceTree = "<group>"; };
 		7981AB112B4F1DBC00DFA751 /* cloudy-bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cloudy-bg.json"; sourceTree = "<group>"; };
@@ -552,6 +554,9 @@
 		799EAAAF2B445DBB006F7C14 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		799EAAB92B4472D1006F7C14 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		799EAAC82B449087006F7C14 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		79B051CF2B5C256E0031BD10 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../../Config.xcconfig; sourceTree = "<group>"; };
+		79B051D12B5C63A90031BD10 /* region.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = region.json; sourceTree = "<group>"; };
+		79B051D32B5C64410031BD10 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.release.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.release.xcconfig"; sourceTree = "<group>"; };
 		A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.debug.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -608,8 +613,9 @@
 				790621CF2B4439B700D50F45 /* AppDelegate.swift */,
 				79267CAD2B444170001BFF15 /* whatseason.entitlements */,
 				790621DD2B4439B800D50F45 /* Info.plist */,
-				7964E2002B59CE7D00DCECE3 /* Config.xcconfig */,
+				79B051CF2B5C256E0031BD10 /* Config.xcconfig */,
 				799EAAAE2B445D23006F7C14 /* Utils */,
+				79B051D12B5C63A90031BD10 /* region.json */,
 			);
 			path = whatseason;
 			sourceTree = "<group>";
@@ -653,6 +659,7 @@
 				798DDAC22B556E9D00A86290 /* CurrentW.swift */,
 				798EDDFD2B5BCD4D0005FEB4 /* HourlyW.swift */,
 				798EDE002B5BD10B0005FEB4 /* DailyW.swift */,
+				79B051D32B5C64410031BD10 /* Region.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1130,6 +1137,7 @@
 				79371C892B5063C000D4DA97 /* thermometer-fahrenheit.json in Resources */,
 				79371CBB2B5063C000D4DA97 /* partly-cloudy-day-hail.json in Resources */,
 				79371CF82B5063C000D4DA97 /* rainbow.json in Resources */,
+				79B051D02B5C256E0031BD10 /* Config.xcconfig in Resources */,
 				79371CD72B5063C000D4DA97 /* extreme-day-rain.json in Resources */,
 				79371C512B5063C000D4DA97 /* solar-eclipse.json in Resources */,
 				79371CC82B5063C000D4DA97 /* sun-hot.json in Resources */,
@@ -1155,6 +1163,7 @@
 				79371C3F2B5063C000D4DA97 /* thunderstorms-night.json in Resources */,
 				79371C2A2B5063C000D4DA97 /* snow.json in Resources */,
 				79371C592B5063C000D4DA97 /* partly-cloudy-night-fog.json in Resources */,
+				79B051D22B5C63A90031BD10 /* region.json in Resources */,
 				79371C602B5063C000D4DA97 /* overcast-hail.json in Resources */,
 				79371CB32B5063C000D4DA97 /* extreme-day-sleet.json in Resources */,
 				79371D032B5063C000D4DA97 /* umbrella-wind.json in Resources */,
@@ -1319,6 +1328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B051D42B5C64410031BD10 /* Region.swift in Sources */,
 				790621D02B4439B700D50F45 /* AppDelegate.swift in Sources */,
 				798EDE012B5BD10B0005FEB4 /* DailyW.swift in Sources */,
 				79371B342B502F4C00D4DA97 /* WeatherKit+Extension.swift in Sources */,
@@ -1360,7 +1370,7 @@
 /* Begin XCBuildConfiguration section */
 		790621DE2B4439B800D50F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7964E2002B59CE7D00DCECE3 /* Config.xcconfig */;
+			baseConfigurationReference = 79B051CF2B5C256E0031BD10 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1424,7 +1434,7 @@
 		};
 		790621DF2B4439B800D50F45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7964E2002B59CE7D00DCECE3 /* Config.xcconfig */;
+			baseConfigurationReference = 79B051CF2B5C256E0031BD10 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

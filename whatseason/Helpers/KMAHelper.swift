@@ -56,7 +56,7 @@ class KMAHelper {
         
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents([.hour, .minute], from: date)
-        if components.hour! < 2 {
+        if components.hour! < 2 || (components.hour! >= 2 && components.hour! < 5) {
             let yesterday = calendar.date(byAdding: .day, value: -1, to: date)!
             baseDate = dateFormatter.string(from: yesterday).dropLast(4)
         }
@@ -77,19 +77,18 @@ class KMAHelper {
     
     static func calculateBaseTimeForVilageFcst(currentDate: Date) -> String {
         let calendar = Calendar(identifier: .gregorian)
-        var components = calendar.dateComponents([.year, .month, .day, .hour], from: currentDate)
-        
+        let components = calendar.dateComponents([.hour], from: currentDate)
         let baseHours = [2, 5, 8, 11, 14, 17, 20, 23]
-        
-        if components.hour! < 2 {
-            components.hour = 23
-        } else {
-            let lastBaseHour = baseHours.first { $0 > components.hour! } ?? baseHours.first!
-            
-            components.hour = lastBaseHour
+        var baseHour = 23 // 기본값으로 이전 날의 마지막 base hour 설정
+
+        if let hour = components.hour {
+            if hour >= 2 {
+                // 현재 시간이 2시 이상이면, 현재 시간보다 작거나 같은 가장 가까운 시간을 찾기
+                baseHour = baseHours.last { $0 <= hour } ?? baseHours.last!
+            }
         }
-        
-        return String(format: "%02d00", components.hour!)
+
+        return String(format: "%02d00", baseHour)
     }
     
 }

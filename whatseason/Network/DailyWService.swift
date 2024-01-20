@@ -13,7 +13,7 @@ class DailyWService {
     
     func fetchW(date: Date, nx: Int, ny: Int) async -> [DailyW]? {
         let requestURL = KMAHelper.createRequestURL(apiURL: "getVilageFcst", date: date, nx: nx, ny: ny)
-        print(requestURL)
+        
         do {
             let (data, _) = try await urlSession.data(from: URL(string: requestURL)!)
             let response = try JSONDecoder().decode(WResponse.self, from: data)
