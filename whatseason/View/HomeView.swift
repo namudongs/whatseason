@@ -48,12 +48,12 @@ class HomeView: UIView {
     
     // MARK: - 메서드
     /// 애플날씨와 도시명을 받아 WeatherView를 업데이트하는 메서드입니다.
-    func configure(_ weather: AnyWeather, _ address: String) {
+    func configure(_ w: AnyW, _ address: String) {
         // HomeFirstView에 데이터 전달
-        homeFirstView.configure(weather, address)
+        homeFirstView.configure(w, address)
         
         // HomeSecondView에 데이터 전달
-        homeSecondView.configure(weather)
+        homeSecondView.configure(w)
     }
     
     /// Lottie 배경을 추가하는 메서드입니다.

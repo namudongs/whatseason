@@ -111,9 +111,9 @@ class HomeSecondView: UIView {
     
     
     // MARK: - 메서드
-    func configure(_ weather: AnyWeather) {
+    func configure(_ w: AnyW) {
 //        let apple = weather.apple!.currentWeather
-        let kma = weather.kma!
+        let kma = w.currentW!
         
         let temp = Int(round(kma.temperature))
         let humidity = kma.humidity

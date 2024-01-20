@@ -7,8 +7,9 @@
 
 import WeatherKit
 
-struct AnyWeather {
+struct AnyW {
     var apple: Weather?
-    var kma: KMACurrentWeather?
+    var currentW: CurrentW?
+    var hourlyW: [HourlyW?]
     var address: String
 }

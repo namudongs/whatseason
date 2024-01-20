@@ -1,5 +1,5 @@
 //
-//  KMAWeatherModel.swift
+//  CurrentW.swift
 //  whatseason
 //
 //  Created by namdghyun on 1/19/24.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct KMACurrentWeather {
+// MARK: - 초단기실황 모델
+struct CurrentW {
     let date: Date  // 현재 날짜와 시간을 저장
     let temperature: Double  // 기온
     let precipitation: Int  // 1시간 강수량

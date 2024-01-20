@@ -1,24 +1,26 @@
 //
-//  KMAWeatherService.swift
+//  CurrentWService.swift
 //  whatseason
 //
 //  Created by namdghyun on 1/19/24.
 //
-import UIKit
+import Foundation
 import WeatherKit
 
-class KMACurrentWeatherService {
+// MARK: - 초단기실황
+class CurrentWService {
     
     private let urlSession = URLSession.shared
     private let dateFormatter = DateFormatter().then {
         $0.dateFormat = "yyyyMMddHHmm"
+        $0.timeZone = .current
+        $0.locale = Locale(identifier: "ko")
     }
     
     let KMA_API_KEY = Bundle.main.infoDictionary?["KMA_API_KEY"] as! String
     
-    func fetchWeatherData(date: Date, nx: Int, ny: Int) async -> KMACurrentWeather? {
+    func fetchWeatherData(date: Date, nx: Int, ny: Int) async -> CurrentW? {
         let requestURL = createRequestURL(date: date, nx: nx, ny: ny)
-        print(requestURL)
         guard let url = URL(string: requestURL) else { return nil }
         
         var request = URLRequest(url: url)
@@ -40,7 +42,6 @@ class KMACurrentWeatherService {
         var adjustedDate = date
         
         if calendar.component(.minute, from: date) < 30 {
-            // 이전 시간의 마지막 분(59분)으로 조정
             adjustedDate = calendar.date(byAdding: .hour, value: -1, to: date)!
             adjustedDate = calendar.date(bySetting: .minute, value: 59, of: adjustedDate)!
         }
@@ -50,7 +51,7 @@ class KMACurrentWeatherService {
     }
 
     
-    private func parseCurrentWeather(from response: WeatherResponse) -> KMACurrentWeather? {
+    private func parseCurrentWeather(from response: WeatherResponse) -> CurrentW? {
         guard let lastItem = response.response.body.items.item.last,
               let lastDate = dateFormatter.date(from: "\(lastItem.baseDate)\(lastItem.baseTime)") else {
             return nil
@@ -61,7 +62,7 @@ class KMACurrentWeatherService {
             weatherDict[item.category] = item.obsrValue
         }
         
-        return KMACurrentWeather(
+        return CurrentW(
             date: lastDate,
             temperature: Double(weatherDict["T1H"] ?? "") ?? 0.0,
             precipitation: Int(weatherDict["RN1"] ?? "") ?? 0,

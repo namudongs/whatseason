@@ -62,9 +62,9 @@ class HomeFirstView: UIView {
     }
 
     // MARK: - 메서드
-    func configure(_ weather: AnyWeather, _ address: String) {
-        let apple = weather.apple!.currentWeather
-        let kma = weather.kma!
+    func configure(_ w: AnyW, _ address: String) {
+        let apple = w.apple!.currentWeather
+        let kma = w.currentW!
         
         let temp = Int(kma.temperature)
         let date = Date().toFormattedKoreanString()
