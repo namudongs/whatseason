@@ -57,6 +57,7 @@ class HomeVC: UIViewController {
     }
     
     func getAllWeather(date: Date, x: Int, y: Int, loc: CLLocation, address: String, regId: String, stnId: String, groupRegId: String) {
+        let start = CFAbsoluteTimeGetCurrent()
         print("********************************")
         // 기상청 날씨 데이터 요청
         dispatchGroup.enter()
@@ -77,61 +78,15 @@ class HomeVC: UIViewController {
         
         dispatchGroup.notify(queue: .main) {
             print("비동기 작업 종료")
-            self.printTest(self.anyW)
+//            self.printTest(self.anyW)
             
             self.anyW.address = address
             self.updateFromAnyWeather(self.anyW, address)
             self.loadingView.removeFromSuperview()
+            self.homeView.homeThirdView.collectionView.reloadData()
+            let end = CFAbsoluteTimeGetCurrent() - start
+            print("실행 시간: \(end)")
         }
-    }
-    
-    func printTest(_ with: AnyW) {
-        print("********************************")
-        print("중기예보")
-        for ww in with.weeklyW! {
-            print("\(ww.date.toFormattedKoreanString())의 오전 강수확률: \(ww.rainProbabilityAM!), 오후 강수확률: \(ww.rainProbabilityPM!)")
-            print("\(ww.date.toFormattedKoreanString())의 오전 날씨: \(ww.conditionAM!), 오후 날씨: \(ww.conditionPM!)")
-            print("\(ww.date.toFormattedKoreanString())의 최저기온: \(ww.lowTemp!) 최고기온: \(ww.highTemp!)")
-            print("********************************")
-        }
-        print("********************************")
-        print("하늘상태[SKY] 코드: 맑음(1), 구름많음(3), 흐림(4)")
-        print("강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)")
-        print("********************************")
-        print("초단기실황")
-        print(with.currentW!.date.toFormattedKoreanString())
-        print("기온: \(with.currentW!.temperature)")
-        print("습도: \(with.currentW!.humidity)")
-        print("강수형태: \(with.currentW!.rainType)")
-        print("강수량: \(with.currentW!.precipitation)")
-        print("********************************")
-        for hw in with.hourlyW! {
-            guard let hw = hw else { return }
-            print("초단기예보")
-            print(hw.date.toFormattedKoreanString())
-            print("기온: \(hw.temperature!)")
-            print("하늘상태: \(hw.skyStatus!)")
-            print("강수형태: \(hw.rainType!)")
-            print("강수량: \(hw.precipitation!)")
-            print("풍향: \(hw.translateWindDirection())")
-            print("풍속: \(hw.windSpeed!)")
-        }
-        print("********************************")
-        for dw in with.dailyW! {
-            guard let dw = dw else { continue }
-            if dw.dailyLowTemp != nil {
-                print("\(dw.date.toFormattedKoreanString("M월 d일")) 최저온도 \(dw.dailyLowTemp!)")
-            } else if dw.dailyHighTemp != nil {
-                print("\(dw.date.toFormattedKoreanString("M월 d일")) 최고온도 \(dw.dailyHighTemp!)")
-            }
-            
-            //            print("시간별기온: \(dw.hourlyTemp!)")
-            //            print("하늘상태: \(dw.skyStatus!)")
-            //            print("산적설: \(dw.snowProbability!)")
-            //            print("강수형태: \(dw.rainType!)")
-            //            print("강수량: \(dw.precipitation!)")
-        }
-        print("********************************")
     }
     
     func getKMAWeekly(_ date: Date, _ regId: String, _ stnId: String, _ groupRegId: String, retryCount: Int = 0) {

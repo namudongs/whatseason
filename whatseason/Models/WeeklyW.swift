@@ -8,11 +8,11 @@
 import Foundation
 
 struct WeeklyW {
-    let date: Date
-    let highTemp: Int?
-    let lowTemp: Int?
-    let rainProbabilityAM: Int?
-    let rainProbabilityPM: Int?
-    let conditionAM: String?
-    let conditionPM: String?
+    var date: Date
+    var highTemp: Int?
+    var lowTemp: Int?
+    var rainProbabilityAM: Int?
+    var rainProbabilityPM: Int?
+    var conditionAM: String?
+    var conditionPM: String?
 }

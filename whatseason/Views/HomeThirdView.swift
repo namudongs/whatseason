@@ -14,7 +14,15 @@ class HomeThirdView: UIView {
         $0.textColor = .black
         $0.text = "시간별 날씨"
     }
-
+    
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        $0.collectionViewLayout = layout
+        $0.backgroundColor = .clear
+    }
+    
     // MARK: - 생성자
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,10 +39,16 @@ class HomeThirdView: UIView {
         self.backgroundColor = .white.withAlphaComponent(0.9)
         
         addSubview(mainLabel)
+        addSubview(collectionView)
         
         mainLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
             make.leading.equalToSuperview().offset(20)
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(mainLabel.snp.bottom).offset(30)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
 }

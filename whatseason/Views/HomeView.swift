@@ -53,6 +53,9 @@ class HomeView: UIView {
         
         // HomeSecondView에 데이터 전달
         homeSecondView.configure(w)
+        
+        // HomeThirdView에 데이터 전달
+        
     }
     
     /// Lottie 배경을 추가하는 메서드입니다.

@@ -280,6 +280,7 @@
 		79E830EE2B5D397A00FA8CDF /* WeeklyW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830ED2B5D397A00FA8CDF /* WeeklyW.swift */; };
 		79E830F02B5D3AAB00FA8CDF /* WeeklyWService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830EF2B5D3AAB00FA8CDF /* WeeklyWService.swift */; };
 		79E830F22B5D3E3600FA8CDF /* MidKMAHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830F12B5D3E3600FA8CDF /* MidKMAHelper.swift */; };
+		79E830F62B5D714100FA8CDF /* HourlyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830F52B5D714100FA8CDF /* HourlyCustomCell.swift */; };
 		7C8D8584C006957BDD3EB4C4 /* Pods_whatseason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F98590EB53F4954B9836A /* Pods_whatseason.framework */; };
 /* End PBXBuildFile section */
 
@@ -562,6 +563,7 @@
 		79E830ED2B5D397A00FA8CDF /* WeeklyW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyW.swift; sourceTree = "<group>"; };
 		79E830EF2B5D3AAB00FA8CDF /* WeeklyWService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWService.swift; sourceTree = "<group>"; };
 		79E830F12B5D3E3600FA8CDF /* MidKMAHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidKMAHelper.swift; sourceTree = "<group>"; };
+		79E830F52B5D714100FA8CDF /* HourlyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCustomCell.swift; sourceTree = "<group>"; };
 		85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.release.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.release.xcconfig"; sourceTree = "<group>"; };
 		A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.debug.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -701,6 +703,7 @@
 				79371B372B503B7700D4DA97 /* HomeFirstView.swift */,
 				798DDABE2B5513AF00A86290 /* HomeSecondView.swift */,
 				798DDAC42B593EFC00A86290 /* HomeThirdView.swift */,
+				79E830F52B5D714100FA8CDF /* HourlyCustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1350,6 +1353,7 @@
 				798DDABF2B5513AF00A86290 /* HomeSecondView.swift in Sources */,
 				790621D22B4439B700D50F45 /* SceneDelegate.swift in Sources */,
 				799EAAB02B445DBB006F7C14 /* HomeView.swift in Sources */,
+				79E830F62B5D714100FA8CDF /* HourlyCustomCell.swift in Sources */,
 				798EDE052B5BEE750005FEB4 /* ShortKMAHelper.swift in Sources */,
 				798DDAC32B556E9D00A86290 /* CurrentW.swift in Sources */,
 				798EDDFC2B5BBADF0005FEB4 /* HourlyWService.swift in Sources */,

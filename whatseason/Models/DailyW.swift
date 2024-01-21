@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - 단기예보 모델
 struct DailyW {
-    let date: Date                  // [DATE]
+    var date: Date                  // [DATE]
     var hourlyTemp: Double?         // [T1H] 기온
     var dailyHighTemp: Double?      // [TMX] 일 최고기온
     var dailyLowTemp: Double?       // [TMN] 일 최저기온

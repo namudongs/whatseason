@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - 초단기예보 모델
 struct HourlyW {
-    let date: Date                  // [DATE]
+    var date: Date                  // [DATE]
     var temperature: Double?        // [T1H] 기온
     var precipitation: String?      // [RN1] 1시간 강수량 (mm)
     var skyStatus: Int?             // [SKY] 하늘상태 (맑음, 구름 많음 등)

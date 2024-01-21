@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - 초단기실황 모델
 struct CurrentW {
-    let date: Date                      // [DATE]
+    var date: Date                      // [DATE]
     var temperature: Double             // [T1H] 기온
     var precipitation: Double           // [RN1] 1시간 강수량 (mm)
     var rainType: Int                   // [PTY] 강수형태
