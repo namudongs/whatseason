@@ -12,7 +12,7 @@ class DailyWService {
     private let urlSession = URLSession.shared
     
     func fetchW(date: Date, nx: Int, ny: Int) async -> [DailyW]? {
-        let requestURL = KMAHelper.createRequestURL(apiURL: "getVilageFcst", date: date, nx: nx, ny: ny)
+        let requestURL = ShortKMAHelper.shared.createRequestURL(apiURL: "getVilageFcst", date: date, nx: nx, ny: ny)
         
         do {
             let (data, _) = try await urlSession.data(from: URL(string: requestURL)!)
@@ -30,7 +30,7 @@ class DailyWService {
         for item in response.response.body.items.item {
             let dateKey = "\(item.fcstDate!)\(item.fcstTime!)"
             let value = item.fcstValue!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let df = KMAHelper.createFormatter()
+            let df = ShortKMAHelper.shared.createFormatter()
             let date = df.date(from: "\(item.fcstDate!)\(item.fcstTime!)")
             var forecast = forecastsDict[dateKey] ?? DailyW(date: date!)
             

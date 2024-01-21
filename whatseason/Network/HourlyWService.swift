@@ -12,7 +12,7 @@ class HourlyWService {
     private let urlSession = URLSession.shared
     
     func fetchW(date: Date, nx: Int, ny: Int) async -> [HourlyW]? {
-        let requestURL = KMAHelper.createRequestURL(apiURL: "getUltraSrtFcst", date: date, nx: nx, ny: ny)
+        let requestURL = ShortKMAHelper.shared.createRequestURL(apiURL: "getUltraSrtFcst", date: date, nx: nx, ny: ny)
         
         do {
             let (data, _) = try await urlSession.data(from: URL(string: requestURL)!)
@@ -28,7 +28,7 @@ class HourlyWService {
         var forecastDict = [Date: HourlyW]()
         
         for item in response.response.body.items.item {
-            let df = KMAHelper.createFormatter()
+            let df = ShortKMAHelper.shared.createFormatter()
             guard let forecastDate = df.date(from: "\(item.fcstDate!)\(item.fcstTime!)") else {
                 continue
             }

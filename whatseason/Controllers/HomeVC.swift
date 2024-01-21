@@ -18,6 +18,7 @@ class HomeVC: UIViewController {
     let currentWService = CurrentWService()
     let hourlyWService = HourlyWService()
     let dailyWService = DailyWService()
+    let weeklyWService = WeeklyWService()
     
     var anyW = AnyW()
     let dispatchGroup = DispatchGroup()
@@ -55,7 +56,8 @@ class HomeVC: UIViewController {
         locationManager.startUpdatingLocation()
     }
     
-    func getAllWeather(date: Date, x: Int, y: Int, loc: CLLocation, address: String) {
+    func getAllWeather(date: Date, x: Int, y: Int, loc: CLLocation, address: String, regId: String, stnId: String, groupRegId: String) {
+        print("********************************")
         // 기상청 날씨 데이터 요청
         dispatchGroup.enter()
         getKMACurrent(date, x, y)
@@ -65,6 +67,9 @@ class HomeVC: UIViewController {
         
         dispatchGroup.enter()
         getKMADaily(date, x, y)
+        
+        dispatchGroup.enter()
+        getKMAWeekly(date, regId, stnId, groupRegId)
         
         // Apple 날씨 데이터 요청
         dispatchGroup.enter()
@@ -81,15 +86,25 @@ class HomeVC: UIViewController {
     }
     
     func printTest(_ with: AnyW) {
+        print("********************************")
+        print("중기예보")
+        for ww in with.weeklyW! {
+            print("\(ww.date.toFormattedKoreanString())의 오전 강수확률: \(ww.rainProbabilityAM!), 오후 강수확률: \(ww.rainProbabilityPM!)")
+            print("\(ww.date.toFormattedKoreanString())의 오전 날씨: \(ww.conditionAM!), 오후 날씨: \(ww.conditionPM!)")
+            print("\(ww.date.toFormattedKoreanString())의 최저기온: \(ww.lowTemp!) 최고기온: \(ww.highTemp!)")
+            print("********************************")
+        }
+        print("********************************")
+        print("하늘상태[SKY] 코드: 맑음(1), 구름많음(3), 흐림(4)")
+        print("강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)")
+        print("********************************")
         print("초단기실황")
         print(with.currentW!.date.toFormattedKoreanString())
         print("기온: \(with.currentW!.temperature)")
         print("습도: \(with.currentW!.humidity)")
         print("강수형태: \(with.currentW!.rainType)")
         print("강수량: \(with.currentW!.precipitation)")
-        
-        print("하늘상태[SKY] 코드: 맑음(1), 구름많음(3), 흐림(4)")
-        print("강수형태[PTY] 코드: 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)")
+        print("********************************")
         for hw in with.hourlyW! {
             guard let hw = hw else { return }
             print("초단기예보")
@@ -101,7 +116,7 @@ class HomeVC: UIViewController {
             print("풍향: \(hw.translateWindDirection())")
             print("풍속: \(hw.windSpeed!)")
         }
-        
+        print("********************************")
         for dw in with.dailyW! {
             guard let dw = dw else { continue }
             if dw.dailyLowTemp != nil {
@@ -116,7 +131,27 @@ class HomeVC: UIViewController {
             //            print("강수형태: \(dw.rainType!)")
             //            print("강수량: \(dw.precipitation!)")
         }
-        
+        print("********************************")
+    }
+    
+    func getKMAWeekly(_ date: Date, _ regId: String, _ stnId: String, _ groupRegId: String, retryCount: Int = 0) {
+        Task {
+            if let result = await weeklyWService.fetchW(date: date, regId: regId, stnId: stnId, groupRegId: groupRegId) {
+                DispatchQueue.main.async {
+                    self.anyW.weeklyW = result
+                    print("기상청 중기예보를 불러왔습니다.")
+                    self.dispatchGroup.leave()
+                }
+            } else {
+                if retryCount < 3 {
+                    print("기상청 중기예보를 불러오는데에 실패했습니다. 재시도 중...")
+                    getKMAWeekly(date, regId, stnId, groupRegId, retryCount: retryCount + 1)
+                } else {
+                    print("기상청 중기예보를 불러오는데 최종적으로 실패했습니다.")
+                    self.dispatchGroup.leave()
+                }
+            }
+        }
     }
     
     func getKMADaily(_ date: Date, _ nx: Int, _ ny: Int, retryCount: Int = 0) {
@@ -247,15 +282,21 @@ extension HomeVC: CLLocationManagerDelegate {
         geoCoder.reverseGeocodeLocation(findLocation, preferredLocale: local) { (place, error) in
             if let address: [CLPlacemark] = place {
                 let locality = address.last?.locality ?? ""
+                var regId = ""
+                var stnId = ""
+                var groupRegId = ""
                 
                 // 중기기온예보구역코드 반환
                 if let regions = loadRegions() {
-                    if let regId = regions[String(locality.dropLast(1))] {
+                    if let reg = regions[String(locality.dropLast(1))] {
                         // 중기육상예보구역코드 반환
-                        let groupKey = String(regId.prefix(4))
+                        let groupKey = String(reg.prefix(4))
+                        groupRegId = groupKey + "0000"
                         if let group = regionGroups[groupKey + "0000"] {
-                            let (regName, stnId) = group
-                            print("\(locality): \(regName) \(regId), \(stnId)")
+                            let (regName, stn) = group
+                            print("\(locality): \(regName), \(reg), \(stn), \(groupRegId)")
+                            regId = reg
+                            stnId = stn
                         }
                         else {
                             print("그룹을 찾을 수 없습니다.")
@@ -266,7 +307,7 @@ extension HomeVC: CLLocationManagerDelegate {
                 }
                 let address = "\(address.last?.locality ?? "") \(address.last?.subLocality ?? "")"
                 
-                self.getAllWeather(date: Date(), x: x, y: y, loc: location, address: address)
+                self.getAllWeather(date: Date(), x: x, y: y, loc: location, address: address, regId: regId, stnId: stnId, groupRegId: groupRegId)
             }
         }
     }

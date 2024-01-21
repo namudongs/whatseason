@@ -7,8 +7,10 @@
 
 import Foundation
 
-class KMAHelper {
-    static func createFormatter(timeZone: TimeZone = .current, locale: Locale = Locale(identifier: "ko")) -> DateFormatter {
+class ShortKMAHelper {
+    static let shared = ShortKMAHelper()
+    
+    func createFormatter(timeZone: TimeZone = .current, locale: Locale = Locale(identifier: "ko")) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMddHHmm"
         formatter.timeZone = timeZone
@@ -16,7 +18,7 @@ class KMAHelper {
         return formatter
     }
     
-    static func createRequestURL(apiURL: String, date: Date, nx: Int, ny: Int) -> String {
+    func createRequestURL(apiURL: String, date: Date, nx: Int, ny: Int) -> String {
         // 초단기실황    http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst
         // 초단기예보    http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst
         // 단기예보     http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst
@@ -51,7 +53,7 @@ class KMAHelper {
         return "\(baseURL)\(apiURL)?\(parameters)"
     }
     
-    static func calculateBaseDateForVilageFcst(date: Date, basetime: String, dateFormatter: DateFormatter) -> String {
+    private func calculateBaseDateForVilageFcst(date: Date, basetime: String, dateFormatter: DateFormatter) -> String {
         var baseDate = dateFormatter.string(from: date).dropLast(4)
         
         let calendar = Calendar(identifier: .gregorian)
@@ -64,7 +66,7 @@ class KMAHelper {
         return String(baseDate)
     }
     
-    static func calculateBaseTimeForUltraSrt(currentDate: Date) -> String {
+    private func calculateBaseTimeForUltraSrt(currentDate: Date) -> String {
         let calendar = Calendar(identifier: .gregorian)
         var components = calendar.dateComponents([.hour, .minute], from: currentDate)
         
@@ -75,7 +77,7 @@ class KMAHelper {
         return String(format: "%02d%02d", components.hour!, components.minute!)
     }
     
-    static func calculateBaseTimeForVilageFcst(currentDate: Date) -> String {
+    private func calculateBaseTimeForVilageFcst(currentDate: Date) -> String {
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents([.hour], from: currentDate)
         let baseHours = [2, 5, 8, 11, 14, 17, 20, 23]

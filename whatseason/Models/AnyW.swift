@@ -12,5 +12,6 @@ struct AnyW {
     var currentW: CurrentW?
     var hourlyW: [HourlyW?]?
     var dailyW: [DailyW?]?
+    var weeklyW: [WeeklyW]?
     var address: String?
 }

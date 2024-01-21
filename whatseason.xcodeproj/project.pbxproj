@@ -267,7 +267,7 @@
 		798EDDFE2B5BCD4D0005FEB4 /* HourlyW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDDFD2B5BCD4D0005FEB4 /* HourlyW.swift */; };
 		798EDE012B5BD10B0005FEB4 /* DailyW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE002B5BD10B0005FEB4 /* DailyW.swift */; };
 		798EDE032B5BD1130005FEB4 /* DailyWService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE022B5BD1130005FEB4 /* DailyWService.swift */; };
-		798EDE052B5BEE750005FEB4 /* KMAHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE042B5BEE750005FEB4 /* KMAHelper.swift */; };
+		798EDE052B5BEE750005FEB4 /* ShortKMAHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE042B5BEE750005FEB4 /* ShortKMAHelper.swift */; };
 		798EDE072B5C05960005FEB4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EDE062B5C05960005FEB4 /* NetworkHelper.swift */; };
 		79907BF32B5C15FB0078403E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79907BF22B5C15FB0078403E /* LoadingView.swift */; };
 		799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */; };
@@ -275,9 +275,11 @@
 		799EAAB02B445DBB006F7C14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAAF2B445DBB006F7C14 /* HomeView.swift */; };
 		799EAABA2B4472D1006F7C14 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EAAB92B4472D1006F7C14 /* HomeVC.swift */; };
 		799EAAC92B449087006F7C14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799EAAC82B449087006F7C14 /* Main.storyboard */; };
-		79B051D02B5C256E0031BD10 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 79B051CF2B5C256E0031BD10 /* Config.xcconfig */; };
 		79B051D22B5C63A90031BD10 /* region.json in Resources */ = {isa = PBXBuildFile; fileRef = 79B051D12B5C63A90031BD10 /* region.json */; };
 		79B051D42B5C64410031BD10 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B051D32B5C64410031BD10 /* Region.swift */; };
+		79E830EE2B5D397A00FA8CDF /* WeeklyW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830ED2B5D397A00FA8CDF /* WeeklyW.swift */; };
+		79E830F02B5D3AAB00FA8CDF /* WeeklyWService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830EF2B5D3AAB00FA8CDF /* WeeklyWService.swift */; };
+		79E830F22B5D3E3600FA8CDF /* MidKMAHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E830F12B5D3E3600FA8CDF /* MidKMAHelper.swift */; };
 		7C8D8584C006957BDD3EB4C4 /* Pods_whatseason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F98590EB53F4954B9836A /* Pods_whatseason.framework */; };
 /* End PBXBuildFile section */
 
@@ -546,7 +548,7 @@
 		798EDDFD2B5BCD4D0005FEB4 /* HourlyW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyW.swift; sourceTree = "<group>"; };
 		798EDE002B5BD10B0005FEB4 /* DailyW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyW.swift; sourceTree = "<group>"; };
 		798EDE022B5BD1130005FEB4 /* DailyWService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWService.swift; sourceTree = "<group>"; };
-		798EDE042B5BEE750005FEB4 /* KMAHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMAHelper.swift; sourceTree = "<group>"; };
+		798EDE042B5BEE750005FEB4 /* ShortKMAHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortKMAHelper.swift; sourceTree = "<group>"; };
 		798EDE062B5C05960005FEB4 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		79907BF22B5C15FB0078403E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		799B4FD32B4C6ADD00AFBA21 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -557,6 +559,9 @@
 		79B051CF2B5C256E0031BD10 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../../Config.xcconfig; sourceTree = "<group>"; };
 		79B051D12B5C63A90031BD10 /* region.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = region.json; sourceTree = "<group>"; };
 		79B051D32B5C64410031BD10 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		79E830ED2B5D397A00FA8CDF /* WeeklyW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyW.swift; sourceTree = "<group>"; };
+		79E830EF2B5D3AAB00FA8CDF /* WeeklyWService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWService.swift; sourceTree = "<group>"; };
+		79E830F12B5D3E3600FA8CDF /* MidKMAHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidKMAHelper.swift; sourceTree = "<group>"; };
 		85449F098A689BBE4C404056 /* Pods-whatseason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.release.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.release.xcconfig"; sourceTree = "<group>"; };
 		A43DBB45C237A1658A8B969A /* Pods-whatseason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatseason.debug.xcconfig"; path = "Target Support Files/Pods-whatseason/Pods-whatseason.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -624,7 +629,8 @@
 			isa = PBXGroup;
 			children = (
 				79640AC32B599F450065DCFE /* ConvertXY.swift */,
-				798EDE042B5BEE750005FEB4 /* KMAHelper.swift */,
+				798EDE042B5BEE750005FEB4 /* ShortKMAHelper.swift */,
+				79E830F12B5D3E3600FA8CDF /* MidKMAHelper.swift */,
 				798EDE062B5C05960005FEB4 /* NetworkHelper.swift */,
 			);
 			path = Helpers;
@@ -659,6 +665,7 @@
 				798DDAC22B556E9D00A86290 /* CurrentW.swift */,
 				798EDDFD2B5BCD4D0005FEB4 /* HourlyW.swift */,
 				798EDE002B5BD10B0005FEB4 /* DailyW.swift */,
+				79E830ED2B5D397A00FA8CDF /* WeeklyW.swift */,
 				79B051D32B5C64410031BD10 /* Region.swift */,
 			);
 			path = Models;
@@ -670,6 +677,7 @@
 				79640ABE2B598A5F0065DCFE /* CurrentWService.swift */,
 				798EDDFB2B5BBADF0005FEB4 /* HourlyWService.swift */,
 				798EDE022B5BD1130005FEB4 /* DailyWService.swift */,
+				79E830EF2B5D3AAB00FA8CDF /* WeeklyWService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -998,7 +1006,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					790621CB2B4439B700D50F45 = {
 						CreatedOnToolsVersion = 15.1;
@@ -1137,7 +1145,6 @@
 				79371C892B5063C000D4DA97 /* thermometer-fahrenheit.json in Resources */,
 				79371CBB2B5063C000D4DA97 /* partly-cloudy-day-hail.json in Resources */,
 				79371CF82B5063C000D4DA97 /* rainbow.json in Resources */,
-				79B051D02B5C256E0031BD10 /* Config.xcconfig in Resources */,
 				79371CD72B5063C000D4DA97 /* extreme-day-rain.json in Resources */,
 				79371C512B5063C000D4DA97 /* solar-eclipse.json in Resources */,
 				79371CC82B5063C000D4DA97 /* sun-hot.json in Resources */,
@@ -1328,6 +1335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E830EE2B5D397A00FA8CDF /* WeeklyW.swift in Sources */,
 				79B051D42B5C64410031BD10 /* Region.swift in Sources */,
 				790621D02B4439B700D50F45 /* AppDelegate.swift in Sources */,
 				798EDE012B5BD10B0005FEB4 /* DailyW.swift in Sources */,
@@ -1337,17 +1345,19 @@
 				799B4FD42B4C6ADD00AFBA21 /* UIView+Extension.swift in Sources */,
 				799EAABA2B4472D1006F7C14 /* HomeVC.swift in Sources */,
 				798EDE032B5BD1130005FEB4 /* DailyWService.swift in Sources */,
+				79E830F22B5D3E3600FA8CDF /* MidKMAHelper.swift in Sources */,
 				799B4FD62B4C748500AFBA21 /* UIColors+Extension.swift in Sources */,
 				798DDABF2B5513AF00A86290 /* HomeSecondView.swift in Sources */,
 				790621D22B4439B700D50F45 /* SceneDelegate.swift in Sources */,
 				799EAAB02B445DBB006F7C14 /* HomeView.swift in Sources */,
-				798EDE052B5BEE750005FEB4 /* KMAHelper.swift in Sources */,
+				798EDE052B5BEE750005FEB4 /* ShortKMAHelper.swift in Sources */,
 				798DDAC32B556E9D00A86290 /* CurrentW.swift in Sources */,
 				798EDDFC2B5BBADF0005FEB4 /* HourlyWService.swift in Sources */,
 				798DDAC52B593EFC00A86290 /* HomeThirdView.swift in Sources */,
 				79640ABF2B598A5F0065DCFE /* CurrentWService.swift in Sources */,
 				7964E1FF2B59BF2B00DCECE3 /* AnyW.swift in Sources */,
 				79371B382B503B7700D4DA97 /* HomeFirstView.swift in Sources */,
+				79E830F02B5D3AAB00FA8CDF /* WeeklyWService.swift in Sources */,
 				798EDDFE2B5BCD4D0005FEB4 /* HourlyW.swift in Sources */,
 				798EDE072B5C05960005FEB4 /* NetworkHelper.swift in Sources */,
 				79640AC42B599F450065DCFE /* ConvertXY.swift in Sources */,

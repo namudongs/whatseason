@@ -13,7 +13,7 @@ class CurrentWService {
     private let urlSession = URLSession.shared
     
     func fetchW(date: Date, nx: Int, ny: Int) async -> CurrentW? {
-        let requestURL = KMAHelper.createRequestURL(apiURL: "getUltraSrtNcst", date: date, nx: nx, ny: ny)
+        let requestURL = ShortKMAHelper.shared.createRequestURL(apiURL: "getUltraSrtNcst", date: date, nx: nx, ny: ny)
         
         do {
             let data = try await NetworkHelper.shared.fetchData(from: requestURL)
@@ -32,13 +32,13 @@ class CurrentWService {
         
         let baseDate = lastItem.baseDate
         let baseTime = lastItem.baseTime
-        let df = KMAHelper.createFormatter()
-        let lastDate = df.date(from: "\(baseDate)\(baseTime)") ?? Date()
+        let df = ShortKMAHelper.shared.createFormatter()
+        let lastDate = df.date(from: "\(baseDate!)\(baseTime!)") ?? Date()
         
         var weatherDict = [String: String]()
         response.response.body.items.item.forEach { item in
             if let obsrValue = item.obsrValue {
-                weatherDict[item.category] = obsrValue
+                weatherDict[item.category!] = obsrValue
             }
         }
         
